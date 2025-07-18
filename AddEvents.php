@@ -291,6 +291,7 @@
 										<h5 class="card-title"><?= htmlspecialchars($row['title']) ?></h5>
 										<p class="card-text"><?= nl2br(htmlspecialchars($row['description'])) ?></p>
 										<p class="mb-1"><strong>Time:</strong> <?= $row['event_time'] ?></p>
+										<p class="mb-1"><strong>Date:</strong> <?= $row['event_date'] ?></p>
 										<p class="mb-0"><strong>Venue:</strong> <?= htmlspecialchars($row['venue']) ?></p>
 									</div>
 								</div>
@@ -408,8 +409,8 @@
 			const height = img.naturalHeight;
 
 
-			const requiredWidth = 800;
-			const requiredHeight = 600;
+			const requiredWidth =310;
+			const requiredHeight = 300;
 
 			if (width !== requiredWidth || height !== requiredHeight) {
 				imageError.style.display = "block";
