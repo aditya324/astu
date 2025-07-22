@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -41,6 +42,8 @@
 	<link rel="stylesheet" href="assets/css/rangeslider.css" type="text/css" media="all">
 	<!-- modernizr js -->
 	<script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 </head>
 
 <body>
@@ -52,7 +55,7 @@
 	<!--==================================================-->
 	<!-- Start Topbar Area -->
 	<!--==================================================-->
-	<div class="topbar-area">
+	<!-- <div class="topbar-area">
 		<div class="topbar-inner">
 			<div class="container">
 				<div class="row">
@@ -79,7 +82,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<!--==================================================-->
 	<!-- End Topbar Area -->
 	<!--==================================================-->
@@ -88,86 +91,7 @@
 	<!--==================================================-->
 	<!-- Start Header Area -->
 	<!--==================================================-->
-	<header class="header-area" id="sticky-header">
-		<div class="container">
-			<div class="row align-items-center">
-				<div class="col-lg-3">
-					<div class="logo">
-						<a href="index.html"><img src="assets/images/logo.png" alt=""></a>
-					</div>
-				</div>
-				<div class="col-lg-9">
-					<div class="header-menu-items">
-						<div class="header-menu">
-							<ul>
-								<li><a href="#">Home <i class="bi bi-chevron-down"></i></a>
-									<div class="sub-menu">
-										<ul>
-											<li><a href="index.html">Home </a></li>
-											<li><a href="landing.html">Home Landing</a></li>
-											<li><a href="video.html">Home Video</a></li>
-										</ul>
-									</div>
-								</li>
-								<li><a href="about.html">About</a></li>
-								<li><a href="donation.html">Donation</a></li>
-								<li><a href="#">Pages <i class="bi bi-chevron-down"></i></a>
-									<div class="sub-menu">
-										<ul>
-											<li><a href="service.html">Service</a></li>
-											<li><a href="service-details.html">Service Details</a></li>
-											<li><a href="team.html">Team</a></li>
-											<li><a href="team-detials.html">Team Details</a></li>
-											<li><a href="faq.html">Faq Page</a></li>
-											<li><a href="contact.html">Contact</a></li>
-											<li><a href="error.html">Error Page</a></li>
-										</ul>
-									</div>
-								</li>
-								<li><a href="#">News <i class="bi bi-chevron-down"></i></a>
-									<div class="sub-menu">
-										<ul>
-											<li><a href="blog.html">Blog</a></li>
-											<li><a href="blog-details.html">Blog Details</a></li>
-										</ul>
-									</div>
-								</li>
-								<li><a href="contact.html">Contacts</a></li>
-							</ul>
-						</div>
-						<div class="header-social">
-							<div class="header-call">
-								<div class="header-call-icon">
-									<i class="bi bi-telephone-plus"></i>
-								</div>
-								<div class="header-call-title">
-									<a href="#">Free contact 24/7 </a>
-									<span><a href="#">936-668-36736</a></span>
-								</div>
-								<div class="header-search">
-									<a class="search-box-btn search-box-outer" href="#"><i class="bi bi-search"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
-
-	<!-- Nonprts Mobile Menu Area -->
-	<div class="mobile-menu-area sticky-menu" id="navbar">
-		<div class="mobile-menu">
-			<div class="mobile-logo">
-				<a href="index.html"><img src="assets/images/logo.png" alt=""></a>
-			</div>
-			<div class="side-menu-info">
-				<div class="sidebar-menu">
-					<a class="navSidebar-button" href="#"><i class="bi bi-justify-right"></i></a>
-				</div>
-			</div>
-		</div>
-	</div>
+	<?php require "header.php" ?>
 	<!--==================================================-->
 	<!-- End Header Area -->
 	<!--==================================================-->
@@ -207,56 +131,19 @@
 				<div class="col-lg-6 col-md-12">
 					<div class="about-content">
 						<div class="section-title">
-							<div class="section-sub-thumb">
-								<img src="assets/images/slider/banner-icon.png" alt="">
-							</div>
 							<div class="section-sub-titile about">
-								<h4>Join us and start donati</h4>
+								<h4>Astu Foundation's Promise</h4>
 							</div>
 							<div class="section-main-title about">
-								<h2>Helping Each Can Make 
-									 Better Nonprofits</h2>
+								<h2>One Mission: A Circle of Care for Our Community.</h2>
 							</div>
 						</div>
 						<div class="about-discription">
-							<p>Payment solutions enable businesses to accept payments Payment stions enable businesses
-								to
-								accept payments from ctly customers ctly securely. stions enable businesses
-								to accept payments from ctly customers ctly securely. </p>
+							<p>Astu Foundation is a promise—a promise of dignity, hope, and unwavering support to our Bengaluru community. Our work is a continuous circle of care, touching lives at every stage. We empower women to build their own futures and guide blind children towards independence. We stand with cancer patients, offering comfort and care in their time of need, and ensure our elders live their final years with the respect they have earned. We build the very foundations for this work: the shelters, classrooms, and centers where these stories of resilience and transformation come to life.</p>
 						</div>
-						<div class="row">
-							<div class="col-lg-6 col-md-6 col-sm-6">
-								<div class="about-list">
-									<ul>
-										<li>Making a quality health</li>
-										<li>Get Building Permission</li>
-										<li>Health & Education</li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-lg-6 col-md-6 col-sm-6">
-								<div class="about-list">
-									<ul>
-										<li>Most premium education</li>
-										<li>Business & Economy</li>
-										<li>Research & development</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<!-- about infor -->
 						<div class="about-info">
 							<div class="nontprts-btn about">
-								<a href="service-details.html">Donatlon Now <i class="bi bi-arrow-right"></i></a>
-							</div>
-							<div class="about-bottom">
-								<div class="about-bottom-shape">
-									<img src="assets/images/about/about-bottom.png" alt="">
-								</div>
-								<div class="about-content">
-									<h5>Aleesha Brown</h5>
-									<span>City Mayor</span>
-								</div>
+								<a href="donate.html">Support Our Mission <i class="bi bi-arrow-right"></i></a>
 							</div>
 						</div>
 					</div>
@@ -264,7 +151,7 @@
 				<div class="col-lg-6 col-md-12">
 					<div class="about-images">
 						<div class="about-thumb">
-							<img src="assets/images/about/about-thumb.png" alt="">
+							<img src="assets/images/about/about-thumb.png" alt="A collage of Astu Foundation's work with children, women, elders, and patients.">
 						</div>
 					</div>
 				</div>
@@ -275,11 +162,54 @@
 	<!-- End About Area -->
 	<!--==================================================-->
 
+	<div id="our-story" class="about-area inner-page wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s" style="background-color: #f8f9fa; padding: 80px 0;">
+		<div class="container">
+			<div class="row align-items-center">
 
+				<div class="col-lg-6 col-md-12">
+					<div class="about-images">
+						<div class="about-thumb" style="text-align: center;">
+							<img src="assets/images/about/founder-story.png" alt="The founder of Astu Foundation during an early community outreach event." style="border-radius: 8px; max-width: 85%;">
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-6 col-md-12">
+					<div class="about-content">
+						<div class="section-title">
+							<div class="section-sub-titile about">
+								<h4>The Spark Behind Our Mission</h4>
+							</div>
+							<div class="section-main-title about">
+								<h2>It All Started With a Single, Simple Act of Kindness.</h2>
+							</div>
+						</div>
+						<div class="about-discription">
+							<p>
+								Astu Foundation wasn't born in a boardroom. It was born on the streets of Bengaluru in the year <strong>2018</strong>. Our founder, <strong>Priya Sharma</strong>, witnessed a moment she couldn't forget: a bright young girl sorting scrap materials near Majestic, her potential being lost one day at a time. That moment was a turning point. It wasn't enough to feel sympathy; we knew we had to act.
+							</p>
+							<p>
+								Our journey began small, with a few friends pooling their resources to ensure that one girl, and then a few others in her small community, had the books, uniforms, and fees they needed to attend school. This simple act of kindness sparked a fire. We quickly realized the needs of our community were vast and interconnected.
+							</p>
+							<p>
+								From that single spark, Astu Foundation grew. It evolved from one person's promise into a community's movement, expanding to support children, empower women, care for our elders, and stand with those in crisis. Our story is still being written every day, and it's a story of hope, resilience, and the incredible power of community.
+							</p>
+						</div>
+						<div class="about-info">
+							<div class="nontprts-btn about">
+								<a href="contact.html">Be a Part of Our Story <i class="bi bi-arrow-right"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
 	<!--==================================================-->
 	<!-- Start Service Area -->
 	<!--==================================================-->
-	<div class="service-area wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
+	<!-- <div class="service-area wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
@@ -310,7 +240,7 @@
 								<a href="#">Education</a>
 							</div>
 							<h4 class="service-title"><a href="#">Early Detection Diagnosis an</a></h4>
-							<p class="service-discription">Please help us expand our services to reach our 
+							<p class="service-discription">Please help us expand our services to reach our
 								diverse communities and persons of all abilities with</p>
 							<div class="process-ber-plugin">
 								<div id="bar1" class="barfiller">
@@ -334,7 +264,7 @@
 								<a href="#">Education</a>
 							</div>
 							<h4 class="service-title"><a href="#">Water For All Children Detection</a></h4>
-							<p class="service-discription">Please help us expand our services to reach our 
+							<p class="service-discription">Please help us expand our services to reach our
 								diverse communities and persons of all abilities with</p>
 							<div class="process-ber-plugin">
 								<div id="bar2" class="barfiller">
@@ -358,7 +288,7 @@
 								<a href="#">Education</a>
 							</div>
 							<h4 class="service-title"><a href="#">Become an Volunteer Smiles</a></h4>
-							<p class="service-discription">Please help us expand our services to reach our 
+							<p class="service-discription">Please help us expand our services to reach our
 								diverse communities and persons of all abilities with</p>
 							<div class="process-ber-plugin">
 								<div id="bar3" class="barfiller">
@@ -381,7 +311,76 @@
 				</div>
 			</div>
 		</div>
-	 </div>
+	</div> -->
+
+
+
+	<div class="milestones-timeline-area">
+		<div class="container">
+			<div class="section-title">
+				<div class="section-sub-titile">
+					<h4>Our Journey of Impact</h4>
+				</div>
+				<div class="section-main-title">
+					<h2>Marking Our Milestones</h2>
+				</div>
+			</div>
+
+			<div class="owl-carousel milestones-carousel">
+
+				<div class="milestone-card">
+					<div class="milestone-image">
+						<img src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Y2hpbGR8c2Nob29sfGVkdWNhdGlvbnx8fHx8fDE2NzcxMDQxOTg&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080" alt="Children learning in a classroom">
+					</div>
+					<div class="milestone-content">
+						<div class="milestone-year color-1">2018</div>
+						<p class="milestone-description">Astu Foundation was born from a promise, officially sponsoring the education of 5 children in Bengaluru.</p>
+					</div>
+				</div>
+
+				<div class="milestone-card">
+					<div class="milestone-image">
+						<img src="https://images.unsplash.com/photo-1618223249124-3d383b4a4c6a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8d29tZW58c2tpbGxzfHNld2luZ3x8fHx8fDE2NzcxMDQyMjc&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080" alt="Women in a skill training program">
+					</div>
+					<div class="milestone-content">
+						<div class="milestone-year color-2">2020</div>
+						<p class="milestone-description">Launched our Women Empowerment program, providing skill training and financial literacy to over 20 women.</p>
+					</div>
+				</div>
+
+				<div class="milestone-card">
+					<div class="milestone-image">
+						<img src="https://images.unsplash.com/photo-1588099714804-1596715501ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8ZWxkZXJseXxvbGR8cGVvcGxlfHx8fHx8MTY3cxMDQyNjY&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080" alt="An elderly person smiling">
+					</div>
+					<div class="milestone-content">
+						<div class="milestone-year color-3">2022</div>
+						<p class="milestone-description">Opened our first dedicated Elder Care home, providing a safe and dignified haven for 15 seniors.</p>
+					</div>
+				</div>
+
+				<div class="milestone-card">
+					<div class="milestone-image">
+						<img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8aG9zcGl0YWx8Y2FyZXxkb2N0b3J8fHx8fHwxNjc3MTA0MzA2&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080" alt="A doctor talking to a patient">
+					</div>
+					<div class="milestone-content">
+						<div class="milestone-year color-4">2024</div>
+						<p class="milestone-description">Crossed the milestone of supporting 100+ cancer patients and their families with treatment and care.</p>
+					</div>
+				</div>
+
+				<div class="milestone-card">
+					<div class="milestone-image">
+						<img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Y29tbXVuaXR5fGJ1aWxkaW5nfG1lZXRpbmd8fHx8fHwxNjc3MTA0MzQ1&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080" alt="A community center building">
+					</div>
+					<div class="milestone-content">
+						<div class="milestone-year color-5">2025</div>
+						<p class="milestone-description">Broke ground on our new multi-purpose community center to house all our initiatives under one roof.</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
 	<!--==================================================-->
 	<!-- End Service Area -->
 	<!--==================================================-->
@@ -389,7 +388,7 @@
 	<!--==================================================-->
 	<!-- Start Events Area -->
 	<!--==================================================-->
-	<div class="events-area inner-page wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1s">
+	<!-- <div class="events-area inner-page wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1s">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
@@ -413,11 +412,11 @@
 							<img src="assets/images/resource/events1.png" alt="">
 						</div>
 						<div class="events-content">
-							<h4 class="events-title"><a href="#">Fundraising Event Ideas To Raise 
-								Money For</a></h4>
+							<h4 class="events-title"><a href="#">Fundraising Event Ideas To Raise
+									Money For</a></h4>
 							<div class="events-content-items">
 								<span><i class="bi bi-geo-alt"></i>Location : 12W Profession Hobert</span>
-							    <span><i class="bi bi-alarm"></i> Office Time : Fri 8:00 - 6:30</span>
+								<span><i class="bi bi-alarm"></i> Office Time : Fri 8:00 - 6:30</span>
 							</div>
 							<div class="events-btn">
 								<a href="#">Details More</a>
@@ -431,11 +430,11 @@
 							<img src="assets/images/resource/events2.png" alt="">
 						</div>
 						<div class="events-content">
-							<h4 class="events-title"><a href="#">Most Effective Ways To Overcome 
-								Nonprofit</a></h4>
+							<h4 class="events-title"><a href="#">Most Effective Ways To Overcome
+									Nonprofit</a></h4>
 							<div class="events-content-items">
 								<span><i class="bi bi-geo-alt"></i>Location : 12W Profession Hobert</span>
-							    <span><i class="bi bi-alarm"></i> Office Time : Fri 8:00 - 6:30</span>
+								<span><i class="bi bi-alarm"></i> Office Time : Fri 8:00 - 6:30</span>
 							</div>
 							<div class="events-btn">
 								<a href="#">Details More</a>
@@ -449,11 +448,11 @@
 							<img src="assets/images/resource/events3.png" alt="">
 						</div>
 						<div class="events-content">
-							<h4 class="events-title"><a href="#">Fundraising Event Ideas To Raise 
-								Money For</a></h4>
+							<h4 class="events-title"><a href="#">Fundraising Event Ideas To Raise
+									Money For</a></h4>
 							<div class="events-content-items">
 								<span><i class="bi bi-geo-alt"></i>Location : 12W Profession Hobert</span>
-							    <span><i class="bi bi-alarm"></i> Office Time : Fri 8:00 - 6:30</span>
+								<span><i class="bi bi-alarm"></i> Office Time : Fri 8:00 - 6:30</span>
 							</div>
 							<div class="events-btn">
 								<a href="#">Details More</a>
@@ -470,7 +469,7 @@
 							<h4 class="events-title"><a href="#">Process of Civil Litigation Paper </a></h4>
 							<div class="events-content-items">
 								<span><i class="bi bi-geo-alt"></i>Location : 12W Profession Hobert</span>
-							    <span><i class="bi bi-alarm"></i> Office Time : Fri 8:00 - 6:30</span>
+								<span><i class="bi bi-alarm"></i> Office Time : Fri 8:00 - 6:30</span>
 							</div>
 							<div class="events-btn">
 								<a href="#">Details More</a>
@@ -480,7 +479,7 @@
 				</div>
 			</div>
 		</div>
-	 </div>
+	</div> -->
 	<!--==================================================-->
 	<!-- End Events Area -->
 	<!--==================================================-->
@@ -488,7 +487,7 @@
 	<!--==================================================-->
 	<!-- Start Testimonial Area -->
 	<!--==================================================-->
-	<div class="testimonial-area inner-page wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1s">
+	<!-- <div class="testimonial-area inner-page wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1s">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
@@ -516,8 +515,8 @@
 								<i class="bi bi-quote"></i>
 							</div>
 							<div class="testi-content">
-								<p>Amazing Template is a responsive WordPress 
-									theme with a modern design that is perfect for 
+								<p>Amazing Template is a responsive WordPress
+									theme with a modern design that is perfect for
 									building any kind of website. Charitable
 									efforts can take many forms, including monetary</p>
 							</div>
@@ -535,8 +534,8 @@
 								<i class="bi bi-quote"></i>
 							</div>
 							<div class="testi-content">
-								<p>Amazing Template is a responsive WordPress 
-									theme with a modern design that is perfect for 
+								<p>Amazing Template is a responsive WordPress
+									theme with a modern design that is perfect for
 									building any kind of website. Charitable
 									efforts can take many forms, including monetary</p>
 							</div>
@@ -551,7 +550,7 @@
 				</div>
 			</div>
 		</div>
-	 </div>
+	</div> -->
 	<!--==================================================-->
 	<!-- End Testimonial Area -->
 	<!--==================================================-->
@@ -567,9 +566,7 @@
 						<div class="section-sub-thumb">
 							<img src="assets/images/slider/banner-icon.png" alt="">
 						</div>
-						<div class="section-sub-thumb">
-							<img src="assets/images/slider/banner-icon.png" alt="">
-						</div>
+						
 						<div class="section-sub-titile">
 							<h4>Raising Your Helping Hands</h4>
 						</div>
@@ -657,75 +654,7 @@
 	<!--==================================================-->
 	<!-- Start Sidebar Area -->
 	<!--==================================================-->
-	<div class="sidebar-group info-group">
-		<div class="sidebar-widget">
-			<div class="sidebar-widget-container">
-				<div class="widget-heading">
-					<a href="#" class="close-side-widget">
-						<i class="bi bi-x-lg"></i>
-					</a>
-				</div>
-				<div class="sidebar-textwidget">
-					<div class="sidebar-info-contents">
-						<div class="content-inner">
-							<div class="sidebar-logo">
-								<a href="index.html"><img src="assets/images/footer-logo.png" alt="logo"></a>
-							</div>
-							<div class="sidebar-widget-menu">
-								<ul>
-									<li class="dropdown"><a href="#" data-toggle="dropdown">Home <i
-												class="icon-arrow"></i></a>
-										<ul class="dropdown-menu">
-											<li><a href="index.html">Home </a></li>
-											<li><a href="landing.html">Home Landing</a></li>
-											<li><a href="video.html">Home Video</a></li>
-										</ul>
-									</li>
-									<li class="dropdown"><a href="about.html" data-toggle="dropdown">About</a></li>
-									<li class="dropdown"><a href="donation.html" data-toggle="dropdown">Donation</a></li>
-									<li class="dropdown"><a href="#project" data-toggle="dropdown">Pages <i class="icon-arrow"></i></a>
-										<ul class="dropdown-menu">
-											<li><a href="service.html">Service</a></li>
-											<li><a href="service-details.html">Service Details</a></li>
-											<li><a href="team.html">Team</a></li>
-											<li><a href="team-detials.html">Team Details</a></li>
-											<li><a href="faq.html">Faq Page</a></li>
-											<li><a href="contact.html">Contact</a></li>
-											<li><a href="error.html">Error Page</a></li>
-										</ul>
-									</li>
-									<li class="dropdown"><a href="#" data-toggle="dropdown">News <i class="icon-arrow"></i></a>
-										<ul class="dropdown-menu">
-											<li><a href="blog.html">Blog</a></li>
-											<li><a href="blog-details.html">Blog Details</a></li>
-										</ul>
-									</li>
-									<li class="dropdown"><a href="contact.html" data-toggle="dropdown">Contacts</a></li>
-								</ul>
-							</div>
-							<div class="contact-info">
-								<h2>Contact Info</h2>
-								<ul class="list-style-one">
-									<li><i class="bi bi-geo-alt-fill"></i>6391 Elgin St. Celina, Delaware</li>
-									<li><i class="bi bi-telephone-fill"></i>(+001) 123-456-789</li>
-									<li><i class="bi bi-envelope"></i> info@example.com</li>
-									<li><i class="bi bi-alarm-fill"></i> Week Days: 08.00 to 10.00
-									</li>
-								</ul>
-							</div>
-							<ul class="social-box">
-								<li class="facebook"><a href="#" class="fab fa-facebook-f"></a></li>
-								<li class="twitter"><a href="#" class="fab fa-instagram"></a></li>
-								<li class="linkedin"><a href="#" class="fab fa-twitter"></a></li>
-								<li class="instagram"><a href="#" class="fab fa-pinterest-p"></a></li>
-								<li class="youtube"><a href="#" class="fab fa-linkedin-in"></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+
 	<!--==================================================-->
 	<!-- End Sidebar Area -->
 	<!--==================================================-->
@@ -733,104 +662,7 @@
 	<!--==================================================-->
 	<!-- Start Footer Area -->
 	<!--==================================================-->
-	<div class="footer-area">
-		<div class="container">
-			<div class="row align-items-center mb-100">
-				<div class="col-lg-8 col-md-12">
-					<div class="footer-content wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
-						<h2>Looking for the Best Dream Home Solutions?</h2>
-						<p>As a app web crawler expert, We will help to organize.</p>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-12">
-					<div class="footer-btn wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="1s">
-						<div class="nontprts-btn safe">
-							<a href="service-details.html">Donatlon Now <i class="bi bi-arrow-right"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-3 col-md-6">
-					<div class="footer-wiget wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-						<div class="footer-wiget-log">
-							<a href="index.html"><img src="assets/images/footer-logo.png" alt=""></a>
-						</div>
-						<div class="footer-wiget-text">
-							<h4>Feugiat a ligula rutrum luctus primis ultrice nteger congue magna at pretium purus a pretium ligula rutrum and luctus</h4>
-						</div>
-						<div class="footer-socilal-title">
-							<h4>Social Info</h4>
-						</div>
-						<div class="footer-social">
-							<ul>
-								<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-								<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
-								<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="footer-wiget wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
-						<div class="footer-wiget-title">
-							<h4>Our Navigation</h4>
-						</div>
-						<div class="footer-wiget-menu">
-							<ul>
-								<li><a href="#"><i class="bi bi-chevron-double-right"></i> Airplane Fright</a></li>
-								<li><a href="#"><i class="bi bi-chevron-double-right"></i> About Portx</a></li>
-								<li><a href="#"><i class="bi bi-chevron-double-right"></i> Meet the Team</a></li>
-								<li><a href="#"><i class="bi bi-chevron-double-right"></i> News & Media</a></li>
-								<li><a href="#"><i class="bi bi-chevron-double-right"></i> Our Projects</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="footer-wiget wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s">
-						<div class="footer-wiget-title">
-							<h4>Our Service</h4>
-						</div>
-						<div class="footer-wiget-menu">
-							<ul>
-								<li><a href="#"><i class="bi bi-chevron-double-right"></i> Reliability & Punctuality</a></li>
-								<li><a href="#"><i class="bi bi-chevron-double-right"></i> Trusted Franchise</a></li>
-								<li><a href="#"><i class="bi bi-chevron-double-right"></i> Warehoues Storage</a></li>
-								<li><a href="#"><i class="bi bi-chevron-double-right"></i> Real Time Tracking</a></li>
-								<li><a href="#"><i class="bi bi-chevron-double-right"></i> Transparent Pricing</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 pr-0">
-					<div class="footer-wiget wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1s">
-						<div class="footer-wiget-title">
-							<h4>Our Gallery</h4>
-						</div>
-						<div class="footer-widget-photo">
-							<ul>
-								<li><img src="assets/images/footer/footer1.png" alt=""></li>
-								<li><img src="assets/images/footer/footer2.png" alt=""></li>
-								<li><img src="assets/images/footer/footer3.png" alt=""></li>
-								<li><img src="assets/images/footer/footer4.png" alt=""></li>
-								<li><img src="assets/images/footer/footer5.png" alt=""></li>
-								<li><img src="assets/images/footer/footer6.png" alt=""></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row line mt-90">
-				<div class="col-lg-12 col-md-12">
-					<div class="copyright-text wow fadeInUp" data-wow-delay="0.10s" data-wow-duration="1s">
-						<p>Copyright © <a href="#">Website_Stock</a> All Rights Reserved.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	<?php require "footer.php" ?>
 	<!--==================================================-->
 	<!-- End Footer Area -->
 	<!--==================================================-->
@@ -866,7 +698,31 @@
 	<!--==================================================-->
 	<!-- End scrollup section Area -->
 	<!--==================================================-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
+	<script>
+		$(document).ready(function() {
+			$('.milestones-carousel').owlCarousel({
+				loop: false, // Set to false if you don't want it to loop
+				margin: 20,
+				nav: true, // This enables the navigation arrows
+				navText: ["<i class='bi bi-arrow-left'></i>", "<i class='bi bi-arrow-right'></i>"], // Custom icons for arrows
+				dots: false, // Hides the small dots
+				responsive: {
+					0: {
+						items: 1
+					},
+					768: {
+						items: 2
+					},
+					992: {
+						items: 3
+					}
+				}
+			});
+		});
+	</script>
 
 	<!-- jquery js -->
 	<script src="assets/js/vendor/jquery-3.6.2.min.js"></script>

@@ -1,0 +1,179 @@
+  :root {
+            --primary-color: #138999;
+            --secondary-color: #0d5a66;
+            --dark-text: #2c3e50;
+            --light-text: #7f8c8d;
+            --bg-light: #f4f7f6; /* A slightly different light background */
+            --white: #ffffff;
+            --border-color: #e9ecef;
+            --shadow: 0px 10px 30px rgba(0, 0, 0, 0.07);
+            --shadow-hover: 0px 15px 40px rgba(0, 0, 0, 0.12);
+            --font-body: 'Poppins', sans-serif;
+            --radius: 16px; /* A slightly larger radius for a modern look */
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-light);
+        }
+        
+        /* Keyframe for staggered animation */
+        @keyframes fadeInUpStaggered {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ===================================
+           PAGE BANNER & TABS
+        ====================================== */
+        .page-banner-area {
+            height: 40vh; display: flex; align-items: center; justify-content: center; background-image: url('https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center; position: relative; color: var(--white); text-align: center;
+        }
+        .page-banner-area::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(45deg, rgba(19, 137, 153, 0.7), rgba(13, 90, 102, 0.8));
+        }
+        .page-banner-content { position: relative; z-index: 2; color: var(--white); }
+        .page-banner-content h1 { font-size: 3.5rem; font-weight: 700; color: var(--white); }
+        
+        .events-nav-tabs { border-bottom: 2px solid var(--border-color); }
+        .events-nav-tabs .nav-item { margin-bottom: -2px; }
+        .events-nav-tabs .nav-link { border: none; background: transparent; margin: 0 10px; color: var(--light-text); font-weight: 600; padding: 15px 20px; border-bottom: 2px solid transparent; transition: all 0.3s ease; }
+        .events-nav-tabs .nav-link.active,
+        .events-nav-tabs .nav-link:hover { color: var(--primary-color); border-bottom: 2px solid var(--primary-color); }
+
+        /* ===================================
+           ULTRA-MODERN VERTICAL EVENT LIST
+        ====================================== */
+        .events-card-vertical {
+            position: relative;
+            display: flex;
+            margin-bottom: 2.5rem;
+            border-radius: var(--radius);
+            overflow: hidden;
+            background: transparent; /* Card itself is transparent */
+            transition: transform 0.4s ease;
+            opacity: 0;
+            animation: fadeInUpStaggered 0.8s ease-out forwards;
+            animation-delay: var(--animation-delay, 0s);
+        }
+        .events-card-vertical:hover {
+            transform: translateY(-8px);
+        }
+
+        /* Animated Gradient Border */
+        .events-card-vertical::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 250%; /* Larger for a softer gradient edge */
+            height: 250%;
+            z-index: 1;
+            background: conic-gradient(from 0deg, var(--primary-color), #ff7e5f, #feb47b, var(--primary-color));
+            transform: translate(-50%, -50%) rotate(0deg);
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 1.5s ease-in-out;
+        }
+        .events-card-vertical:hover::before {
+            opacity: 1;
+            transform: translate(-50%, -50%) rotate(360deg);
+        }
+
+        /* Inner content container sits on top of the border */
+        .event-card-inner {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            width: calc(100% - 2px); /* 1px gap on each side for the border */
+            height: calc(100% - 2px);
+            margin: 1px;
+            background: var(--white);
+            border-radius: calc(var(--radius) - 1px);
+            overflow: hidden;
+        }
+
+        /* Image Wrapper */
+        .event-image-wrapper {
+            flex: 0 0 320px;
+            clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+            position: relative;
+        }
+        .event-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .events-card-vertical:hover .event-image-wrapper img {
+            transform: scale(1.1);
+        }
+
+        /* Content Wrapper */
+        .event-content-wrapper {
+            flex: 1;
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Glassmorphism Date Badge */
+        .event-date-vertical {
+            position: absolute;
+            top: 1.5rem;
+            left: 1.5rem; /* Moved to the left */
+            text-align: center;
+            color: var(--dark-text);
+            font-weight: 700;
+            padding: 10px 15px;
+            border-radius: var(--radius);
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            z-index: 3;
+        }
+        .event-date-vertical p { font-size: 2.2rem; margin: 0; line-height: 1; }
+        .event-date-vertical span { font-size: 1rem; font-weight: 500; text-transform: uppercase; }
+
+        .event-title-vertical { font-size: 1.8rem; font-weight: 700; line-height: 1.3; margin-bottom: 0.75rem; }
+        .event-title-vertical a { color: var(--dark-text); text-decoration: none; transition: color 0.3s ease; }
+        .event-title-vertical a:hover { color: var(--primary-color); }
+        .event-meta-vertical { display: flex; gap: 1.5rem; color: var(--light-text); margin-bottom: 1.5rem; font-size: 1rem; }
+        .event-meta-vertical span { display: flex; align-items: center; gap: 0.5rem; }
+        .event-meta-vertical i { color: var(--primary-color); }
+        .event-description { color: var(--light-text); line-height: 1.8; flex-grow: 1; }
+
+        .details-btn-vertical {
+            margin-top: 1.5rem;
+            background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+            color: var(--white);
+            padding: 14px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            align-self: flex-start;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 20px rgba(19, 137, 153, 0.3);
+        }
+        .details-btn-vertical:hover {
+            box-shadow: 0 8px 25px rgba(19, 137, 153, 0.5);
+            transform: translateY(-3px);
+        }
+
+        /* Pagination Styles */
+        .pagination { gap: 5px; }
+        .pagination .page-item .page-link { color: var(--light-text); border: none; border-radius: var(--radius) !important; font-weight: 600; padding: 10px 18px; transition: all 0.3s ease; }
+        .pagination .page-item.active .page-link { background-color: var(--primary-color); color: var(--white); }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 991px) {
+            .event-card-inner { flex-direction: column; }
+            .event-image-wrapper { flex-basis: 250px; clip-path: none; }
+        }

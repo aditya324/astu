@@ -10,23 +10,34 @@ CREATE TABLE events (
 
 
 CREATE TABLE volunteers (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    full_name VARCHAR(100),
-    email VARCHAR(100),
-    phone VARCHAR(20),
-    city VARCHAR(100),
-    interest TEXT,
-    message TEXT,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  full_name VARCHAR(255),
+  email VARCHAR(255),
+  phone VARCHAR(20),
+  city VARCHAR(100),
+  interest VARCHAR(255),
+  message TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE `associates` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `name` VARCHAR(100),
+  `email` VARCHAR(100),
+  `organization` VARCHAR(100),
+  `message` TEXT,
+  `submitted_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 
-CREATE TABLE associates (
+CREATE TABLE event_registrations (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100),
-    email VARCHAR(100),
-    phone VARCHAR(20),
-    type VARCHAR(50),
-    reason TEXT,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    event_id INT NOT NULL,
+    event_name VARCHAR(255) NOT NULL,
+    registrant_name VARCHAR(255) NOT NULL,
+    registrant_email VARCHAR(255) NOT NULL,
+    registrant_phone VARCHAR(20) NOT NULL,
+    registration_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (event_id) REFERENCES events(id) ON DELETE CASCADE
 );
+
