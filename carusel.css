@@ -1,0 +1,116 @@
+ /* --- NEW NEUTRAL COLOR THEME --- */
+        :root {
+            --section-bg: #f4f7f9; /* Light gray background for the section */
+            --card-bg: #ffffff;
+            --text-dark: #333;
+            --text-light: #777; /* Lighter text for inactive cards */
+            --button-bg: #DF5311; /* Your brand's orange color */
+            --button-hover-bg: #B9460E;
+        }
+
+        /* --- STYLES REMOVED FROM BODY --- */
+        /* These styles will now be inherited from your own website's stylesheet */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+        }
+
+        /* --- STYLES NOW ENCAPSULATED IN THIS SECTION --- */
+        .success-stories-section {
+            width: 100%;
+            background-color: var(--section-bg);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden; /* Recommended for carousel sections */
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 50px;
+        }
+
+        /* Main Swiper container */
+        .swiper {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        /* Individual card (slide) */
+        .swiper-slide {
+            background: var(--card-bg);
+            width: 420px;
+            height: 480px;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+            /* Default styles for INACTIVE cards */
+            opacity: 0.5;
+            transform: scale(0.9);
+        }
+
+        /* --- Styling the ACTIVE (center) card --- */
+        .swiper-slide-active {
+            opacity: 1;
+            transform: scale(1); /* Active card is at normal size */
+            box-shadow: 0 15px 45px rgba(0,0,0,0.15);
+            z-index: 2;
+        }
+        
+        .story-card-content {
+            display: flex;
+            height: 100%;
+            width: 100%;
+        }
+
+        .story-text {
+            flex: 1.2; /* Give text slightly more space */
+            padding: 40px;
+            color: var(--text-light);
+            transition: color 0.4s ease;
+        }
+
+        .swiper-slide-active .story-text {
+            color: var(--text-dark);
+        }
+        
+        .story-text h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 0 0 15px 0;
+        }
+        
+        .story-text p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 0 0 30px 0;
+        }
+
+        .story-button {
+            display: inline-block;
+            background-color: var(--button-bg);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        .story-button:hover {
+            background-color: var(--button-hover-bg);
+        }
+
+        .story-image {
+            flex: 1;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .swiper-3d .swiper-slide-shadow {
+            background: rgba(0, 0, 0, 0.15);
+        }

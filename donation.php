@@ -1,577 +1,277 @@
+<?php
+// We need the .env variables for the Key ID on the frontend
+require 'vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+?>
 <!DOCTYPE HTML>
 <html lang="en-US">
-
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Nonprts-Nonprofit Charity HTML5 Template </title>
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- Favicon -->
-	<link rel="icon" type="image/png" sizes="56x56" href="assets/images/fav-icon/icon.png">
-	<!-- bootstrap CSS -->
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" media="all">
-	<!-- carousel CSS -->
-	<link rel="stylesheet" href="assets/css/owl.carousel.min.css" type="text/css" media="all">
-	<!-- animate CSS -->
-	<link rel="stylesheet" href="assets/css/animate.css" type="text/css" media="all">
-	<!-- font-awesome CSS -->
-	<link rel="stylesheet" href="assets/css/all.min.css" type="text/css" media="all">
-	<!-- font-flaticon CSS -->
-	<link rel="stylesheet" href="assets/css/flaticon.css" type="text/css" media="all">
-	<!-- theme-default CSS -->
-	<link rel="stylesheet" href="assets/css/theme-default.css" type="text/css" media="all">
-	<!-- meanmenu CSS -->
-	<link rel="stylesheet" href="assets/css/meanmenu.min.css" type="text/css" media="all">
-	<!-- transitions CSS -->
-	<link rel="stylesheet" href="assets/css/owl.transitions.css" type="text/css" media="all">
-	<!-- venobox CSS -->
-	<link rel="stylesheet" href="venobox/venobox.css" type="text/css" media="all">
-	<!-- bootstrap icons -->
-	<link rel="stylesheet" href="assets/css/bootstrap-icons.css" type="text/css" media="all">
-	<!-- Slick Slider -->
-	<link rel="stylesheet" type="text/css" href="assets/slick/slick.css">
-	<link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css">
-	<!-- Main Style CSS -->
-	<link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all">
-	<!-- Dropdown CSS -->
-	<link rel="stylesheet" href="assets/css/dropdown.css" type="text/css" media="all">
-	<!-- responsive CSS -->
-	<link rel="stylesheet" href="assets/css/responsive.css" type="text/css" media="all">
-	<!-- rangeslider CSS -->
-	<link rel="stylesheet" href="assets/css/rangeslider.css" type="text/css" media="all">
-	<!-- modernizr js -->
-	<script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Make a Donation - Astu Foundation</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+    <style>
+        body { background-color: #f4f7f6; }
+        .donation-page-wrapper {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .form-section { padding: 50px; }
+        .impact-section {
+            background-image: linear-gradient(rgba(19, 137, 153, 0.8), rgba(13, 90, 102, 0.9)), url('https://images.unsplash.com/photo-1593113646773-428c64a9f158?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .impact-section h3 { font-weight: 700; }
+        .impact-section .impact-item { display: flex; align-items: center; margin-top: 20px; }
+        .impact-section .impact-item i { font-size: 2rem; margin-right: 15px; }
+        .amount-selection-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 25px; }
+        .amount-card {
+            border: 2px solid #e9ecef;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        .amount-card:hover {
+            border-color: #138999;
+            color: #138999;
+        }
+        .amount-card.active {
+            background-color: #138999;
+            color: #fff;
+            border-color: #138999;
+            transform: scale(1.05);
+        }
+        .form-control { padding: 12px; }
+    </style>
 </head>
-
 <body>
-	<!-- loder -->
-	<div class="loader_bg">
-		<div class="loader"></div>
-	</div>
-	<!--==================================================-->
-	<!-- Start Topbar Area -->
-	<!--==================================================-->
-	<div class="topbar-area">
-		<div class="topbar-inner">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-9">
-						<div class="topbar-items">
-							<ul>
-								<li><i class="bi bi-geo-alt"></i> <a href="#">Location : 12W Profession Str Hobert, CA</a></li>
-								<li><i class="bi bi-envelope"></i> <a href="#">Our Email : helpus24@gmail.com</a></li>
-								<li class="inner"><a href="#"><i class="bi bi-alarm"></i> Office Time : Mon - Fri 8:00 - 6:30</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-3">
-						<div class="topbar-social">
-							<h4>Follow on:</h4>
-							<ul>
-								<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-								<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
-								<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--==================================================-->
-	<!-- End Topbar Area -->
-	<!--==================================================-->
+  
 
+    <?php require 'header.php'; ?>
 
-	<!--==================================================-->
-	<!-- Start Header Area -->
-	<!--==================================================-->
-	<header class="header-area" id="sticky-header">
-		<div class="container">
-			<div class="row align-items-center">
-				<div class="col-lg-3">
-					<div class="logo">
-						<a href="index.html"><img src="assets/images/logo.png" alt=""></a>
-					</div>
-				</div>
-				<div class="col-lg-9">
-					<div class="header-menu-items">
-						<div class="header-menu">
-							<ul>
-								<li><a href="#">Home <i class="bi bi-chevron-down"></i></a>
-									<div class="sub-menu">
-										<ul>
-											<li><a href="index.html">Home </a></li>
-											<li><a href="landing.html">Home Landing</a></li>
-											<li><a href="video.html">Home Video</a></li>
-										</ul>
-									</div>
-								</li>
-								<li><a href="about.html">About</a></li>
-								<li><a href="donation.html">Donation</a></li>
-								<li><a href="#">Pages <i class="bi bi-chevron-down"></i></a>
-									<div class="sub-menu">
-										<ul>
-											<li><a href="service.html">Service</a></li>
-											<li><a href="service-details.html">Service Details</a></li>
-											<li><a href="team.html">Team</a></li>
-											<li><a href="team-detials.html">Team Details</a></li>
-											<li><a href="faq.html">Faq Page</a></li>
-											<li><a href="contact.html">Contact</a></li>
-											<li><a href="error.html">Error Page</a></li>
-										</ul>
-									</div>
-								</li>
-								<li><a href="#">News <i class="bi bi-chevron-down"></i></a>
-									<div class="sub-menu">
-										<ul>
-											<li><a href="blog.html">Blog</a></li>
-											<li><a href="blog-details.html">Blog Details</a></li>
-										</ul>
-									</div>
-								</li>
-								<li><a href="contact.html">Contacts</a></li>
-							</ul>
-						</div>
-						<div class="header-social">
-							<div class="header-call">
-								<div class="header-call-icon">
-									<i class="bi bi-telephone-plus"></i>
-								</div>
-								<div class="header-call-title">
-									<a href="#">Free contact 24/7 </a>
-									<span><a href="#">936-668-36736</a></span>
-								</div>
-								<div class="header-search">
-									<a class="search-box-btn search-box-outer" href="#"><i class="bi bi-search"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
+    <div class="breatcome-area">
+        <div class="container">
+            <div class="breatcome-content">
+                <div class="breatcome-title"><h1>Make a Donation</h1></div>
+                <div class="bratcome-text"><ul><li><a href="index.php">Home</a></li><li>Donation</li></ul></div>
+            </div>
+        </div>
+    </div>
 
-	<!-- Nonprts Mobile Menu Area -->
-	<div class="mobile-menu-area sticky-menu" id="navbar">
-		<div class="mobile-menu">
-			<div class="mobile-logo">
-				<a href="index.html"><img src="assets/images/logo.png" alt=""></a>
-			</div>
-			<div class="side-menu-info">
-				<div class="sidebar-menu">
-					<a class="navSidebar-button" href="#"><i class="bi bi-justify-right"></i></a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--==================================================-->
-	<!-- End Header Area -->
-	<!--==================================================-->
+    <div class="new-donation-area">
+        <div class="container">
+            <div class="donation-page-wrapper">
+                <div class="row g-0">
+                    <div class="col-lg-7">
+                        <div class="form-section">
+                            <h2 class="mb-2">Secure Donation</h2>
+                            <p class="text-muted mb-4">Your support helps us continue our mission.</p>
+                            <div id="payment-status" class="mb-3"></div>
 
-	<!--==================================================-->
-	<!-- Start Breatcome Area -->
-	<!--==================================================-->
-	<div class="breatcome-area">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 col-md-12">
-					<div class="breatcome-content">
-						<div class="breatcome-title">
-							<h1>Blog</h1>
-						</div>
-						<div class="bratcome-text">
-							<ul>
-								<li><a href="index.html">Home</a></li>
-								<li>Blog</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--==================================================-->
-	<!-- End Breatcome Area -->
-	<!--==================================================-->
+                            <form id="donation-form">
+                                <h5>1. Select an Amount (₹)</h5>
+                                <div class="amount-selection-cards">
+                                    <div class="amount-card" data-amount="500">₹500</div>
+                                    <div class="amount-card" data-amount="1000">₹1,000</div>
+                                    <div class="amount-card" data-amount="2500">₹2,500</div>
+                                    <div class="amount-card" data-amount="5000">₹5,000</div>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="amount" class="form-label">Or Enter a Custom Amount</label>
+                                    <input type="number" class="form-control" id="amount" placeholder="e.g., 1500" required>
+                                </div>
+                                
+                                <h5 class="mt-4">2. Personal Information</h5>
+                                <div class="row mt-3">
+                                    <div class="col-12 mb-3">
+                                        <label for="name" class="form-label">Full Name</label>
+                                        <input type="text" class="form-control" id="name" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email" class="form-label">Email Address</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="phone" class="form-label">Phone Number</label>
+                                        <input type="tel" class="form-control" id="phone" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-grid mt-4">
+                                    <button type="submit" id="donate-btn" class="btn btn-primary btn-lg">Donate Now</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
 
-	<!--==================================================-->
-	<!-- Start Events Area -->
-	<!--==================================================-->
-	<div class="events-area inner-page2 wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1s">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="section-title wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
-						<div class="section-sub-thumb">
-							<img src="assets/images/slider/banner-icon.png" alt="">
-						</div>
-						<div class="section-sub-titile">
-							<h4>Raising Your Helping Hands</h4>
-						</div>
-						<div class="section-main-title">
-							<h2>Check Latest Upcoming Events</h2>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-6 col-md-12">
-					<div class="events-single-box wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-						<div class="events-thumb">
-							<img src="assets/images/resource/events1.png" alt="">
-						</div>
-						<div class="events-content">
-							<h4 class="events-title"><a href="#">Fundraising Event Ideas To Raise 
-								Money For</a></h4>
-							<div class="events-content-items">
-								<span><i class="bi bi-geo-alt"></i>Location : 12W Profession Hobert</span>
-							    <span><i class="bi bi-alarm"></i> Office Time : Fri 8:00 - 6:30</span>
-							</div>
-							<div class="events-btn">
-								<a href="#">Details More</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6 col-md-12">
-					<div class="events-single-box wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
-						<div class="events-thumb">
-							<img src="assets/images/resource/events2.png" alt="">
-						</div>
-						<div class="events-content">
-							<h4 class="events-title"><a href="#">Most Effective Ways To Overcome 
-								Nonprofit</a></h4>
-							<div class="events-content-items">
-								<span><i class="bi bi-geo-alt"></i>Location : 12W Profession Hobert</span>
-							    <span><i class="bi bi-alarm"></i> Office Time : Fri 8:00 - 6:30</span>
-							</div>
-							<div class="events-btn">
-								<a href="#">Details More</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6 col-md-12">
-					<div class="events-single-box wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s">
-						<div class="events-thumb">
-							<img src="assets/images/resource/events3.png" alt="">
-						</div>
-						<div class="events-content">
-							<h4 class="events-title"><a href="#">Fundraising Event Ideas To Raise 
-								Money For</a></h4>
-							<div class="events-content-items">
-								<span><i class="bi bi-geo-alt"></i>Location : 12W Profession Hobert</span>
-							    <span><i class="bi bi-alarm"></i> Office Time : Fri 8:00 - 6:30</span>
-							</div>
-							<div class="events-btn">
-								<a href="#">Details More</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6 col-md-12">
-					<div class="events-single-box wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1s">
-						<div class="events-thumb">
-							<img src="assets/images/resource/events4.png" alt="">
-						</div>
-						<div class="events-content">
-							<h4 class="events-title"><a href="#">Process of Civil Litigation Paper </a></h4>
-							<div class="events-content-items">
-								<span><i class="bi bi-geo-alt"></i>Location : 12W Profession Hobert</span>
-							    <span><i class="bi bi-alarm"></i> Office Time : Fri 8:00 - 6:30</span>
-							</div>
-							<div class="events-btn">
-								<a href="#">Details More</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	 </div>
-	<!--==================================================-->
-	<!-- End Events Area -->
-	<!--==================================================-->
+                    <div class="col-lg-5">
+                        <div class="impact-section">
+                            <h3>Your Contribution Makes a World of Difference</h3>
+                            <p class="mt-3">Every donation, no matter the size, brings us one step closer to our goal. Your generosity fuels our projects and brings hope to communities.</p>
+                            <div class="impact-item">
+                                <i class="bi bi-book"></i>
+                                <div><strong>Education</strong><br>Provide learning materials for a child.</div>
+                            </div>
+                            <div class="impact-item">
+                                <i class="bi bi-heart-pulse"></i>
+                                <div><strong>Health</strong><br>Support our medical outreach programs.</div>
+                            </div>
+                            <div class="impact-item">
+                                <i class="bi bi-house"></i>
+                                <div><strong>Shelter</strong><br>Help provide a safe place for those in need.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <?php require 'footer.php'; ?>
 
-	<!--==================================================-->
-	<!-- Start Sidebar Area -->
-	<!--==================================================-->
-	<div class="sidebar-group info-group">
-		<div class="sidebar-widget">
-			<div class="sidebar-widget-container">
-				<div class="widget-heading">
-					<a href="#" class="close-side-widget">
-						<i class="bi bi-x-lg"></i>
-					</a>
-				</div>
-				<div class="sidebar-textwidget">
-					<div class="sidebar-info-contents">
-						<div class="content-inner">
-							<div class="sidebar-logo">
-								<a href="index.html"><img src="assets/images/footer-logo.png" alt="logo"></a>
-							</div>
-							<div class="sidebar-widget-menu">
-								<ul>
-									<li class="dropdown"><a href="#" data-toggle="dropdown">Home <i
-												class="icon-arrow"></i></a>
-										<ul class="dropdown-menu">
-											<li><a href="index.html">Home </a></li>
-											<li><a href="landing.html">Home Landing</a></li>
-											<li><a href="video.html">Home Video</a></li>
-										</ul>
-									</li>
-									<li class="dropdown"><a href="about.html" data-toggle="dropdown">About</a></li>
-									<li class="dropdown"><a href="donation.html" data-toggle="dropdown">Donation</a></li>
-									<li class="dropdown"><a href="#project" data-toggle="dropdown">Pages <i class="icon-arrow"></i></a>
-										<ul class="dropdown-menu">
-											<li><a href="service.html">Service</a></li>
-											<li><a href="service-details.html">Service Details</a></li>
-											<li><a href="team.html">Team</a></li>
-											<li><a href="team-detials.html">Team Details</a></li>
-											<li><a href="faq.html">Faq Page</a></li>
-											<li><a href="contact.html">Contact</a></li>
-											<li><a href="error.html">Error Page</a></li>
-										</ul>
-									</li>
-									<li class="dropdown"><a href="#" data-toggle="dropdown">News <i class="icon-arrow"></i></a>
-										<ul class="dropdown-menu">
-											<li><a href="blog.html">Blog</a></li>
-											<li><a href="blog-details.html">Blog Details</a></li>
-										</ul>
-									</li>
-									<li class="dropdown"><a href="contact.html" data-toggle="dropdown">Contacts</a></li>
-								</ul>
-							</div>
-							<div class="contact-info">
-								<h2>Contact Info</h2>
-								<ul class="list-style-one">
-									<li><i class="bi bi-geo-alt-fill"></i>6391 Elgin St. Celina, Delaware</li>
-									<li><i class="bi bi-telephone-fill"></i>(+001) 123-456-789</li>
-									<li><i class="bi bi-envelope"></i> info@example.com</li>
-									<li><i class="bi bi-alarm-fill"></i> Week Days: 08.00 to 10.00
-									</li>
-								</ul>
-							</div>
-							<ul class="social-box">
-								<li class="facebook"><a href="#" class="fab fa-facebook-f"></a></li>
-								<li class="twitter"><a href="#" class="fab fa-instagram"></a></li>
-								<li class="linkedin"><a href="#" class="fab fa-twitter"></a></li>
-								<li class="instagram"><a href="#" class="fab fa-pinterest-p"></a></li>
-								<li class="youtube"><a href="#" class="fab fa-linkedin-in"></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--==================================================-->
-	<!-- End Sidebar Area -->
-	<!--==================================================-->
+    <script src="assets/js/vendor/jquery-3.6.2.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
 
-	<!--==================================================-->
-	<!-- Start Footer Area -->
-	<!--==================================================-->
-	<div class="footer-area">
-		<div class="container">
-			<div class="row align-items-center mb-100">
-				<div class="col-lg-8 col-md-12">
-					<div class="footer-content wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
-						<h2>Looking for the Best Dream Home Solutions?</h2>
-						<p>As a app web crawler expert, We will help to organize.</p>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-12">
-					<div class="footer-btn wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="1s">
-						<div class="nontprts-btn safe">
-							<a href="service-details.html">Donatlon Now <i class="bi bi-arrow-right"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-3 col-md-6">
-					<div class="footer-wiget wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-						<div class="footer-wiget-log">
-							<a href="index.html"><img src="assets/images/footer-logo.png" alt=""></a>
-						</div>
-						<div class="footer-wiget-text">
-							<h4>Feugiat a ligula rutrum luctus primis ultrice nteger congue magna at pretium purus a pretium ligula rutrum and luctus</h4>
-						</div>
-						<div class="footer-socilal-title">
-							<h4>Social Info</h4>
-						</div>
-						<div class="footer-social">
-							<ul>
-								<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-								<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
-								<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="footer-wiget wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
-						<div class="footer-wiget-title">
-							<h4>Our Navigation</h4>
-						</div>
-						<div class="footer-wiget-menu">
-							<ul>
-								<li><a href="#"><i class="bi bi-chevron-double-right"></i> Airplane Fright</a></li>
-								<li><a href="#"><i class="bi bi-chevron-double-right"></i> About Portx</a></li>
-								<li><a href="#"><i class="bi bi-chevron-double-right"></i> Meet the Team</a></li>
-								<li><a href="#"><i class="bi bi-chevron-double-right"></i> News & Media</a></li>
-								<li><a href="#"><i class="bi bi-chevron-double-right"></i> Our Projects</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="footer-wiget wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s">
-						<div class="footer-wiget-title">
-							<h4>Our Service</h4>
-						</div>
-						<div class="footer-wiget-menu">
-							<ul>
-								<li><a href="#"><i class="bi bi-chevron-double-right"></i> Reliability & Punctuality</a></li>
-								<li><a href="#"><i class="bi bi-chevron-double-right"></i> Trusted Franchise</a></li>
-								<li><a href="#"><i class="bi bi-chevron-double-right"></i> Warehoues Storage</a></li>
-								<li><a href="#"><i class="bi bi-chevron-double-right"></i> Real Time Tracking</a></li>
-								<li><a href="#"><i class="bi bi-chevron-double-right"></i> Transparent Pricing</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 pr-0">
-					<div class="footer-wiget wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1s">
-						<div class="footer-wiget-title">
-							<h4>Our Gallery</h4>
-						</div>
-						<div class="footer-widget-photo">
-							<ul>
-								<li><img src="assets/images/footer/footer1.png" alt=""></li>
-								<li><img src="assets/images/footer/footer2.png" alt=""></li>
-								<li><img src="assets/images/footer/footer3.png" alt=""></li>
-								<li><img src="assets/images/footer/footer4.png" alt=""></li>
-								<li><img src="assets/images/footer/footer5.png" alt=""></li>
-								<li><img src="assets/images/footer/footer6.png" alt=""></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row line mt-90">
-				<div class="col-lg-12 col-md-12">
-					<div class="copyright-text wow fadeInUp" data-wow-delay="0.10s" data-wow-duration="1s">
-						<p>Copyright © <a href="#">Website_Stock</a> All Rights Reserved.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--==================================================-->
-	<!-- End Footer Area -->
-	<!--==================================================-->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('donation-form');
+        const amountInput = document.getElementById('amount');
+        const amountCards = document.querySelectorAll('.amount-card'); // Changed from buttons to cards
+        const donateBtn = document.getElementById('donate-btn');
+        const paymentStatus = document.getElementById('payment-status');
+        const razorpayKeyId = "<?= $_ENV['RAZORPAY_KEY_ID'] ?>";
 
-	<!--==================================================-->
-	<!-- Start Search Popup Area -->
-	<!--==================================================-->
-	<div class="search-popup">
-		<button class="close-search style-two"><span class="flaticon-multiply"><i
-					class="far fa-times-circle"></i></span></button>
-		<button class="close-search"><i class="fas fa-arrow-up"></i></button>
-		<form method="post" action="#">
-			<div class="form-group">
-				<input type="search" name="search-field" value="" placeholder="Search Here" required="">
-				<button type="submit"><i class="fa fa-search"></i></button>
-			</div>
-		</form>
-	</div>
-	<!--==================================================-->
-	<!-- End Search Popup Area -->
-	<!--==================================================-->
+        // New logic for amount selection cards
+        amountCards.forEach(card => {
+            card.addEventListener('click', function() {
+                // Remove 'active' class from all cards
+                amountCards.forEach(c => c.classList.remove('active'));
+                // Add 'active' class to the clicked card
+                this.classList.add('active');
+                // Update the input field value
+                amountInput.value = this.dataset.amount;
+            });
+        });
 
-	<!--==================================================-->
-	<!-- Start scrollup section Area -->
-	<!--==================================================-->
-	<!-- scrollup section -->
-	<div class="prgoress_scrollup">
-		<svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-			<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-		</svg>
-	</div>
+        // Clear card selection if user types a custom amount
+        amountInput.addEventListener('input', function() {
+            amountCards.forEach(c => c.classList.remove('active'));
+        });
 
-	<!--==================================================-->
-	<!-- End scrollup section Area -->
-	<!--==================================================-->
+        donateBtn.addEventListener('click', async function(event) {
+            event.preventDefault();
+            event.stopPropagation();
 
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
 
-	<!-- jquery js -->
-	<script src="assets/js/vendor/jquery-3.6.2.min.js"></script>
+            donateBtn.disabled = true;
+            donateBtn.innerText = 'Processing...';
+            paymentStatus.innerHTML = '';
 
-	<script src="assets/js/popper.min.js"></script>
+            const formData = {
+                amount: amountInput.value,
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+            };
 
-	<!-- bootstrap js -->
-	<script src="assets/js/bootstrap.min.js"></script>
+            // 1. Create a Razorpay Order
+            const orderResponse = await fetch('create_order.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ amount: formData.amount })
+            });
+            
+            // Check for server errors before trying to parse JSON
+            if (!orderResponse.ok) {
+                 paymentStatus.innerHTML = `<div class="alert alert-danger">Could not connect to the payment server. Please try again later.</div>`;
+                 donateBtn.disabled = false;
+                 donateBtn.innerText = 'Donate Now';
+                 return;
+            }
 
-	<!-- carousel js -->
-	<script src="assets/js/owl.carousel.min.js"></script>
+            const orderData = await orderResponse.json();
+            
+            if (!orderData.id) {
+                paymentStatus.innerHTML = `<div class="alert alert-danger">Error creating order. Please try again.</div>`;
+                donateBtn.disabled = false;
+                donateBtn.innerText = 'Donate Now';
+                return;
+            }
 
-	<!-- counterup js -->
-	<script src="assets/js/jquery.counterup.min.js"></script>
+            // 2. Open Razorpay Checkout
+            const options = {
+                key: razorpayKeyId,
+                amount: orderData.amount,
+                currency: "INR",
+                name: "Astu Foundation",
+                description: "Donation for a good cause",
+                order_id: orderData.id,
+                handler: async function(response) {
+                    // 3. Verify the payment
+                    const verificationData = {
+                        razorpay_payment_id: response.razorpay_payment_id,
+                        razorpay_order_id: response.razorpay_order_id,
+                        razorpay_signature: response.razorpay_signature,
+                        name: formData.name, email: formData.email, phone: formData.phone, amount: formData.amount
+                    };
 
-	<!-- waypoints js -->
-	<script src="assets/js/waypoints.min.js"></script>
+                    const verifyResponse = await fetch('verify_payment.php', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(verificationData)
+                    });
+                    const verifyResult = await verifyResponse.json();
 
-	<!-- wow js -->
-	<script src="assets/js/wow.min.js"></script>
-
-	<!-- imagesloaded js -->
-	<script src="assets/js/imagesloaded.pkgd.min.js"></script>
-
-	<!-- venobox js -->
-	<script src="venobox/venobox.js"></script>
-
-	<!--  animated-text js -->
-	<script src="assets/js/animated-text.js"></script>
-
-	<!-- venobox min js -->
-	<script src="venobox/venobox.min.js"></script>
-
-	<!-- isotope js -->
-	<script src="assets/js/isotope.pkgd.min.js"></script>
-
-	<!-- jquery meanmenu js -->
-	<script src="assets/js/jquery.meanmenu.js"></script>
-
-	<!-- jquery scrollup js -->
-	<script src="assets/js/jquery.scrollUp.js"></script>
-
-	<!-- Slick Slider -->
-	<script src="assets/slick/slick.min.js"></script>
-
-	<script src="assets/js/jquery.barfiller.js"></script>
-	<!-- jquery js -->
-
-	<!-- ragrslider js -->
-	<script src="assets/js/rangeslider.js"></script>
-
-	<!-- ragrslider js -->
-	<script src="assets/js/mixitup.min.js"></script>
-
-	<!-- theme js -->
-	<script src="assets/js/theme.js"></script>
-
-	<!-- scroll js -->
-	<script src="assets/js/script.js"></script>
-
-
+                    if (verifyResult.status === 'success') {
+                        paymentStatus.innerHTML = `<div class="alert alert-success">Thank you! Your donation was successful.</div>`;
+                        form.reset();
+                        amountCards.forEach(c => c.classList.remove('active'));
+                    } else {
+                        paymentStatus.innerHTML = `<div class="alert alert-danger">Payment verification failed. Please contact us.</div>`;
+                    }
+                    donateBtn.disabled = false;
+                    donateBtn.innerText = 'Donate Now';
+                },
+                prefill: {
+                    name: formData.name, email: formData.email, contact: formData.phone
+                },
+                theme: { color: "#138999" },
+                modal: {
+                    ondismiss: function() {
+                        paymentStatus.innerHTML = `<div class="alert alert-warning">Payment was not completed.</div>`;
+                        donateBtn.disabled = false;
+                        donateBtn.innerText = 'Donate Now';
+                    }
+                }
+            };
+            
+            const rzp = new Razorpay(options);
+            rzp.open();
+        });
+    });
+    </script>
 </body>
-
 </html>

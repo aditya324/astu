@@ -41,6 +41,10 @@
     href="assets/css/all.min.css"
     type="text/css"
     media="all" />
+
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!-- font-flaticon CSS -->
   <link
     rel="stylesheet"
@@ -89,6 +93,12 @@
     href="assets/css/style.css"
     type="text/css"
     media="all" />
+
+     <link
+    rel="stylesheet"
+    href="./carusel.css"
+    type="text/css"
+    media="all" />
   <!-- Dropdown CSS -->
   <link
     rel="stylesheet"
@@ -108,6 +118,21 @@
     type="text/css"
     media="all" />
   <!-- modernizr js -->
+
+
+  <link
+    rel="stylesheet"
+    href="./journey.css"
+    type="text/css"
+    media="all" />
+
+
+  <link
+    rel="stylesheet"
+    href="./main.css"
+    type="text/css"
+    media="all" />
+
   <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
 
 
@@ -185,14 +210,14 @@
                   class="wow fadeInUp"
                   data-wow-delay="0.8s"
                   data-wow-duration="1s"
-                  href="service-details.html">Donatlon Now <i class="bi bi-arrow-right"></i></a>
+                  href="./donation.php">Donate Now<i class="bi bi-arrow-right"></i></a>
               </div>
               <div class="nontprts-btn slider2">
                 <a
                   class="wow fadeInUp"
                   data-wow-delay="0.8s"
                   data-wow-duration="1s"
-                  href="contact.html">Contact Now <i class="bi bi-arrow-right"></i></a>
+                  href="./contact.php">Contact Now <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div>
@@ -463,156 +488,125 @@
   <!--==================================================-->
   <!-- Start About Area -->
   <!--==================================================-->
-  <div
-    class="about-area wow fadeInUp"
-    data-wow-delay="0.3s"
-    data-wow-duration="1s">
-    <div class="container">
-      <div class="row align-items-center">
-        <!-- Left column: unchanged about‐content -->
-        <div class="col-lg-6 col-md-12">
-          <div
-            class="about-content wow fadeInLeft"
-            data-wow-delay="0.2s"
-            data-wow-duration="1s">
-            <div class="section-title">
-              <div class="section-sub-thumb">
-                <img src="assets/images/slider/banner-icon.png" alt="" />
-              </div>
-              <div class="section-sub-titile about">
-                <h4>Ready to help us</h4>
-              </div>
-              <div class="section-main-title about">
-                <h2>We believe that we can save more lifes</h2>
-              </div>
-            </div>
-            <div class="about-discription">
-              <p>
-                Welcome to Asthu Foundation, a beacon of hope and
-                transformation. Our mission is to empower communities and
-                create lasting impacts through dedicated healthcare,
-                education, and empowerment initiatives.
-              </p>
-            </div>
+  <section class="editorial-canvas">
 
-            <div class="row">
-              <div class="col-lg-6 col-md-6 col-sm-6">
-                <div class="about-list">
-                  <ul>
-                    <li>Support For Cancer Patients</li>
-                    <li>Elder Care</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-lg-6 col-md-6 col-sm-6">
-                <div class="about-list">
-                  <ul>
-                    <li>Support For Blind Children</li>
-                    <li>Rural Healthcare Infrastructure</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+    <h1 class="hero-heading">Weaving Hope Into <span>Tomorrow.</span></h1>
 
-            <!-- about info -->
-            <div class="about-info">
-              <div class="nontprts-btn about">
-                <a href="service-details.html">Donatlon Now <i class="bi bi-arrow-right"></i></a>
-              </div>
-              <div class="about-bottom">
-                <div class="about-bottom-shape">
-                  <img src="assets/images/image-68x67-modified.png" alt="" />
-                </div>
-                <div class="about-content">
-                  <h5>Dr. Chethan Raju</h5>
-                  <span>Founder and Trustee</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right column: the 4 cards -->
-        <div class="col-lg-6 col-md-12">
-          <div
-            class="about-images wow fadeInRight"
-            data-wow-delay="0.2s"
-            data-wow-duration="1s">
-            <div class="row g-4">
-              <!-- Card 1 -->
-              <div class="col-sm-6">
-                <div
-                  class="card text-white h-100"
-                  style="background-color: #e55700">
-                  <div
-                    class="card-body d-flex flex-column justify-content-center text-center">
-                    <i class="fa-solid fa-ribbon fa-3x mb-3"></i>
-                    <h5 class="card-title">Support For Cancer Patients</h5>
-                    <p class="card-text small">
-                      Fighting Cancer, Restoring Hope
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 2 -->
-              <div class="col-sm-6">
-                <div
-                  class="card text-dark h-100"
-                  style="background-color: #f7c948">
-                  <div
-                    class="card-body d-flex flex-column justify-content-center text-center">
-                    <i
-                      class="fa-solid fa-person-walking-with-cane fa-3x mb-3"
-                      style="color: white"></i>
-                    <h5 class="card-title">Support For Blind Children</h5>
-                    <p class="card-text small">
-                      Empowering Vision Beyond Sight
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 3 -->
-              <div class="col-sm-6">
-                <div
-                  class="card text-white h-100"
-                  style="background-color: #198aa5">
-                  <div
-                    class="card-body d-flex flex-column justify-content-center text-center">
-                    <i class="bi bi-person-fill display-4 mb-3"></i>
-                    <h5 class="card-title">Elder Care</h5>
-                    <p class="card-text small">
-                      Honoring Seniors, Ensuring Dignity
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 4 -->
-              <div class="col-sm-6">
-                <div
-                  class="card text-white h-100"
-                  style="background-color: #8636d3">
-                  <div
-                    class="card-body d-flex flex-column justify-content-center text-center">
-                    <i class="bi bi-house-fill display-4 mb-3"></i>
-                    <h5 class="card-title">
-                      Rural Healthcare Infrastructure
-                    </h5>
-                    <p class="card-text small">
-                      Building Healthier Futures, One Village at a Time
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="hero-image-container">
+      <div class="hero-image-stack">
+        <img src="./assets/images/2149243599.webp" alt="Hands holding soil with a young plant, representing growth and hope." id="img-default" class="active">
+        <img src="./assets/images/2832.webp" alt="A doctor provides compassionate care to a patient." id="img-cancer">
+        <img src="./assets/images/child-learning-braile (1).webp" alt="A hopeful child looking towards the future." id="img-blind">
+        <img src="./assets/images/2148962325.webp" alt="Hands of an elderly person being held with care." id="img-elder">
+        <img src="./assets/images/village-community (1).webp" alt="A vibrant village scene with a new community building." id="img-infra">
       </div>
     </div>
-  </div>
+
+    <p class="hero-description">
+      Asthu Foundation is not just an organization; it is a promise. A promise to stand with the vulnerable, to build stronger communities, and to transform lives through dedicated, compassionate action.
+    </p>
+
+    <nav class="causes-nav">
+      <div class="causes-list-container">
+        <a href="#" class="cause-link" data-image="img-cancer">
+          <div class="cause-number">01</div>
+          <div class="cause-details">
+            <h3>Support For Cancer Patients</h3>
+            <p>Providing critical care and restoring hope.</p>
+          </div>
+        </a>
+        <a href="#" class="cause-link" data-image="img-blind">
+          <div class="cause-number">02</div>
+          <div class="cause-details">
+            <h3>Vision For Blind Children</h3>
+            <p>Empowering children through specialized education.</p>
+          </div>
+        </a>
+        <a href="#" class="cause-link" data-image="img-elder">
+          <div class="cause-number">03</div>
+          <div class="cause-details">
+            <h3>Dignified Elder Care</h3>
+            <p>Honoring our seniors with compassion and support.</p>
+          </div>
+        </a>
+        <a href="#" class="cause-link" data-image="img-infra">
+          <div class="cause-number">04</div>
+          <div class="cause-details">
+            <h3>Rural Health Infrastructure</h3>
+            <p>Building the foundations for a healthier future.</p>
+          </div>
+        </a>
+      </div>
+    </nav>
+
+    <div class="donate-button-container">
+      <a href="./donation.php" class="donate-button">Donate Now</a>
+    </div>
+
+  </section>
+
+
+
+
+
+
+
   <!--==================================================-->
   <!-- End About Area -->
   <!--==================================================-->
 
+  <!-- <section class="what-we-do-section">
+    <h2 class="section-title">Our Core Missions</h2>
+
+    <div class="card-container">
+
+      <div class="ngo-card">
+        <div class="card-header"><i class="bi bi-book-half"></i></div>
+        <div class="card-body">
+          <h3 class="card-title">Enlighten</h3>
+          <p class="card-description">Providing visually impaired children with access to specialized education and assistive technology.</p>
+          <div class="card-button-wrapper"><a href="#" class="card-button">Learn More</a></div>
+        </div>
+      </div>
+
+      <div class="ngo-card">
+        <div class="card-header"><i class="bi bi-heart-pulse-fill"></i></div>
+        <div class="card-body">
+          <h3 class="card-title">Hope</h3>
+          <p class="card-description">Offering comprehensive support and financial aid, ensuring no one faces the journey against cancer alone.</p>
+          <div class="card-button-wrapper"><a href="#" class="card-button">Learn More</a></div>
+        </div>
+      </div>
+
+      <div class="ngo-card">
+        <div class="card-header"><i class="bi bi-house-heart-fill"></i></div>
+        <div class="card-body">
+          <h3 class="card-title">Cherish</h3>
+          <p class="card-description">Ensuring our elders live their golden years with dignity through healthcare, companionship, and safe facilities.</p>
+          <div class="card-button-wrapper"><a href="#" class="card-button">Learn More</a></div>
+        </div>
+      </div>
+
+      <div class="ngo-card">
+        <div class="card-header"><i class="bi bi-buildings-fill"></i></div>
+        <div class="card-body">
+          <h3 class="card-title">Build</h3>
+          <p class="card-description">Developing essential rural infrastructure like clean water sources and schools to foster community growth.</p>
+          <div class="card-button-wrapper"><a href="#" class="card-button">Learn More</a></div>
+        </div>
+      </div>
+
+      <div class="ngo-card">
+        <div class="card-header"><i class="bi bi-lightbulb-fill"></i></div>
+        <div class="card-body">
+          <h3 class="card-title">Empower</h3>
+          <p class="card-description">Equipping women with vocational skills and financial literacy to become leaders and break cycles of poverty.</p>
+          <div class="card-button-wrapper"><a href="#" class="card-button">Learn More</a></div>
+        </div>
+      </div>
+
+    </div>
+  </section> -->
   <!--==================================================-->
   <!-- Start Service Area -->
   <!--==================================================-->
@@ -643,19 +637,17 @@
         </div>
       </div>
       <div class="row" id="servicesRow">
-        <!-- Card 1 -->
+
         <div class="col-lg-4 col-md-6">
           <div
             class="service-single-box wow fadeInUp"
             data-wow-delay="0.2s"
             data-wow-duration="1s">
             <div class="service-thumb">
-              <img src="assets/images/service/service1.png" alt="" />
+              <img src="assets/images/2151064696.webp" alt="" />
             </div>
             <div class="service-content">
-              <!-- <div class="service-btn">
-                  <a href="#">Education</a>
-                </div> -->
+
               <h4 class="service-title">
                 <a href="#">Cancer Patient Support</a>
               </h4>
@@ -664,43 +656,25 @@
                 comprehensive assistance to those battling cancer. We aim to
                 alleviate the challenges faced by patients and their families.
               </p>
-              <!-- <div class="process-ber-plugin">
-          <div id="bar1" class="barfiller">
-            <span
-              class="fill"
-              data-percentage="70"
-              style="
-                background: rgb(22, 181, 151);
-                width: 360.691px;
-                transition: width 7s ease-in-out 0s;
-              "
-            ></span>
-          </div>
-        </div> -->
-              <!-- <div class="service-donate">
-          <p>87% Donated</p>
-          <span>$6.5987% Goals</span>
-        </div> -->
+
               <div class="donate-btn d-flex justify-content-center m-3">
-                <a href="donation.html">Donate Now</a>
+                <a href="./donation.php">Donate Now</a>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Card 2 -->
+
         <div class="col-lg-4 col-md-6">
           <div
             class="service-single-box wow fadeInUp"
             data-wow-delay="0.4s"
             data-wow-duration="1s">
             <div class="service-thumb">
-              <img src="assets/images/service/service2.png" alt="" />
+              <img src="assets/images/child-learning-braile (1).webp" alt="" />
             </div>
             <div class="service-content">
-              <!-- <div class="service-btn">
-                  <a href="#">Education</a>
-                </div> -->
+
               <h4 class="service-title">
                 <a href="#">Support For Blind Children</a>
               </h4>
@@ -709,43 +683,25 @@
                 comprehensive support programs, fostering their independence
                 and integration into society.
               </p>
-              <!-- <div class="process-ber-plugin">
-          <div id="bar2" class="barfiller">
-            <span
-              class="fill"
-              data-percentage="70"
-              style="
-                background: rgb(22, 181, 151);
-                width: 360.691px;
-                transition: width 7s ease-in-out 0s;
-              "
-            ></span>
-          </div>
-        </div> -->
-              <!-- <div class="service-donate">
-          <p>87% Donated</p>
-          <span>$6.5987% Goals</span>
-        </div> -->
+
               <div class="donate-btn d-flex justify-content-center m-3">
-                <a href="donation.html">Donate Now</a>
+                <a href="./donation.php">Donate Now</a>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Card 3 -->
+
         <div class="col-lg-4 col-md-6">
           <div
             class="service-single-box wow fadeInUp"
             data-wow-delay="0.6s"
             data-wow-duration="1s">
             <div class="service-thumb">
-              <img src="assets/images/service/service3.png" alt="" />
+              <img src="assets/images/elder-care.jpg" alt="" />
             </div>
             <div class="service-content">
-              <!-- <div class="service-btn">
-                  <a href="#">Education</a>
-                </div> -->
+
               <h4 class="service-title">
                 <a href="#">Elder Care</a>
               </h4>
@@ -754,43 +710,25 @@
                 support and ensure dignity for seniors, promoting a fulfilling
                 and respectful life.
               </p>
-              <!-- <div class="process-ber-plugin">
-          <div id="bar3" class="barfiller">
-            <span
-              class="fill"
-              data-percentage="70"
-              style="
-                background: rgb(22, 181, 151);
-                width: 360.691px;
-                transition: width 7s ease-in-out 0s;
-              "
-            ></span>
-          </div>
-        </div> -->
-              <!-- <div class="service-donate">
-          <p>87% Donated</p>
-          <span>$6.5987% Goals</span>
-        </div> -->
+
               <div class="donate-btn d-flex justify-content-center m-3">
-                <a href="donation.html">Donate Now</a>
+                <a href="./donation.php">Donate Now</a>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- EXTRA Card 4 (hidden by default) -->
+
         <div class="col-lg-4 col-md-6 extra-card mt-3">
           <div
             class="service-single-box wow fadeInUp"
             data-wow-delay="0.8s"
             data-wow-duration="1s">
             <div class="service-thumb">
-              <img src="assets/images/service/service3.png" alt="" />
+              <img src="assets/images/rural-infra.jpg" alt="" />
             </div>
             <div class="service-content">
-              <!-- <div class="service-btn">
-                  <a href="#">Health</a>
-                </div> -->
+
               <h4 class="service-title">
                 <a href="#">Rural Healthcare Infrastructure</a>
               </h4>
@@ -799,43 +737,25 @@
                 and facilities. Empowering rural communities with quality
                 medical infrastructure
               </p>
-              <!-- <div class="process-ber-plugin">
-          <div id="bar4" class="barfiller">
-            <span
-              class="fill"
-              data-percentage="70"
-              style="
-                background: rgb(22, 181, 151);
-                width: 360.691px;
-                transition: width 7s ease-in-out 0s;
-              "
-            ></span>
-          </div>
-        </div> -->
-              <!-- <div class="service-donate">
-          <p>87% Donated</p>
-          <span>$6.5987% Goals</span>
-        </div> -->
+
               <div class="donate-btn d-flex justify-content-center m-3">
-                <a href="donation.html">Donate Now</a>
+                <a href="./donation.php">Donate Now</a>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- EXTRA Card 5 (hidden by default) -->
+
         <div class="col-lg-4 col-md-6 extra-card mt-3">
           <div
             class="service-single-box wow fadeInUp"
             data-wow-delay="1s"
             data-wow-duration="1s">
             <div class="service-thumb">
-              <img src="assets/images/service/service3.png" alt="" />
+              <img src="assets/images/wmen-empoerment.jpg" alt="" />
             </div>
             <div class="service-content">
-              <!-- <div class="service-btn">
-                  <a href="#">Support</a>
-                </div> -->
+
               <h4 class="service-title">
                 <a href="#">Women Empowerment</a>
               </h4>
@@ -843,49 +763,20 @@
                 Empowering women through education, opportunity, and equality.
                 Building a future where every woman can lead and thrive.
               </p>
-              <!-- <div class="process-ber-plugin">
-          <div id="bar5" class="barfiller">
-            <span
-              class="fill"
-              data-percentage="70"
-              style="
-                background: rgb(22, 181, 151);
-                width: 360.691px;
-                transition: width 7s ease-in-out 0s;
-              "
-            ></span>
-          </div>
-        </div> -->
-              <!-- <div class="service-donate">
-          <p>87% Donated</p>
-          <span>$6.5987% Goals</span>
-        </div> -->
+
               <div class="donate-btn d-flex justify-content-center m-3">
-                <a href="donation.html">Donate Now</a>
+                <a href="./donation.php">Donate Now</a>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- View More Button -->
+
       <div class="text-center mt-4">
         <button id="viewMoreBtn" class="view-morebtn">View More</button>
       </div>
-      <!-- <div class="row">
-          <div class="col-lg-12">
-            <div
-              class="service-text wow fadeInUp"
-              data-wow-delay="0.8s"
-              data-wow-duration="1s"
-            >
-              <h4>
-                We work creatively and specially for our client
-                <a href="#">Check Our Work</a>
-              </h4>
-            </div>
-          </div>
-        </div> -->
+
     </div>
   </div>
 
@@ -1425,7 +1316,7 @@
                   support, and change where it's needed most
                 </p>
                 <div class="service-item-btn">
-                  <a href="service-details.html">Read More</a>
+                  <a href="./volunteer-form.php">Read More</a>
                 </div>
               </div>
             </div>
@@ -1448,7 +1339,7 @@
                   build a better tomorrow — together.
                 </p>
                 <div class="service-item-btn">
-                  <a href="service-details.html">Read More</a>
+                  <a href="./associate_form.php">Read More</a>
                 </div>
               </div>
             </div>
@@ -1471,7 +1362,7 @@
                   believes in hope again.
                 </p>
                 <div class="service-item-btn">
-                  <a href="service-details.html">Read More</a>
+                  <a href="./donation.php">Read More</a>
                 </div>
               </div>
             </div>
@@ -2014,6 +1905,50 @@
       </div>
     </div>
   </div>
+
+  <section class="success-stories-section">
+
+    <h2 class="section-title">Success Stories</h2>
+
+    <div class="swiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="story-card-content">
+            <div class="story-text">
+              <h3>Ravi Devangan</h3>
+              <p>Ravi's life was transformed through our prosthetic support program, allowing him to regain mobility and confidence.</p>
+              <a href="#" class="story-button">Read More</a>
+            </div>
+            <div class="story-image" style="background-image: url('https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=1974&auto=format&fit=crop');"></div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="story-card-content">
+            <div class="story-text">
+              <h3>Ankit Gupta</h3>
+              <p>With access to quality healthcare provided by our rural initiatives, Ankit's family now lives a healthier, happier life.</p>
+              <a href="#" class="story-button">Read More</a>
+            </div>
+            <div class="story-image" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop');"></div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="story-card-content">
+            <div class="story-text">
+              <h3>Maria Silva</h3>
+              <p>Maria's journey began with uncertainty, but through vocational training, she now runs her own successful local business.</p>
+              <a href="#" class="story-button">Read More</a>
+            </div>
+            <div class="story-image" style="background-image: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop');"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
   <!--==================================================-->
   <!-- End Sidebar Area -->
   <!--==================================================-->
@@ -2067,7 +2002,29 @@
   <!--==================================================-->
   <!-- End scrollup section Area -->
   <!--==================================================-->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+  <script>
+    var swiper = new Swiper(".swiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      loop: true,
+      coverflowEffect: {
+        rotate: 0, // Set rotate to 0 for a flat, non-3D look
+        stretch: 80,
+        depth: 200,
+        modifier: 1,
+        slideShadows: true,
+      },
+      // Optional: Add navigation buttons if you want them
+      // navigation: {
+      //   nextEl: '.swiper-button-next',
+      //   prevEl: '.swiper-button-prev',
+      // },
+    });
+  </script>
   <!-- jquery js -->
   <script src="assets/js/vendor/jquery-3.6.2.min.js"></script>
 
@@ -2159,6 +2116,32 @@
         };
 
         updateCount();
+      });
+    });
+  </script>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const causeLinks = document.querySelectorAll('.cause-link');
+      const imageStack = document.querySelector('.hero-image-stack');
+      const defaultImage = document.getElementById('img-default');
+
+      causeLinks.forEach(link => {
+        const targetImageId = link.dataset.image;
+        const targetImage = document.getElementById(targetImageId);
+
+        if (targetImage) {
+          link.addEventListener('mouseenter', () => {
+            imageStack.querySelectorAll('img').forEach(img => img.classList.remove('active'));
+            targetImage.classList.add('active');
+          });
+
+          link.addEventListener('mouseleave', () => {
+            imageStack.querySelectorAll('img').forEach(img => img.classList.remove('active'));
+            defaultImage.classList.add('active');
+          });
+        }
       });
     });
   </script>

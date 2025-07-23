@@ -3,7 +3,9 @@
 font-family: 'Josefin Sans', sans-serif;
 
 */
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 html,
 
 
@@ -26,7 +28,8 @@ body {
     font-weight: 400;
     line-height: 26px;
     text-align: left;
-    font-family: 'Josefin Sans', sans-serif;
+    /* font-family: 'Josefin Sans', sans-serif; */
+     font-family: 'Poppins', sans-serif;
 }
 
 p {
@@ -42,7 +45,8 @@ h4,
 h5,
 h6 {
     color: #334c55;
-    font-family: 'Josefin Sans', sans-serif;
+    /* font-family: 'Josefin Sans', sans-serif; */
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     margin-bottom: 0;
     line-height: 1.2;

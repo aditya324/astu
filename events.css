@@ -3,13 +3,13 @@
             --secondary-color: #0d5a66;
             --dark-text: #2c3e50;
             --light-text: #7f8c8d;
-            --bg-light: #f4f7f6; /* A slightly different light background */
+            --bg-light: #f4f7f6; 
             --white: #ffffff;
             --border-color: #e9ecef;
             --shadow: 0px 10px 30px rgba(0, 0, 0, 0.07);
             --shadow-hover: 0px 15px 40px rgba(0, 0, 0, 0.12);
             --font-body: 'Poppins', sans-serif;
-            --radius: 16px; /* A slightly larger radius for a modern look */
+            --radius: 16px; 
         }
 
         body {

@@ -417,7 +417,7 @@ header.landing .sticky-nav {
   text-decoration: none;
   font-size: 20px;
   font-weight: 500;
-  background: #DF5311;
+  background: #df5311;
   color: #fff;
   padding: 17px 30px;
   border-radius: 5px;
@@ -479,7 +479,7 @@ header.landing .sticky-nav {
 
 .nontprts-btn.safe a {
   background: #fff;
-  color: #DF5311;
+  color: #df5311;
 }
 
 .nontprts-btn.safe a:hover {
@@ -1955,13 +1955,13 @@ h4.events-title a {
   position: absolute;
   left: 0;
   bottom: -173px;
-  background: #DF5311;
+  background: #df5311;
   padding: 23px 35px;
   border-radius: 5px 5px 0 0;
 }
 
 .bratcome-text ul {
-  list-style: none; 
+  list-style: none;
 }
 
 .bratcome-text ul li {
@@ -3810,7 +3810,7 @@ span.flaticon-multiply i {
 }
 
 .view-morebtn {
-  background-color: #DF5311;
+  background-color: #df5311;
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
@@ -3818,122 +3818,126 @@ span.flaticon-multiply i {
   font-weight: 600;
 }
 
+.stats-section {
+  background-color: #f8f9fa; /* Light grey background */
+}
+.stat-box .stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #e55700; /* Accent color */
+  margin: 0;
+}
+.stat-box .stat-label {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #333;
+}
 
-  .stats-section {
-    background-color: #f8f9fa; /* Light grey background */
-  }
-  .stat-box .stat-number {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #E55700;      /* Accent color */
-    margin: 0;
-  }
-  .stat-box .stat-label {
-    margin-top: 0.5rem;
-    font-size: 1rem;
-    color: #333;
-  }
+.milestones-timeline-area {
+  padding: 80px 0;
+  position: relative;
+}
+.section-title {
+  margin-bottom: 50px;
+  text-align: center;
+}
+.section-sub-titile h4 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 10px;
+}
+.section-main-title h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #222;
+}
+.milestone-card {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  overflow: hidden; /* Important for the image corners */
+  margin: 5px;
+}
+.milestone-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Ensures images are same size and don't distort */
+}
+.milestone-content {
+  padding: 25px;
+}
+.milestone-year {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  position: relative;
+}
+/* The colorful underline */
+.milestone-year::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 50px;
+}
+/* Define colors for the underline */
+.milestone-year.color-1::after {
+  background-color: #f39c12;
+} /* Yellow */
+.milestone-year.color-2::after {
+  background-color: #e74c3c;
+} /* Red */
+.milestone-year.color-3::after {
+  background-color: #3498db;
+} /* Blue */
+.milestone-year.color-4::after {
+  background-color: #2ecc71;
+} /* Green */
+.milestone-year.color-5::after {
+  background-color: #9b59b6;
+} /* Purple */
 
+.milestone-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
 
-
-body {
-            font-family: Arial, sans-serif;
-            background-color: #ffffff;
-            color: #4a4a4a;
-        }
-        .milestones-timeline-area {
-            padding: 80px 0;
-            position: relative;
-        }
-        .section-title {
-            margin-bottom: 50px;
-            text-align: center;
-        }
-        .section-sub-titile h4 {
-            font-size: 18px;
-            font-weight: 500;
-            color: #555;
-            margin-bottom: 10px;
-        }
-        .section-main-title h2 {
-            font-size: 42px;
-            font-weight: 700;
-            color: #222;
-        }
-        .milestone-card {
-            border: 1px solid #e9ecef;
-            border-radius: 8px;
-            overflow: hidden; /* Important for the image corners */
-            margin: 5px;
-        }
-        .milestone-image img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover; /* Ensures images are same size and don't distort */
-        }
-        .milestone-content {
-            padding: 25px;
-        }
-        .milestone-year {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            position: relative;
-        }
-        /* The colorful underline */
-        .milestone-year::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            height: 4px;
-            width: 50px;
-        }
-        /* Define colors for the underline */
-        .milestone-year.color-1::after { background-color: #f39c12; } /* Yellow */
-        .milestone-year.color-2::after { background-color: #e74c3c; } /* Red */
-        .milestone-year.color-3::after { background-color: #3498db; } /* Blue */
-        .milestone-year.color-4::after { background-color: #2ecc71; } /* Green */
-        .milestone-year.color-5::after { background-color: #9b59b6; } /* Purple */
-
-        .milestone-description {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #555;
-        }
-        
-        /* Custom Navigation Arrows */
-        .owl-nav {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            transform: translateY(-50%);
-            display: flex;
-            justify-content: space-between;
-            pointer-events: none; /* Allows clicks to go through to the carousel */
-        }
-        .owl-prev, .owl-next {
-            pointer-events: all; /* Makes only the buttons clickable */
-            background: #fff !important;
-            color: #222 !important;
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px !important;
-            transition: all 0.3s ease;
-        }
-        .owl-prev {
-            margin-left: -60px; /* Position outside the container */
-        }
-        .owl-next {
-            margin-right: -60px; /* Position outside the container */
-        }
-        .owl-prev:hover, .owl-next:hover {
-            background: #f1f1f1 !important;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
+/* Custom Navigation Arrows */
+.owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none; /* Allows clicks to go through to the carousel */
+}
+.owl-prev,
+.owl-next {
+  pointer-events: all; /* Makes only the buttons clickable */
+  background: #fff !important;
+  color: #222 !important;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px !important;
+  transition: all 0.3s ease;
+}
+.owl-prev {
+  margin-left: -60px; /* Position outside the container */
+}
+.owl-next {
+  margin-right: -60px; /* Position outside the container */
+}
+.owl-prev:hover,
+.owl-next:hover {
+  background: #f1f1f1 !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
