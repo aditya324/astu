@@ -134,7 +134,7 @@ Tags: 	agency, Business Agency, Business Consultant, business optimization, comp
 .header-area {
   position: relative;
   background: #df5311;
-  z-index: 9;
+  z-index: 1;
 }
 
 .header-area::before {
@@ -181,7 +181,7 @@ Tags: 	agency, Business Agency, Business Consultant, business optimization, comp
 }
 
 .header-menu ul li a:hover {
-  color: #df5311;
+  color: #fff;
 }
 
 .header-menu ul li a::before {
@@ -189,7 +189,7 @@ Tags: 	agency, Business Agency, Business Consultant, business optimization, comp
   content: "";
   height: 1px;
   width: 0;
-  background: #df5311;
+  background: #fff;;
   bottom: 50px;
   right: 0;
   transition: 0.5s;
@@ -491,7 +491,7 @@ header.landing .sticky-nav {
 ===================================================*/
 
 .slider-area {
-  background: url(../images/banner/empowering-future-women-day-scaled.webp);
+  background: url(../images/banner/caner-patient-holding-hands.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -510,19 +510,19 @@ header.landing .sticky-nav {
 } */
 
 .slider-area.two {
-  background: url(../images/banner/Healthier-F.webp);
+  background: url(../images/banner/women-empoerment.jpg);
   background-size: cover;
 }
 .slider-area.three {
-  background: url(../images/banner/Untitled-design.webp);
+  background: url(../images/banner/blind-children-banner.jpg);
   background-size: cover;
 }
 .slider-area.four {
-  background: url(../images/banner/Untitled-design.webp);
+  background: url(../images/banner/elder-care-banner.jpg);
   background-size: cover;
 }
 .slider-area.five {
-  background: url(../images/banner/empowering-future-women-day-scaled.webp);
+  background: url(../images/banner/rural-healthcare-infrastructure.jpg);
   background-size: cover;
 }
 
@@ -1051,7 +1051,7 @@ h4.events-title a {
   font-size: 16px;
   font-weight: 400;
   color: #ffff;
-  background: #15c8a0;
+  background: #DF5311;
   text-decoration: none;
   padding: 19px 53px;
   position: relative;

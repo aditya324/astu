@@ -94,7 +94,7 @@
     type="text/css"
     media="all" />
 
-     <link
+  <link
     rel="stylesheet"
     href="./carusel.css"
     type="text/css"
@@ -134,7 +134,18 @@
     media="all" />
 
   <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 
 </head>
 
@@ -192,7 +203,7 @@
                   class="wow fadeInUp"
                   data-wow-delay="0.4s"
                   data-wow-duration="1s">
-                  Empowering Women,Enriching Communities
+                  Fighting Cancer, Restoring Hope
                 </h1>
               </div>
               <div class="slider-discription">
@@ -234,7 +245,7 @@
                   class="wow fadeInUp"
                   data-wow-delay="0.4s"
                   data-wow-duration="1s">
-                  Empowering villages for healthier futures!
+                  Empowering Women, Transforming Lives
                 </h1>
               </div>
               <div class="slider-discription">
@@ -242,10 +253,7 @@
                   class="wow fadeInUp"
                   data-wow-delay="0.6s"
                   data-wow-duration="1s">
-                  Asthu Foundation is committed to enhancing the healthcare
-                  infrastructure in rural areas. Our initiatives are designed
-                  to provide comprehensive medical services and improve
-                  community health
+                  Asthu Foundation is dedicated to uplifting women through skill development, health education, and self-employment programs. Our initiatives foster confidence, independence, and equal opportunities for women to lead empowered lives.
                 </p>
               </div>
               <div class="nontprts-btn slider1">
@@ -279,7 +287,7 @@
                   class="wow fadeInUp"
                   data-wow-delay="0.4s"
                   data-wow-duration="1s">
-                  abcd
+                  Lighting the Path for Every Child
                 </h1>
               </div>
               <div class="slider-discription">
@@ -287,8 +295,7 @@
                   class="wow fadeInUp"
                   data-wow-delay="0.6s"
                   data-wow-duration="1s">
-                  Nullam eu nibh vitae est tempor molestie id sed exthe.
-                  Quisque dignissim maximus ipsum metus poor the peoole ipsum.
+                  Asthu Foundation is devoted to supporting blind and visually impaired children by providing accessible education, assistive tools, and inclusive care. Our mission is to help every child thrive with dignity, confidence, and opportunity.
                 </p>
               </div>
               <div class="nontprts-btn slider1">
@@ -322,7 +329,7 @@
                   class="wow fadeInUp"
                   data-wow-delay="0.4s"
                   data-wow-duration="1s">
-                  Fighting Cancer, Restoring Hope
+                  Caring for Elders, Honoring Their Journey
                 </h1>
               </div>
               <div class="slider-discription">
@@ -330,8 +337,9 @@
                   class="wow fadeInUp"
                   data-wow-delay="0.6s"
                   data-wow-duration="1s">
-                  Nullam eu nibh vitae est tempor molestie id sed exthe.
-                  Quisque dignissim maximus ipsum metus poor the peoole ipsum.
+                  Asthu Foundation is dedicated to providing compassionate elder care through health checkups, emotional support, and community engagement. We strive to ensure our seniors live with dignity, respect, and a sense of belonging.
+
+
                 </p>
               </div>
               <div class="nontprts-btn slider1">
@@ -365,7 +373,7 @@
                   class="wow fadeInUp"
                   data-wow-delay="0.4s"
                   data-wow-duration="1s">
-                  Fighting Cancer, Restoring Hope
+                  Building Stronger Villages, Brick by Brick
                 </h1>
               </div>
               <div class="slider-discription">
@@ -373,8 +381,7 @@
                   class="wow fadeInUp"
                   data-wow-delay="0.6s"
                   data-wow-duration="1s">
-                  Nullam eu nibh vitae est tempor molestie id sed exthe.
-                  Quisque dignissim maximus ipsum metus poor the peoole ipsum.
+                  Asthu Foundation is committed to strengthening rural infrastructure by improving access to clean water, sanitation, roads, and community spaces. Our efforts aim to create sustainable, self-reliant villages with better living conditions and brighter futures.
                 </p>
               </div>
               <div class="nontprts-btn slider1">
@@ -896,7 +903,7 @@
       <!-- Upcoming Events -->
       <section class="py-5 bg-light">
         <div class="container">
-          <h2 class="text-center fw-bold mb-4">Events</h2>
+
 
           <!-- Nav tabs -->
           <ul class="nav nav-tabs mb-4 justify-content-center" id="eventTabs" role="tablist">
@@ -1626,13 +1633,13 @@
                 <img src="assets/images/resource/safe-life-icon.png" alt="" />
               </div>
               <div class="section-sub-titile safe">
-                <h4>Raising Your Helping Hands</h4>
+                <h4>Lend a Hand, Light a Life</h4>
               </div>
               <div class="section-main-title safe">
-                <h2>Welcome To Save Life And Make A Positive Impact</h2>
+                <h2>Empowering Lives. Creating Hope. Together with Astu</h2>
               </div>
               <div class="nontprts-btn safe">
-                <a href="service-details.html">Donatlon Now <i class="bi bi-arrow-right"></i></a>
+                <a href="./donation.php">Donate Now <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div>
@@ -1810,101 +1817,7 @@
   <!--==================================================-->
   <!-- Start Sidebar Area -->
   <!--==================================================-->
-  <div class="sidebar-group info-group">
-    <div class="sidebar-widget">
-      <div class="sidebar-widget-container">
-        <div class="widget-heading">
-          <a href="#" class="close-side-widget">
-            <i class="bi bi-x-lg"></i>
-          </a>
-        </div>
-        <div class="sidebar-textwidget">
-          <div class="sidebar-info-contents">
-            <div class="content-inner">
-              <div class="sidebar-logo">
-                <a href="index.html"><img src="assets/images/footer-logo.png" alt="logo" /></a>
-              </div>
-              <div class="sidebar-widget-menu">
-                <ul>
-                  <li class="dropdown">
-                    <a href="#" data-toggle="dropdown">Home <i class="icon-arrow"></i></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="index.html">Home </a></li>
-                      <li><a href="landing.html">Home Landing</a></li>
-                      <li><a href="video.html">Home Video</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a href="about.html" data-toggle="dropdown">About</a>
-                  </li>
-                  <li class="dropdown">
-                    <a href="donation.html" data-toggle="dropdown">Donation</a>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#project" data-toggle="dropdown">Pages <i class="icon-arrow"></i></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="service.html">Service</a></li>
-                      <li>
-                        <a href="service-details.html">Service Details</a>
-                      </li>
-                      <li><a href="team.html">Team</a></li>
-                      <li><a href="team-detials.html">Team Details</a></li>
-                      <li><a href="faq.html">Faq Page</a></li>
-                      <li><a href="contact.html">Contact</a></li>
-                      <li><a href="error.html">Error Page</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#" data-toggle="dropdown">News <i class="icon-arrow"></i></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="blog.html">Blog</a></li>
-                      <li><a href="blog-details.html">Blog Details</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a href="contact.html" data-toggle="dropdown">Contacts</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="contact-info">
-                <h2>Contact Info</h2>
-                <ul class="list-style-one">
-                  <li>
-                    <i class="bi bi-geo-alt-fill"></i>6391 Elgin St. Celina,
-                    Delaware
-                  </li>
-                  <li>
-                    <i class="bi bi-telephone-fill"></i>(+001) 123-456-789
-                  </li>
-                  <li><i class="bi bi-envelope"></i> info@example.com</li>
-                  <li>
-                    <i class="bi bi-alarm-fill"></i> Week Days: 08.00 to 10.00
-                  </li>
-                </ul>
-              </div>
-              <ul class="social-box">
-                <li class="facebook">
-                  <a href="#" class="fab fa-facebook-f"></a>
-                </li>
-                <li class="twitter">
-                  <a href="#" class="fab fa-instagram"></a>
-                </li>
-                <li class="linkedin">
-                  <a href="#" class="fab fa-twitter"></a>
-                </li>
-                <li class="instagram">
-                  <a href="#" class="fab fa-pinterest-p"></a>
-                </li>
-                <li class="youtube">
-                  <a href="#" class="fab fa-linkedin-in"></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+
 
   <section class="success-stories-section">
 

@@ -42,6 +42,11 @@
         text-decoration: none;
         font-weight: 600;
     }
+
+
+
+    /* New class for the sticky and transparent header */
+
 </style>
 
 <body>
@@ -62,7 +67,7 @@
                             <ul>
                                 <li><a href="/">Home</a></li>
                                 <li><a href="about.php">About</a></li>
-                      
+
                                 <!-- <li>
                                     <a href="service.php">Service <i class="bi bi-chevron-down"></i></a>
                                     <div class="sub-menu">
@@ -79,15 +84,16 @@
                                 </li> -->
                                 <li><a href="service.php">Service</li>
                                 <li><a href="events.php">Events</li>
-                                <li>
-                                    <a href="blogs.php">Blogs <i class="bi bi-chevron-down"></i></a>
+                                 <li><a href="blog.html">Blogs</li>
+                                <!-- <li>
+                                    <a href="blog.html">Blogs <i class="bi bi-chevron-down"></i></a>
                                     <div class="sub-menu">
-                                        <!-- <ul>
+                                        <ul>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="blog-details.html">Blog Details</a></li>
-                  </ul> -->
+                  </ul>
                                     </div>
-                                </li>
+                                </li> -->
                                 <li><a href="contact.html">Contacts</a></li>
                             </ul>
                         </div>
@@ -106,7 +112,7 @@
     <div class="mobile-menu-area sticky-menu" id="navbar">
         <div class="mobile-menu">
             <div class="mobile-logo">
-                <a href="index.html"><img src="assets/images/logo.png" alt=""></a>
+                <a href="index.html"><img src="assets/images/astu-logo.png" alt=""></a>
             </div>
             <div class="side-menu-info">
                 <div class="sidebar-menu">
@@ -132,48 +138,43 @@
                     <div class="sidebar-info-contents">
                         <div class="content-inner">
                             <div class="sidebar-logo">
-                                <a href="index.html"><img src="assets/images/footer-logo.png" alt="logo"></a>
+                                <a href="index.html"><img src="assets/images/astu-logo.png" alt="logo"></a>
                             </div>
                             <div class="sidebar-widget-menu">
                                 <ul>
-                                    <li class="dropdown"><a href="#" data-toggle="dropdown">Home <i
-                                                class="icon-arrow"></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="index.html">Home </a></li>
-                                            <li><a href="landing.html">Home Landing</a></li>
-                                            <li><a href="video.html">Home Video</a></li>
-                                        </ul>
-                                    </li>
+                                    <li class="dropdown"><a href="/" data-toggle="dropdown">Home</a></li>
                                     <li class="dropdown"><a href="about.html" data-toggle="dropdown">About</a></li>
                                     <li class="dropdown"><a href="donation.html" data-toggle="dropdown">Donation</a></li>
-                                    <li class="dropdown"><a href="#project" data-toggle="dropdown">Pages <i class="icon-arrow"></i></a>
+                                    <li class="dropdown"><a href="./events.php" data-toggle="dropdown">Events</a></li>
+
+                                    <!-- <li class="dropdown"><a href="#project" data-toggle="dropdown">Pages <i class="icon-arrow"></i></a>
                                         <ul class="dropdown-menu">
                                             <li><a href="service.html">Service</a></li>
                                             <li><a href="service-details.html">Service Details</a></li>
                                             <li><a href="team.html">Team</a></li>
                                             <li><a href="team-detials.html">Team Details</a></li>
                                             <li><a href="faq.html">Faq Page</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="contact.php">Contact</a></li>
                                             <li><a href="error.html">Error Page</a></li>
                                         </ul>
-                                    </li>
-                                    <li class="dropdown"><a href="#" data-toggle="dropdown">News <i class="icon-arrow"></i></a>
+                                    </li> -->
+                                    <!-- <li class="dropdown"><a href="#" data-toggle="dropdown">News <i class="icon-arrow"></i></a>
                                         <ul class="dropdown-menu">
                                             <li><a href="blog.html">Blog</a></li>
                                             <li><a href="blog-details.html">Blog Details</a></li>
                                         </ul>
-                                    </li>
-                                    <li class="dropdown"><a href="contact.html" data-toggle="dropdown">Contacts</a></li>
+                                    </li> -->
+                                    <li class="dropdown"><a href="./blog.html" data-toggle="dropdown">Blogs</a></li>
+                                    <li class="dropdown"><a href="./contact.php" data-toggle="dropdown">contact</a></li>
                                 </ul>
                             </div>
                             <div class="contact-info">
                                 <h2>Contact Info</h2>
                                 <ul class="list-style-one">
                                     <li><i class="bi bi-geo-alt-fill"></i>6391 Elgin St. Celina, Delaware</li>
-                                    <li><i class="bi bi-telephone-fill"></i>(+001) 123-456-789</li>
-                                    <li><i class="bi bi-envelope"></i> info@example.com</li>
-                                    <li><i class="bi bi-alarm-fill"></i> Week Days: 08.00 to 10.00
-                                    </li>
+                                    <li><a href="tel:+919071115255" style="color:white"><i class="fa-solid fa-phone" style="color:white"></i>+919071115255</a></li>
+                                    <li><a href="mailto:contact@asthufoundation.org" style="color:white"><i class="fa-solid fa-envelope" ></i> contact@asthufoundation.org</a></li>
+                                    <li> <a href="https://wa.me/919071115255" target="_blank" rel="noopener noreferrer" style="color:white"><i class="fa-brands fa-whatsapp"></i>+919071115255</a></li>
                                 </ul>
                             </div>
                             <ul class="social-box">

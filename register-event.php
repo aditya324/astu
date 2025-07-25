@@ -53,10 +53,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $submitted_event_id = (int)$_POST['event_id'];
 
     // The event title is already known from the GET request logic above
-    
+
     // --- DATABASE INSERTION ---
     $sql = "INSERT INTO event_registrations (event_id, event_name, registrant_name, registrant_email, registrant_phone) VALUES (?, ?, ?, ?, ?)";
-    
+
     if ($stmt = $conn->prepare($sql)) {
         // Bind all 5 parameters correctly
         $stmt->bind_param("issss", $submitted_event_id, $event_title, $registrant_name, $registrant_email, $registrant_phone);
@@ -83,10 +83,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $mail->isHTML(true);
                 $mail->Subject = 'New Event Registration: ' . htmlspecialchars($event_title);
                 $mail->Body    = "<h2>New Registration for: " . htmlspecialchars($event_title) . "</h2><p>Details:</p><ul><li>Name: " . htmlspecialchars($registrant_name) . "</li><li>Email: " . htmlspecialchars($registrant_email) . "</li><li>Phone: " . htmlspecialchars($registrant_phone) . "</li></ul>";
-                
+
                 $mail->send();
                 $_SESSION['form_status'] = ['type' => 'success', 'message' => 'Thank you for registering! We have received your details.'];
-
             } catch (Exception $e) {
                 $_SESSION['form_status'] = ['type' => 'warning', 'message' => 'Registration successful, but the notification email failed.'];
             }
@@ -104,51 +103,172 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Register for an Event</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-</head>
+
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <title>Nonpro-Nonprofit Charity HTML5 Template</title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- Favicon -->
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="56x56"
+            href="assets/images/fav-icon/icon.png" />
+        <!-- bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="assets/css/bootstrap.min.css"
+            type="text/css"
+            media="all" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+        <!-- carousel CSS -->
+        <link
+            rel="stylesheet"
+            href="assets/css/owl.carousel.min.css"
+            type="text/css"
+            media="all" />
+        <!-- animate CSS -->
+        <link
+            rel="stylesheet"
+            href="assets/css/animate.css"
+            type="text/css"
+            media="all" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+        <!-- font-awesome CSS -->
+        <link
+            rel="stylesheet"
+            href="assets/css/all.min.css"
+            type="text/css"
+            media="all" />
+        <!-- font-flaticon CSS -->
+        <link
+            rel="stylesheet"
+            href="assets/css/flaticon.css"
+            type="text/css"
+            media="all" />
+        <!-- theme-default CSS -->
+        <link
+            rel="stylesheet"
+            href="assets/css/theme-default.css"
+            type="text/css"
+            media="all" />
+        <!-- meanmenu CSS -->
+        <link
+            rel="stylesheet"
+            href="assets/css/meanmenu.min.css"
+            type="text/css"
+            media="all" />
+        <!-- transitions CSS -->
+        <link
+            rel="stylesheet"
+            href="assets/css/owl.transitions.css"
+            type="text/css"
+            media="all" />
+        <!-- venobox CSS -->
+        <link
+            rel="stylesheet"
+            href="venobox/venobox.css"
+            type="text/css"
+            media="all" />
+        <!-- bootstrap icons -->
+        <link
+            rel="stylesheet"
+            href="assets/css/bootstrap-icons.css"
+            type="text/css"
+            media="all" />
+        <!-- Slick Slider -->
+        <link rel="stylesheet" type="text/css" href="assets/slick/slick.css" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="assets/slick/slick-theme.css" />
+        <!-- Main Style CSS -->
+        <link
+            rel="stylesheet"
+            href="assets/css/style.css"
+            type="text/css"
+            media="all" />
+        <!-- Dropdown CSS -->
+        <link
+            rel="stylesheet"
+            href="assets/css/dropdown.css"
+            type="text/css"
+            media="all" />
+        <!-- responsive CSS -->
+        <link
+            rel="stylesheet"
+            href="assets/css/responsive.css"
+            type="text/css"
+            media="all" />
+        <!-- rangeslider CSS -->
+        <link
+            rel="stylesheet"
+            href="assets/css/rangeslider.css"
+            type="text/css"
+            media="all" />
+        <!-- modernizr js -->
+        <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
+
+
+
+    </head>
+
 <body class="bg-light">
+    <?php require "header.php" ?>
 
-<div class="container mt-5">
-    <div class="col-md-8 mx-auto">
-        <div class="text-center">
-            <h5 class="text-muted">You are registering for the event:</h5>
-            <h2 class="mb-4"><?= htmlspecialchars($event_title) ?></h2>
+    <div class="container mt-5">
+        <div class="col-md-8 mx-auto">
+            <div class="text-center">
+                <h5 class="text-muted">You are registering for the event:</h5>
+                <h2 class="mb-4"><?= htmlspecialchars($event_title) ?></h2>
+            </div>
+
+            <?php
+            // Display the success or error message
+            if (isset($_SESSION['form_status'])) {
+                $status = $_SESSION['form_status'];
+                echo '<div class="alert alert-' . htmlspecialchars($status['type']) . '">' . htmlspecialchars($status['message']) . '</div>';
+                unset($_SESSION['form_status']); // Clear message after displaying
+            }
+            ?>
+
+            <form action="<?= htmlspecialchars($_SERVER['REQUEST_URI']); ?>" method="POST" style="margin: 10px;">
+
+                <input type="hidden" name="event_id" value="<?= (int)$event_id ?>">
+
+                <div class="mb-3">
+                    <label for="registrant_name" class="form-label" style="color:black">Full Name</label>
+                    <input type="text" class="form-control" name="registrant_name" id="registrant_name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="registrant_email" class="form-label" style="color: black;">Email ID</label>
+                    <input type="email" class="form-control" name="registrant_email" id="registrant_email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="registrant_phone" class="form-label" style="color: black;">Phone Number</label>
+                    <input type="tel" class="form-control" name="registrant_phone" id="registrant_phone" required>
+                </div>
+                <div class="d-grid mt-4">
+                    <button type="submit" class="btn btn-success btn-lg" style="background-color: #DF5311; color:white">Complete Registration</button>
+                </div>
+            </form>
         </div>
-        
-        <?php
-        // Display the success or error message
-        if (isset($_SESSION['form_status'])) {
-            $status = $_SESSION['form_status'];
-            echo '<div class="alert alert-' . htmlspecialchars($status['type']) . '">' . htmlspecialchars($status['message']) . '</div>';
-            unset($_SESSION['form_status']); // Clear message after displaying
-        }
-        ?>
-
-        <form action="<?= htmlspecialchars($_SERVER['REQUEST_URI']); ?>" method="POST">
-            
-            <input type="hidden" name="event_id" value="<?= (int)$event_id ?>">
-
-            <div class="mb-3">
-                <label for="registrant_name" class="form-label">Full Name</label>
-                <input type="text" class="form-control" name="registrant_name" id="registrant_name" required>
-            </div>
-            <div class="mb-3">
-                <label for="registrant_email" class="form-label">Email ID</label>
-                <input type="email" class="form-control" name="registrant_email" id="registrant_email" required>
-            </div>
-            <div class="mb-3">
-                <label for="registrant_phone" class="form-label">Phone Number</label>
-                <input type="tel" class="form-control" name="registrant_phone" id="registrant_phone" required>
-            </div>
-            <div class="d-grid mt-4">
-                <button type="submit" class="btn btn-success btn-lg">Complete Registration</button>
-            </div>
-        </form>
     </div>
-</div>
+
+    <?php require "footer.php" ?>
 
 </body>
+
 </html>

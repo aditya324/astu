@@ -158,7 +158,7 @@ $events = $stmt->get_result();
                                             <span><i class="bi bi-geo-alt"></i> <?= htmlspecialchars($row['venue']) ?></span>
                                         </div>
                                         <p class="event-description">Join us for this exciting event. Your participation and support are vital for our cause and help us make a significant impact.</p>
-                                        <a href="event-details.php?id=<?= (int)$row['id'] ?>" class="details-btn-vertical">View Details</a>
+                                        <a href="register-event.php?event_id=<?= (int)$row['id'] ?>" class="details-btn-vertical">View Details</a>
                                     </div>
                                 </div>
                             </div>

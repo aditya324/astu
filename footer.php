@@ -1,4 +1,39 @@
-<div class="footer-area">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+
+  <style>
+    .footer-wiget-menu p a {
+      display: flex;
+      /* Arrange icon and text in a row */
+      align-items: center;
+      color: white;
+      /* Vertically align icon and text */
+      text-decoration: none;
+      /* Remove default link underline */
+
+      /* Inherit text color from parent */
+    }
+
+    .footer-wiget-menu p i {
+      margin-right: 10px;
+      /* Add spacing between the icon and text */
+      width: 20px;
+      /* Ensure icons have a consistent width */
+      text-align: center;
+
+      /* Center the icon within its container */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="footer-area">
     <div class="container">
       <div class="row align-items-center mb-100">
         <div class="col-lg-8 col-md-12">
@@ -6,7 +41,7 @@
             class="footer-content wow fadeInUp"
             data-wow-delay="0.4s"
             data-wow-duration="1s">
-            <h2>Looking for the Best Dream Home Solutions?</h2>
+            <h2>Ready to Help Build a Better Future for All?</h2>
             <p>As a app web crawler expert, We will help to organize.</p>
           </div>
         </div>
@@ -16,7 +51,7 @@
             data-wow-delay="0.5s"
             data-wow-duration="1s">
             <div class="nontprts-btn safe">
-              <a href="service-details.html">Donatlon Now <i class="bi bi-arrow-right"></i></a>
+              <a href="./donation.php">Donate Now <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
         </div>
@@ -28,7 +63,7 @@
             data-wow-delay="0.2s"
             data-wow-duration="1s">
             <div class="footer-wiget-log">
-              <a href="index.html"><img src="assets/images/footer-logo.png" alt="" /></a>
+              <a href="index.php"><img src="assets/images/astu-logo.png" alt="" /></a>
             </div>
             <div class="footer-wiget-text">
               <h4>
@@ -68,23 +103,19 @@
             <div class="footer-wiget-menu">
               <ul>
                 <li>
-                  <a href="#"><i class="bi bi-chevron-double-right"></i> Airplane
-                    Fright</a>
+                  <a href="/index.php"><i class="bi bi-chevron-double-right"></i> Home</a>
                 </li>
                 <li>
-                  <a href="#"><i class="bi bi-chevron-double-right"></i> About Portx</a>
+                  <a href="./about.php"><i class="bi bi-chevron-double-right"></i> About </a>
                 </li>
                 <li>
-                  <a href="#"><i class="bi bi-chevron-double-right"></i> Meet the
-                    Team</a>
+                  <a href="./events.php"><i class="bi bi-chevron-double-right"></i>Events</a>
                 </li>
                 <li>
-                  <a href="#"><i class="bi bi-chevron-double-right"></i> News &
-                    Media</a>
+                  <a href="./blog.html"><i class="bi bi-chevron-double-right"></i> Blogs</a>
                 </li>
                 <li>
-                  <a href="#"><i class="bi bi-chevron-double-right"></i> Our
-                    Projects</a>
+                  <a href="./contact.php"><i class="bi bi-chevron-double-right"></i>Contact</a>
                 </li>
               </ul>
             </div>
@@ -96,10 +127,10 @@
             data-wow-delay="0.6s"
             data-wow-duration="1s">
             <div class="footer-wiget-title">
-              <h4>Our Service</h4>
+              <h4>Contact Details</h4>
             </div>
             <div class="footer-wiget-menu">
-              <ul>
+              <!-- <ul>
                 <li>
                   <a href="#"><i class="bi bi-chevron-double-right"></i> Reliability &
                     Punctuality</a>
@@ -120,7 +151,18 @@
                   <a href="#"><i class="bi bi-chevron-double-right"></i> Transparent
                     Pricing</a>
                 </li>
-              </ul>
+              </ul> -->
+
+
+              <p>
+                <a href="tel:+919071115255"><i class="fa-solid fa-phone"></i>+919071115255</a>
+              </p>
+              <p>
+                <a href="https://wa.me/919071115255" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i>+919071115255</a>
+              </p>
+              <p>
+                <a href="mailto:contact@asthufoundation.org"><i class="fa-solid fa-envelope"></i> contact@asthufoundation.org</a>
+              </p>
             </div>
           </div>
         </div>
@@ -159,3 +201,6 @@
       </div>
     </div>
   </div>
+</body>
+
+</html>

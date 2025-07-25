@@ -52,3 +52,21 @@ CREATE TABLE contact_submissions (
     message TEXT NOT NULL,
     submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+
+CREATE TABLE donations (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    phone VARCHAR(20) NOT NULL,
+    amount DECIMAL(10, 2) NOT NULL,
+    razorpay_payment_id VARCHAR(255),
+    razorpay_order_id VARCHAR(255),
+    status VARCHAR(50) DEFAULT 'pending',
+    donated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+
+
+

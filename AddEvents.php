@@ -47,8 +47,20 @@
 <body>
 	<!-- loder -->
 
+
+
+
 	<?php
-	require_once 'db.php'; // your connection file
+
+	session_start();
+
+
+
+	if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+		header("location: login.php");
+		exit;
+	}
+	require_once 'db.php';
 	require 'config.php';
 
 	$today = date('Y-m-d');
@@ -84,7 +96,7 @@
 			<div class="row justify-content-center">
 				<div class="col-lg-8">
 					<div class="card shadow-lg border-0 rounded-4 p-4">
-						<h2 class="text-center mb-4 fw-bold text-primary">🎉 Add New Event</h2>
+						<h2 class="text-center mb-4 fw-bold text-primary">Add New Event</h2>
 						<form action="submit_events.php" method="POST" enctype="multipart/form-data">
 							<!-- Event Image -->
 							<div class="mb-3">
@@ -137,97 +149,97 @@
 	</section>
 
 	<section class="py-5 bg-light">
-	<div class="container">
-		<h2 class="text-center fw-bold mb-4">📅 Events</h2>
+		<div class="container">
+			<h2 class="text-center fw-bold mb-4">📅 Events</h2>
 
-		<ul class="nav nav-tabs mb-4 justify-content-center" id="eventTabs" role="tablist">
-			<li class="nav-item" role="presentation">
-				<button class="nav-link active" id="upcoming-tab" data-bs-toggle="tab" data-bs-target="#upcoming" type="button" role="tab">Upcoming</button>
-			</li>
-			<li class="nav-item" role="presentation">
-				<button class="nav-link" id="current-tab" data-bs-toggle="tab" data-bs-target="#current" type="button" role="tab">Current</button>
-			</li>
-			<li class="nav-item" role="presentation">
-				<button class="nav-link" id="past-tab" data-bs-toggle="tab" data-bs-target="#past" type="button" role="tab">Past</button>
-			</li>
-		</ul>
+			<ul class="nav nav-tabs mb-4 justify-content-center" id="eventTabs" role="tablist">
+				<li class="nav-item" role="presentation">
+					<button class="nav-link active" id="upcoming-tab" data-bs-toggle="tab" data-bs-target="#upcoming" type="button" role="tab">Upcoming</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link" id="current-tab" data-bs-toggle="tab" data-bs-target="#current" type="button" role="tab">Current</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link" id="past-tab" data-bs-toggle="tab" data-bs-target="#past" type="button" role="tab">Past</button>
+				</li>
+			</ul>
 
-		<div class="tab-content" id="eventTabsContent">
+			<div class="tab-content" id="eventTabsContent">
 
-			<!-- Upcoming Events -->
-			<div class="tab-pane fade show active" id="upcoming" role="tabpanel">
-				<div class="row g-4">
-					<?php if ($upcoming->num_rows > 0): ?>
-						<?php while ($row = $upcoming->fetch_assoc()): ?>
-							<div class="col-md-6 col-lg-4">
-								<div class="card h-100 shadow-sm">
-									<img src="<?= BASE_URL . htmlspecialchars($row['image_path']) ?>" class="card-img-top" alt="Event Image">
-									<div class="card-body">
-										<h5 class="card-title"><?= htmlspecialchars($row['title']) ?></h5>
-										<p class="card-text"><?= nl2br(htmlspecialchars($row['description'])) ?></p>
-										<p class="mb-1"><strong>Date:</strong> <?= $row['event_date'] ?></p>
-										<p class="mb-1"><strong>Time:</strong> <?= $row['event_time'] ?></p>
-										<p class="mb-0"><strong>Venue:</strong> <?= htmlspecialchars($row['venue']) ?></p>
+				<!-- Upcoming Events -->
+				<div class="tab-pane fade show active" id="upcoming" role="tabpanel">
+					<div class="row g-4">
+						<?php if ($upcoming->num_rows > 0): ?>
+							<?php while ($row = $upcoming->fetch_assoc()): ?>
+								<div class="col-md-6 col-lg-4">
+									<div class="card h-100 shadow-sm">
+										<img src="<?= BASE_URL . htmlspecialchars($row['image_path']) ?>" class="card-img-top" alt="Event Image">
+										<div class="card-body">
+											<h5 class="card-title"><?= htmlspecialchars($row['title']) ?></h5>
+											<p class="card-text"><?= nl2br(htmlspecialchars($row['description'])) ?></p>
+											<p class="mb-1"><strong>Date:</strong> <?= $row['event_date'] ?></p>
+											<p class="mb-1"><strong>Time:</strong> <?= $row['event_time'] ?></p>
+											<p class="mb-0"><strong>Venue:</strong> <?= htmlspecialchars($row['venue']) ?></p>
+										</div>
 									</div>
 								</div>
-							</div>
-						<?php endwhile; ?>
-					<?php else: ?>
-						<p class="text-muted text-center">No upcoming events.</p>
-					<?php endif; ?>
+							<?php endwhile; ?>
+						<?php else: ?>
+							<p class="text-muted text-center">No upcoming events.</p>
+						<?php endif; ?>
+					</div>
 				</div>
-			</div>
 
-			<!-- Current Events -->
-			<div class="tab-pane fade" id="current" role="tabpanel">
-				<div class="row g-4">
-					<?php if ($current->num_rows > 0): ?>
-						<?php while ($row = $current->fetch_assoc()): ?>
-							<div class="col-md-6 col-lg-4">
-								<div class="card h-100 shadow-sm">
-									<img src="<?= BASE_URL . htmlspecialchars($row['image_path']) ?>" class="card-img-top" alt="Event Image">
-									<div class="card-body">
-										<h5 class="card-title"><?= htmlspecialchars($row['title']) ?></h5>
-										<p class="card-text"><?= nl2br(htmlspecialchars($row['description'])) ?></p>
-										<p class="mb-1"><strong>Time:</strong> <?= $row['event_time'] ?></p>
-										<p class="mb-1"><strong>Date:</strong> <?= $row['event_date'] ?></p>
-										<p class="mb-0"><strong>Venue:</strong> <?= htmlspecialchars($row['venue']) ?></p>
+				<!-- Current Events -->
+				<div class="tab-pane fade" id="current" role="tabpanel">
+					<div class="row g-4">
+						<?php if ($current->num_rows > 0): ?>
+							<?php while ($row = $current->fetch_assoc()): ?>
+								<div class="col-md-6 col-lg-4">
+									<div class="card h-100 shadow-sm">
+										<img src="<?= BASE_URL . htmlspecialchars($row['image_path']) ?>" class="card-img-top" alt="Event Image">
+										<div class="card-body">
+											<h5 class="card-title"><?= htmlspecialchars($row['title']) ?></h5>
+											<p class="card-text"><?= nl2br(htmlspecialchars($row['description'])) ?></p>
+											<p class="mb-1"><strong>Time:</strong> <?= $row['event_time'] ?></p>
+											<p class="mb-1"><strong>Date:</strong> <?= $row['event_date'] ?></p>
+											<p class="mb-0"><strong>Venue:</strong> <?= htmlspecialchars($row['venue']) ?></p>
+										</div>
 									</div>
 								</div>
-							</div>
-						<?php endwhile; ?>
-					<?php else: ?>
-						<p class="text-muted text-center">No current events.</p>
-					<?php endif; ?>
+							<?php endwhile; ?>
+						<?php else: ?>
+							<p class="text-muted text-center">No current events.</p>
+						<?php endif; ?>
+					</div>
 				</div>
-			</div>
 
-			<!-- Past Events -->
-			<div class="tab-pane fade" id="past" role="tabpanel">
-				<div class="row g-4">
-					<?php if ($past->num_rows > 0): ?>
-						<?php while ($row = $past->fetch_assoc()): ?>
-							<div class="col-md-6 col-lg-4">
-								<div class="card h-100 shadow-sm">
-									<img src="<?= BASE_URL . htmlspecialchars($row['image_path']) ?>" class="card-img-top" alt="Event Image">
-									<div class="card-body">
-										<h5 class="card-title"><?= htmlspecialchars($row['title']) ?></h5>
-										<p class="card-text"><?= nl2br(htmlspecialchars($row['description'])) ?></p>
-										<p class="mb-1"><strong>Date:</strong> <?= $row['event_date'] ?></p>
-										<p class="mb-1"><strong>Time:</strong> <?= $row['event_time'] ?></p>
-										<p class="mb-0"><strong>Venue:</strong> <?= htmlspecialchars($row['venue']) ?></p>
+				<!-- Past Events -->
+				<div class="tab-pane fade" id="past" role="tabpanel">
+					<div class="row g-4">
+						<?php if ($past->num_rows > 0): ?>
+							<?php while ($row = $past->fetch_assoc()): ?>
+								<div class="col-md-6 col-lg-4">
+									<div class="card h-100 shadow-sm">
+										<img src="<?= BASE_URL . htmlspecialchars($row['image_path']) ?>" class="card-img-top" alt="Event Image">
+										<div class="card-body">
+											<h5 class="card-title"><?= htmlspecialchars($row['title']) ?></h5>
+											<p class="card-text"><?= nl2br(htmlspecialchars($row['description'])) ?></p>
+											<p class="mb-1"><strong>Date:</strong> <?= $row['event_date'] ?></p>
+											<p class="mb-1"><strong>Time:</strong> <?= $row['event_time'] ?></p>
+											<p class="mb-0"><strong>Venue:</strong> <?= htmlspecialchars($row['venue']) ?></p>
+										</div>
 									</div>
 								</div>
-							</div>
-						<?php endwhile; ?>	
-					<?php else: ?>
-						<p class="text-muted text-center">No past events.</p>
-					<?php endif; ?>
+							<?php endwhile; ?>
+						<?php else: ?>
+							<p class="text-muted text-center">No past events.</p>
+						<?php endif; ?>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
 
 
 
@@ -308,7 +320,7 @@
 			const height = img.naturalHeight;
 
 
-			const requiredWidth =310;
+			const requiredWidth = 310;
 			const requiredHeight = 300;
 
 			if (width !== requiredWidth || height !== requiredHeight) {
