@@ -261,7 +261,7 @@
                   class="wow fadeInUp"
                   data-wow-delay="0.8s"
                   data-wow-duration="1s"
-                  href="service-details.html">Donatlon Now <i class="bi bi-arrow-right"></i></a>
+                   href="./donation.php">Donate Now<i class="bi bi-arrow-right"></i></a>
               </div>
               <div class="nontprts-btn slider2">
                 <a
@@ -303,7 +303,7 @@
                   class="wow fadeInUp"
                   data-wow-delay="0.8s"
                   data-wow-duration="1s"
-                  href="service-details.html">Donatlon Now <i class="bi bi-arrow-right"></i></a>
+                  href="./donation.php">Donate Now<i class="bi bi-arrow-right"></i></a>
               </div>
               <div class="nontprts-btn slider2">
                 <a
@@ -347,7 +347,7 @@
                   class="wow fadeInUp"
                   data-wow-delay="0.8s"
                   data-wow-duration="1s"
-                  href="service-details.html">Donatlon Now <i class="bi bi-arrow-right"></i></a>
+                  href="./donation.php">Donate Now<i class="bi bi-arrow-right"></i></a>
               </div>
               <div class="nontprts-btn slider2">
                 <a
@@ -389,7 +389,7 @@
                   class="wow fadeInUp"
                   data-wow-delay="0.8s"
                   data-wow-duration="1s"
-                  href="service-details.html">Donatlon Now <i class="bi bi-arrow-right"></i></a>
+                   href="./donation.php">Donate Now<i class="bi bi-arrow-right"></i></a>
               </div>
               <div class="nontprts-btn slider2">
                 <a

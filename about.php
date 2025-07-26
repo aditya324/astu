@@ -143,7 +143,7 @@
 						</div>
 						<div class="about-info">
 							<div class="nontprts-btn about">
-								<a href="donate.html">Support Our Mission <i class="bi bi-arrow-right"></i></a>
+								<a href="./donation.php">Support Our Mission <i class="bi bi-arrow-right"></i></a>
 							</div>
 						</div>
 					</div>
@@ -197,7 +197,7 @@
 						</div>
 						<div class="about-info">
 							<div class="nontprts-btn about">
-								<a href="contact.html">Be a Part of Our Story <i class="bi bi-arrow-right"></i></a>
+								<a href="./contact.php">Be a Part of Our Story <i class="bi bi-arrow-right"></i></a>
 							</div>
 						</div>
 					</div>

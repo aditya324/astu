@@ -67,6 +67,11 @@
 .cta-area .btn-light{
     font-weight: bold;
 }
+
+
+.btn-primary{
+    background-color:#DF5311;
+}
     </style>
 </head>
 <body>
@@ -114,7 +119,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
-                <img src="https://placehold.co/600x450/E8505B/white?text=Astu+Foundation" alt="Cancer Care Support Group" class="img-fluid rounded shadow-sm">
+                <img src="./assets/images/2151064696.webp" alt="Cancer Care Support Group" class="img-fluid rounded shadow-sm">
             </div>
             <div class="col-lg-6 mt-4 mt-lg-0">
                 <span class="service-tag">SUPPORT & CARE</span>
@@ -125,7 +130,7 @@
                     <li><i class="bi bi-check-circle-fill text-success me-2"></i>Organizing awareness and early detection camps.</li>
                     <li><i class="bi bi-check-circle-fill text-success me-2"></i>Providing counseling and emotional support.</li>
                 </ul>
-                <a href="donate.php?cause=cancer-care" class="btn btn-primary mt-3">Support This Cause</a>
+                <a href="./donation.php" class="btn btn-primary mt-3">Support This Cause</a>
             </div>
         </div>
     </div>
@@ -135,7 +140,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 order-lg-2">
-                 <img src="https://placehold.co/600x450/4B86B4/white?text=Astu+Foundation" alt="Visually Impaired Child Learning" class="img-fluid rounded shadow-sm">
+                 <img src="./assets/images/child-learning-braile (1).webp" alt="Visually Impaired Child Learning" class="img-fluid rounded shadow-sm">
             </div>
             <div class="col-lg-6 mt-4 mt-lg-0 order-lg-1">
                 <span class="service-tag">EDUCATION & INCLUSION</span>
@@ -146,7 +151,7 @@
                     <li><i class="bi bi-check-circle-fill text-success me-2"></i>Providing Braille kits, audiobooks, and assistive tech.</li>
                     <li><i class="bi bi-check-circle-fill text-success me-2"></i>Conducting skill development and mobility training.</li>
                 </ul>
-                <a href="donate.php?cause=blind-children" class="btn btn-primary mt-3">Help a Child See a Future</a>
+                <a href="/donation.php" class="btn btn-primary mt-3">Help a Child See a Future</a>
             </div>
         </div>
     </div>
@@ -156,7 +161,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
-                 <img src="https://placehold.co/600x450/5cb85c/white?text=Astu+Foundation" alt="Elderly Person Receiving Care" class="img-fluid rounded shadow-sm">
+                 <img src="./assets/images/elder-care.jpg" alt="Elderly Person Receiving Care" class="img-fluid rounded shadow-sm">
             </div>
             <div class="col-lg-6 mt-4 mt-lg-0">
                 <span class="service-tag">DIGNITY & COMPANIONSHIP</span>
@@ -167,7 +172,7 @@
                     <li><i class="bi bi-check-circle-fill text-success me-2"></i>Ensuring access to essential healthcare and nutrition.</li>
                     <li><i class="bi bi-check-circle-fill text-success me-2"></i>Providing companionship and support for daily activities.</li>
                 </ul>
-                <a href="donate.php?cause=eldercare" class="btn btn-primary mt-3">Support an Elder</a>
+                <a href="/donation.php" class="btn btn-primary mt-3">Support an Elder</a>
             </div>
         </div>
     </div>
@@ -177,7 +182,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 order-lg-2">
-                 <img src="https://placehold.co/600x450/F0AD4E/white?text=Astu+Foundation" alt="New Water Pump in a Village" class="img-fluid rounded shadow-sm">
+                 <img src="./assets/images/rural-infra.jpg" alt="New Water Pump in a Village" class="img-fluid rounded shadow-sm">
             </div>
             <div class="col-lg-6 mt-4 mt-lg-0 order-lg-1">
                 <span class="service-tag">COMMUNITY & GROWTH</span>
@@ -188,7 +193,7 @@
                     <li><i class="bi bi-check-circle-fill text-success me-2"></i>Building community centers and schools.</li>
                     <li><i class="bi bi-check-circle-fill text-success me-2"></i>Improving local roads for better connectivity.</li>
                 </ul>
-                <a href="donate.php?cause=rural-infra" class="btn btn-primary mt-3">Help Build a Village</a>
+                <a href="/donation.php" class="btn btn-primary mt-3">Help Build a Village</a>
             </div>
         </div>
     </div>
@@ -198,7 +203,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
-                 <img src="https://placehold.co/600x450/337ab7/white?text=Astu+Foundation" alt="Woman Learning a New Skill" class="img-fluid rounded shadow-sm">
+                 <img src="./assets/images/women-empowerment.webp" alt="Woman Learning a New Skill" class="img-fluid rounded shadow-sm">
             </div>
             <div class="col-lg-6 mt-4 mt-lg-0">
                 <span class="service-tag">EQUALITY & EMPOWERMENT</span>
@@ -209,7 +214,7 @@
                     <li><i class="bi bi-check-circle-fill text-success me-2"></i>Running health and legal rights awareness campaigns.</li>
                     <li><i class="bi bi-check-circle-fill text-success me-2"></i>Creating self-help groups for community support.</li>
                 </ul>
-                <a href="donate.php?cause=women-empowerment" class="btn btn-primary mt-3">Empower a Woman</a>
+                <a href="/donation.php" class="btn btn-primary mt-3">Empower a Woman</a>
             </div>
         </div>
     </div>

@@ -109,6 +109,9 @@
                   <a href="./about.php"><i class="bi bi-chevron-double-right"></i> About </a>
                 </li>
                 <li>
+                  <a href="./service.php"><i class="bi bi-chevron-double-right"></i> Service </a>
+                </li>
+                <li>
                   <a href="./events.php"><i class="bi bi-chevron-double-right"></i>Events</a>
                 </li>
                 <li>
