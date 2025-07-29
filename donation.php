@@ -134,6 +134,17 @@ $dotenv->load();
                         <div class="form-section">
                             <h2 class="mb-2">Secure Donation</h2>
                             <p class="text-muted mb-4">Your support helps us continue our mission.</p>
+
+
+                            <div class="mb-4">
+                                <div class="btn-group w-100" role="group">
+                                    <input type="radio" class="btn-check" name="donation_type" id="one-time" value="one-time" autocomplete="off" checked>
+                                    <label class="btn btn-outline-primary" for="one-time">One-Time</label>
+
+                                    <input type="radio" class="btn-check" name="donation_type" id="monthly" value="monthly" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="monthly">Monthly</label>
+                                </div>
+                            </div>
                             <div id="payment-status" class="mb-3"></div>
 
                             <form id="donation-form">
@@ -200,32 +211,31 @@ $dotenv->load();
     <script src="assets/js/vendor/jquery-3.6.2.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
 
+    // donation.php (bottom of the file)
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const form = document.getElementById('donation-form');
             const amountInput = document.getElementById('amount');
-            const amountCards = document.querySelectorAll('.amount-card'); // Changed from buttons to cards
+            const amountCards = document.querySelectorAll('.amount-card');
             const donateBtn = document.getElementById('donate-btn');
             const paymentStatus = document.getElementById('payment-status');
             const razorpayKeyId = "<?= $_ENV['RAZORPAY_KEY_ID'] ?>";
 
-            // New logic for amount selection cards
+            // Amount selection card logic (no changes here)
             amountCards.forEach(card => {
                 card.addEventListener('click', function() {
-                    // Remove 'active' class from all cards
                     amountCards.forEach(c => c.classList.remove('active'));
-                    // Add 'active' class to the clicked card
                     this.classList.add('active');
-                    // Update the input field value
                     amountInput.value = this.dataset.amount;
                 });
             });
 
-            // Clear card selection if user types a custom amount
             amountInput.addEventListener('input', function() {
                 amountCards.forEach(c => c.classList.remove('active'));
             });
 
+            // Main donation button event listener
             donateBtn.addEventListener('click', async function(event) {
                 event.preventDefault();
                 event.stopPropagation();
@@ -246,92 +256,149 @@ $dotenv->load();
                     phone: document.getElementById('phone').value,
                 };
 
-                // 1. Create a Razorpay Order
-                const orderResponse = await fetch('create_order.php', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        amount: formData.amount
-                    })
-                });
+                const donationType = document.querySelector('input[name="donation_type"]:checked').value;
 
-                // Check for server errors before trying to parse JSON
-                if (!orderResponse.ok) {
-                    paymentStatus.innerHTML = `<div class="alert alert-danger">Could not connect to the payment server. Please try again later.</div>`;
-                    donateBtn.disabled = false;
-                    donateBtn.innerText = 'Donate Now';
-                    return;
-                }
+                // =======================================================
+                // CORE LOGIC: Check if it's a one-time or monthly donation
+                // =======================================================
 
-                const orderData = await orderResponse.json();
-
-                if (!orderData.id) {
-                    paymentStatus.innerHTML = `<div class="alert alert-danger">Error creating order. Please try again.</div>`;
-                    donateBtn.disabled = false;
-                    donateBtn.innerText = 'Donate Now';
-                    return;
-                }
-
-                // 2. Open Razorpay Checkout
-                const options = {
-                    key: razorpayKeyId,
-                    amount: orderData.amount,
-                    currency: "INR",
-                    name: "Astu Foundation",
-                    description: "Donation for a good cause",
-                    order_id: orderData.id,
-                    handler: async function(response) {
-                        // 3. Verify the payment
-                        const verificationData = {
-                            razorpay_payment_id: response.razorpay_payment_id,
-                            razorpay_order_id: response.razorpay_order_id,
-                            razorpay_signature: response.razorpay_signature,
-                            name: formData.name,
-                            email: formData.email,
-                            phone: formData.phone,
-                            amount: formData.amount
-                        };
-
-                        const verifyResponse = await fetch('verify_payment.php', {
+                if (donationType === 'monthly') {
+                    /************************
+                     * HANDLE MONTHLY DONATION
+                     ************************/
+                    try {
+                        // 1. Create a Subscription on the server
+                        const subResponse = await fetch('create_subscription.php', {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json'
                             },
-                            body: JSON.stringify(verificationData)
+                            body: JSON.stringify(formData)
                         });
-                        const verifyResult = await verifyResponse.json();
+                        const subData = await subResponse.json();
 
-                        if (verifyResult.status === 'success') {
-                            paymentStatus.innerHTML = `<div class="alert alert-success">Thank you! Your donation was successful.</div>`;
-                            form.reset();
-                            amountCards.forEach(c => c.classList.remove('active'));
-                        } else {
-                            paymentStatus.innerHTML = `<div class="alert alert-danger">Payment verification failed. Please contact us.</div>`;
+                        if (!subData.id) {
+                            throw new Error(subData.error || 'Could not create subscription.');
                         }
+
+                        // 2. Open Razorpay Checkout for Subscriptions
+                        const options = {
+                            key: razorpayKeyId,
+                            subscription_id: subData.id,
+                            name: "Astu Foundation (Monthly)",
+                            description: `Monthly donation of ₹${formData.amount}`,
+                            handler: function(response) {
+                                // This handler just confirms the subscription has started.
+                                // The actual payment verification happens via webhooks.
+                                paymentStatus.innerHTML = `<div class="alert alert-success">Thank you! Your monthly donation is now active.</div>`;
+                                form.reset();
+                                amountCards.forEach(c => c.classList.remove('active'));
+                                donateBtn.disabled = false;
+                                donateBtn.innerText = 'Donate Now';
+                            },
+                            prefill: {
+                                name: formData.name,
+                                email: formData.email,
+                                contact: formData.phone
+                            },
+                            theme: {
+                                color: "#138999"
+                            },
+                            modal: {
+                                ondismiss: function() {
+                                    paymentStatus.innerHTML = `<div class="alert alert-warning">Subscription was not completed.</div>`;
+                                    donateBtn.disabled = false;
+                                    donateBtn.innerText = 'Donate Now';
+                                }
+                            }
+                        };
+                        const rzp = new Razorpay(options);
+                        rzp.open();
+
+                    } catch (error) {
+                        paymentStatus.innerHTML = `<div class="alert alert-danger">Error: ${error.message}</div>`;
                         donateBtn.disabled = false;
                         donateBtn.innerText = 'Donate Now';
-                    },
-                    prefill: {
-                        name: formData.name,
-                        email: formData.email,
-                        contact: formData.phone
-                    },
-                    theme: {
-                        color: "#138999"
-                    },
-                    modal: {
-                        ondismiss: function() {
-                            paymentStatus.innerHTML = `<div class="alert alert-warning">Payment was not completed.</div>`;
-                            donateBtn.disabled = false;
-                            donateBtn.innerText = 'Donate Now';
-                        }
                     }
-                };
 
-                const rzp = new Razorpay(options);
-                rzp.open();
+                } else {
+                    /************************
+                     * HANDLE ONE-TIME DONATION (Your existing code)
+                     ************************/
+                    try {
+                        // 1. Create a Razorpay Order
+                        const orderResponse = await fetch('create_order.php', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                amount: formData.amount
+                            })
+                        });
+                        const orderData = await orderResponse.json();
+                        if (!orderData.id) {
+                            throw new Error('Could not create order.');
+                        }
+
+                        // 2. Open Razorpay Checkout for Orders
+                        const options = {
+                            key: razorpayKeyId,
+                            amount: orderData.amount,
+                            currency: "INR",
+                            name: "Astu Foundation",
+                            description: "Donation for a good cause",
+                            order_id: orderData.id,
+                            handler: async function(response) {
+                                // 3. Verify the payment (your existing logic)
+                                response.name = formData.name;
+                                response.email = formData.email;
+                                response.phone = formData.phone;
+                                response.amount = formData.amount;
+
+                                const verifyResponse = await fetch('verify_payment.php', {
+                                    method: 'POST',
+                                    headers: {
+                                        'Content-Type': 'application/json'
+                                    },
+                                    body: JSON.stringify(response)
+                                });
+                                const verifyResult = await verifyResponse.json();
+
+                                if (verifyResult.status === 'success') {
+                                    paymentStatus.innerHTML = `<div class="alert alert-success">Thank you! Your donation was successful.</div>`;
+                                    form.reset();
+                                    amountCards.forEach(c => c.classList.remove('active'));
+                                } else {
+                                    paymentStatus.innerHTML = `<div class="alert alert-danger">Payment verification failed. Please contact us.</div>`;
+                                }
+                                donateBtn.disabled = false;
+                                donateBtn.innerText = 'Donate Now';
+                            },
+                            prefill: {
+                                name: formData.name,
+                                email: formData.email,
+                                contact: formData.phone
+                            },
+                            theme: {
+                                color: "#138999"
+                            },
+                            modal: {
+                                ondismiss: function() {
+                                    paymentStatus.innerHTML = `<div class="alert alert-warning">Payment was not completed.</div>`;
+                                    donateBtn.disabled = false;
+                                    donateBtn.innerText = 'Donate Now';
+                                }
+                            }
+                        };
+                        const rzp = new Razorpay(options);
+                        rzp.open();
+                    } catch (error) {
+                        paymentStatus.innerHTML = `<div class="alert alert-danger">Error: ${error.message}</div>`;
+                        donateBtn.disabled = false;
+                        donateBtn.innerText = 'Donate Now';
+                    }
+                }
             });
         });
     </script>

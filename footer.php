@@ -42,7 +42,7 @@
             data-wow-delay="0.4s"
             data-wow-duration="1s">
             <h2>Ready to Help Build a Better Future for All?</h2>
-            <p>As a app web crawler expert, We will help to organize.</p>
+            <p>We harness the power of digital tools to organize help, hope, and humanity — one life at a time.</p>
           </div>
         </div>
         <div class="col-lg-4 col-md-12">
@@ -63,12 +63,11 @@
             data-wow-delay="0.2s"
             data-wow-duration="1s">
             <div class="footer-wiget-log">
-              <a href="index.php"><img src="assets/images/astu-logo.png" alt="" /></a>
+              <a href="index.php"><img src="assets/images/astu-logo (2).jpg" alt="" /></a>
             </div>
             <div class="footer-wiget-text">
               <h4>
-                Feugiat a ligula rutrum luctus primis ultrice nteger congue
-                magna at pretium purus a pretium ligula rutrum and luctus
+                Empowering lives through compassion, care, and community-driven impact
               </h4>
             </div>
             <div class="footer-socilal-title">
@@ -77,16 +76,16 @@
             <div class="footer-social">
               <ul>
                 <li>
-                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://www.facebook.com/Asthufoundation/"><i class="fab fa-facebook-f"></i></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="https://x.com/Asthufoundation"><i class="fab fa-twitter"></i></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fab fa-vimeo-v"></i></a>
+                  <a href="https://www.linkedin.com/in/asthu-foundation-4b698b356/"><i class="fab fa-linkedin"></i></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.instagram.com/asthufoundation/"><i class="fab fa-instagram"></i></a>
                 </li>
               </ul>
             </div>

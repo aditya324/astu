@@ -35,7 +35,7 @@
     }
 
     .donate-btn a {
-        background-color: #138999;
+        background-color: #df5311;
         color: white;
         padding: 20px 50px;
         border-radius: 5px;
@@ -56,7 +56,7 @@
                 <div class="col-lg-3">
                     <div class="logo">
                         <a href="index.php">
-                            <img src="assets/images/astu-logo.png" alt="Logo" />
+                            <img src="assets/images/astu-logo (2).jpg" alt="Logo" />
                         </a>
                     </div>
                 </div>
@@ -94,7 +94,7 @@
                   </ul>
                                     </div>
                                 </li> -->
-                                <li><a href="contact.html">Contacts</a></li>
+                                <li><a href="contact.php">Contacts</a></li>
                             </ul>
                         </div>
 
@@ -112,7 +112,7 @@
     <div class="mobile-menu-area sticky-menu" id="navbar">
         <div class="mobile-menu">
             <div class="mobile-logo">
-                <a href="index.html"><img src="assets/images/astu-logo.png" alt=""></a>
+                <a href="index.html"><img src="assets/images/astu-logo (2).jpg" alt=""></a>
             </div>
             <div class="side-menu-info">
                 <div class="sidebar-menu">

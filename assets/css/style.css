@@ -133,7 +133,7 @@ Tags: 	agency, Business Agency, Business Consultant, business optimization, comp
 
 .header-area {
   position: relative;
-  background: #df5311;
+  background: #138999;
   z-index: 1;
 }
 
@@ -142,7 +142,7 @@ Tags: 	agency, Business Agency, Business Consultant, business optimization, comp
   content: "";
   width: 1464px;
   height: 123px;
-  background-color: #df5311;
+  background-color: #138999;
   right: -30px;
   bottom: 0;
   z-index: -1;
@@ -264,7 +264,7 @@ Tags: 	agency, Business Agency, Business Consultant, business optimization, comp
   animation: 500ms running fadeInUp;
   -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
   transition: 0.5s !important;
-  background: #df5311 !important;
+  background: #138999 !important;
   z-index: 9999 !important;
   animation: fadeInDown 1s both 0.2s;
   padding: 0 30px;

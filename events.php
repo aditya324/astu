@@ -54,73 +54,56 @@ $events = $stmt->get_result();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Nonprts-Nonprofit Charity HTML5 Template </title>
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- Favicon -->
-	<link rel="icon" type="image/png" sizes="56x56" href="assets/images/fav-icon/icon.png">
-	<!-- bootstrap CSS -->
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" media="all">
-	<!-- carousel CSS -->
-	<link rel="stylesheet" href="assets/css/owl.carousel.min.css" type="text/css" media="all">
-	<!-- animate CSS -->
-	<link rel="stylesheet" href="assets/css/animate.css" type="text/css" media="all">
-	<!-- font-awesome CSS -->
-	<link rel="stylesheet" href="assets/css/all.min.css" type="text/css" media="all">
-	<!-- font-flaticon CSS -->
-	<link rel="stylesheet" href="assets/css/flaticon.css" type="text/css" media="all">
-	<!-- theme-default CSS -->
-	<link rel="stylesheet" href="assets/css/theme-default.css" type="text/css" media="all">
-	<!-- meanmenu CSS -->
-	<link rel="stylesheet" href="assets/css/meanmenu.min.css" type="text/css" media="all">
-	<!-- transitions CSS -->
-	<link rel="stylesheet" href="assets/css/owl.transitions.css" type="text/css" media="all">
-	<!-- venobox CSS -->
-	<link rel="stylesheet" href="venobox/venobox.css" type="text/css" media="all">
-	<!-- bootstrap icons -->
-	<link rel="stylesheet" href="assets/css/bootstrap-icons.css" type="text/css" media="all">
-	<!-- Slick Slider -->
-	<link rel="stylesheet" type="text/css" href="assets/slick/slick.css">
-	<link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css">
-	<!-- Main Style CSS -->
-	<link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all">
-	<!-- Dropdown CSS -->
-	<link rel="stylesheet" href="assets/css/dropdown.css" type="text/css" media="all">
-	<!-- responsive CSS -->
-	<link rel="stylesheet" href="assets/css/responsive.css" type="text/css" media="all">
-	<!-- rangeslider CSS -->
-	<link rel="stylesheet" href="assets/css/rangeslider.css" type="text/css" media="all">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Nonprts-Nonprofit Charity HTML5 Template </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="56x56" href="assets/images/fav-icon/icon.png">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="assets/css/animate.css" type="text/css" media="all">
+    <link rel="stylesheet" href="assets/css/all.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="assets/css/flaticon.css" type="text/css" media="all">
+    <link rel="stylesheet" href="assets/css/theme-default.css" type="text/css" media="all">
+    <link rel="stylesheet" href="assets/css/meanmenu.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="assets/css/owl.transitions.css" type="text/css" media="all">
+    <link rel="stylesheet" href="venobox/venobox.css" type="text/css" media="all">
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.css" type="text/css" media="all">
+    <link rel="stylesheet" type="text/css" href="assets/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="assets/css/dropdown.css" type="text/css" media="all">
+    <link rel="stylesheet" href="assets/css/responsive.css" type="text/css" media="all">
+    <link rel="stylesheet" href="assets/css/rangeslider.css" type="text/css" media="all">
     <link rel="stylesheet" href="/events.css">
-	<!-- modernizr js -->
-	<script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 </head>
 <body>
 
     <?php require "header.php"; ?>
 
     <div class="breatcome-area">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 col-md-12">
-					<div class="breatcome-content">
-						<div class="breatcome-title">
-							<h1>Events</h1>
-						</div>
-						<div class="bratcome-text">
-							<ul>
-								<li><a href="/">Home</a></li>
-								<li>Events</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="breatcome-content">
+                        <div class="breatcome-title">
+                            <h1>Events</h1>
+                        </div>
+                        <div class="bratcome-text">
+                            <ul>
+                                <li><a href="/">Home</a></li>
+                                <li>Events</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="events-page-area py-5">
         <div class="container">
@@ -142,8 +125,8 @@ $events = $stmt->get_result();
                                 <div class="event-card-inner">
                                     <div class="event-image-wrapper">
                                         <div class="event-date-vertical">
-                                           <p><?= date('d', strtotime($row['event_date'])) ?></p>
-                                           <span><?= date('M', strtotime($row['event_date'])) ?></span>
+                                            <p><?= date('d', strtotime($row['event_date'])) ?></p>
+                                            <span><?= date('M', strtotime($row['event_date'])) ?></span>
                                         </div>
                                         <a href="event-details.php?id=<?= (int)$row['id'] ?>">
                                             <img src="<?= BASE_URL . htmlspecialchars($row['image_path']) ?>" alt="<?= htmlspecialchars($row['title']) ?>">
@@ -158,8 +141,11 @@ $events = $stmt->get_result();
                                             <span><i class="bi bi-geo-alt"></i> <?= htmlspecialchars($row['venue']) ?></span>
                                         </div>
                                         <p class="event-description">Join us for this exciting event. Your participation and support are vital for our cause and help us make a significant impact.</p>
-                                        <a href="register-event.php?event_id=<?= (int)$row['id'] ?>" class="details-btn-vertical">View Details</a>
-                                    </div>
+                                        
+                                        <?php if ($active_tab !== 'past'): ?>
+                                            <a href="register-event.php?event_id=<?= (int)$row['id'] ?>" class="details-btn-vertical">View Details</a>
+                                        <?php endif; ?>
+                                        </div>
                                 </div>
                             </div>
                         </div>

@@ -261,7 +261,7 @@
                   class="wow fadeInUp"
                   data-wow-delay="0.8s"
                   data-wow-duration="1s"
-                   href="./donation.php">Donate Now<i class="bi bi-arrow-right"></i></a>
+                  href="./donation.php">Donate Now<i class="bi bi-arrow-right"></i></a>
               </div>
               <div class="nontprts-btn slider2">
                 <a
@@ -389,7 +389,7 @@
                   class="wow fadeInUp"
                   data-wow-delay="0.8s"
                   data-wow-duration="1s"
-                   href="./donation.php">Donate Now<i class="bi bi-arrow-right"></i></a>
+                  href="./donation.php">Donate Now<i class="bi bi-arrow-right"></i></a>
               </div>
               <div class="nontprts-btn slider2">
                 <a
@@ -678,7 +678,7 @@
             data-wow-delay="0.4s"
             data-wow-duration="1s">
             <div class="service-thumb">
-              <img src="assets/images/child-learning-braile (1).webp" alt="" />
+              <img src="assets/images/child-reading-in-braile.jpg" alt="" />
             </div>
             <div class="service-content">
 
@@ -686,9 +686,10 @@
                 <a href="#">Support For Blind Children</a>
               </h4>
               <p class="service-discription">
-                We are dedicated to empowering blind children through
-                comprehensive support programs, fostering their independence
-                and integration into society.
+                Empowering blind children with dedicated support,
+                Fostering their unique journey to independence.
+                Building skills for confident integration,
+                Creating a future where every child can thrive.
               </p>
 
               <div class="donate-btn d-flex justify-content-center m-3">
@@ -705,7 +706,7 @@
             data-wow-delay="0.6s"
             data-wow-duration="1s">
             <div class="service-thumb">
-              <img src="assets/images/elder-care.jpg" alt="" />
+              <img src="assets/images/elder-care-at-astu.jpg" alt="" />
             </div>
             <div class="service-content">
 
@@ -713,9 +714,10 @@
                 <a href="#">Elder Care</a>
               </h4>
               <p class="service-discription">
-                Our Elder Care program is designed to provide comprehensive
-                support and ensure dignity for seniors, promoting a fulfilling
-                and respectful life.
+                Our mission is to provide comprehensive support,
+                To champion the dignity of every senior.
+                Fostering a life of fulfillment and purpose,
+                And honoring them with unwavering respect.
               </p>
 
               <div class="donate-btn d-flex justify-content-center m-3">
