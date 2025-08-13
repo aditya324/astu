@@ -238,7 +238,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				<div class="col-lg-8 col-md-12">
 					<div class="contact-box">
 						<div class="contact-box-title">
-							<h4>Get A Quote</h4>
+							<h4>Contact Us</h4>
 						</div>
 						<form action="<?= htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" id="it-form">
 							<div class="row">

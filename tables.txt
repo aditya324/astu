@@ -67,6 +67,19 @@ CREATE TABLE donations (
 );
 
 
+ALTER TABLE events ADD COLUMN updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP;
 
+
+
+ALTER TABLE volunteers ADD COLUMN status ENUM('pending','approved','rejected') DEFAULT 'pending';
+ALTER TABLE associates ADD COLUMN status ENUM('pending','approved','rejected') DEFAULT 'pending';
+
+CREATE TABLE stats (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    villages_served INT DEFAULT 0,
+    blind_children_supported INT DEFAULT 0,
+    patients_treated INT DEFAULT 0,
+    women_empowered INT DEFAULT 0
+);
 
 

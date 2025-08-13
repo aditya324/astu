@@ -2,7 +2,8 @@
 session_start();
 // If user is already logged in, redirect to events page
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-    header("location: AddEvents.php");
+    header("location: admin/index.php");
+
     exit;
 }
 

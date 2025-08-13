@@ -1,3 +1,13 @@
+<?php
+require 'db.php';
+
+
+$result = $conn->query("SELECT villages_served, blind_children_supported, patients_treated, women_empowered FROM stats LIMIT 1");
+$stats = $result->fetch_assoc();
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -162,6 +172,7 @@
   $current = $conn->query("SELECT * FROM events WHERE event_date = '$today'");
   $past = $conn->query("SELECT * FROM events WHERE event_date < '$today' ORDER BY event_date DESC");
   $upcoming = $conn->query("SELECT * FROM events WHERE event_date > '$today' ORDER BY event_date ASC");
+  $stories = $conn->query("SELECT name, testimonial, image FROM testimonials WHERE status='approved' ORDER BY id DESC");
 
   if (!$upcoming || !$current || !$past) {
     echo "Error fetching events: " . $conn->error;
@@ -1659,38 +1670,37 @@
         <div class="col-md-3 col-6 mb-4">
           <div class="stat-box text-center">
             <h2 class="stat-number">
-              <!-- counter will animate from 0 to 2500 -->
-              <span class="counter" data-target="100">0</span>+
+              <span class="counter" data-target="<?= $stats['villages_served'] ?>">0</span>+
             </h2>
-            <p class="stat-label">Vilages Served</p>
+            <p class="stat-label">Villages Served</p>
           </div>
         </div>
+
         <!-- Stat 2 -->
         <div class="col-md-3 col-6 mb-4">
           <div class="stat-box text-center">
             <h2 class="stat-number">
-              <!-- counter will animate from 0 to 500 -->
-              <span class="counter" data-target="200">0</span>+
+              <span class="counter" data-target="<?= $stats['blind_children_supported'] ?>">0</span>+
             </h2>
             <p class="stat-label">Blind Children Supported</p>
           </div>
         </div>
+
         <!-- Stat 3 -->
         <div class="col-md-3 col-6 mb-4">
           <div class="stat-box text-center">
             <h2 class="stat-number">
-              <!-- counter will animate from 0 to 150 -->
-              <span class="counter" data-target="50000">0</span>
+              <span class="counter" data-target="<?= $stats['patients_treated'] ?>">0</span>
             </h2>
-            <p class="stat-label">patients Treated</p>
+            <p class="stat-label">Patients Treated</p>
           </div>
         </div>
+
         <!-- Stat 4 -->
         <div class="col-md-3 col-6 mb-4">
           <div class="stat-box text-center">
             <h2 class="stat-number">
-              <!-- counter will animate from 0 to 120 -->
-              <span class="counter" data-target="1000">0</span>
+              <span class="counter" data-target="<?= $stats['women_empowered'] ?>">0</span>
             </h2>
             <p class="stat-label">Women Empowered</p>
           </div>
@@ -1698,6 +1708,7 @@
       </div>
     </div>
   </section>
+
   <!--==================================================-->
   <!-- Start Blog Area -->
   <!--==================================================-->
@@ -1821,7 +1832,7 @@
   <!--==================================================-->
 
 
-  <section class="success-stories-section">
+  <!-- <section class="success-stories-section">
 
     <h2 class="section-title">Success Stories</h2>
 
@@ -1863,7 +1874,35 @@
 
       </div>
     </div>
-  </section>
+  </section> -->
+
+
+
+  <section class="success-stories-section">
+    <h2 class="section-title">Success Stories</h2>
+
+    <div class="swiper">
+      <div class="swiper-wrapper">
+
+        <?php while ($row = $stories->fetch_assoc()) { ?>
+          <div class="swiper-slide">
+            <div class="story-card-content">
+              <div class="story-text">
+                <h3><?= htmlspecialchars($row['name']) ?></h3>
+                <p><?= nl2br(htmlspecialchars($row['testimonial'])) ?></p>
+               
+              </div>
+              <div class="story-image" 
+                   style="background-image: url('uploads/testimonials/<?= htmlspecialchars($row['image']) ?>');">
+              </div>
+            </div>
+          </div>
+        <?php } ?>
+
+      </div>
+    </div>
+</section>
+
   <!--==================================================-->
   <!-- End Sidebar Area -->
   <!--==================================================-->
