@@ -151,7 +151,7 @@
 				<div class="col-lg-6 col-md-12">
 					<div class="about-images">
 						<div class="about-thumb">
-							<img src="assets/images/about/about-thumb.png" alt="A collage of Astu Foundation's work with children, women, elders, and patients.">
+							<img src="assets/images/about/astu-about.jpg" alt="A collage of Astu Foundation's work with children, women, elders, and patients.">
 						</div>
 					</div>
 				</div>
@@ -322,7 +322,7 @@
 					<h4>Our Journey of Impact</h4>
 				</div>
 				<div class="section-main-title">
-					<h2>Marking Our Milestones</h2>
+					<h2>Help Us Reaching Milestones</h2>
 				</div>
 			</div>
 
@@ -558,7 +558,7 @@
 	<!--==================================================-->
 	<!-- Start Blog Area -->
 	<!--==================================================-->
-	<div class="blog-area wow fadeInUp" data-wow-delay="0.10s" data-wow-duration="1s">
+	<!-- <div class="blog-area wow fadeInUp" data-wow-delay="0.10s" data-wow-duration="1s">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
@@ -645,7 +645,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<!--==================================================-->
 	<!-- End Blog Area -->
 	<!--==================================================-->

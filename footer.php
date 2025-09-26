@@ -168,7 +168,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 pr-0">
+        <!-- <div class="col-lg-3 col-md-6 pr-0">
           <div
             class="footer-wiget wow fadeInUp"
             data-wow-delay="0.8s"
@@ -187,7 +187,7 @@
               </ul>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
       <div class="row line mt-90">
         <div class="col-lg-12 col-md-12">

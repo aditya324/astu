@@ -33,7 +33,7 @@ function sendPaymentEmail($toEmail, $toName, $razorpayPaymentId)
 
         // Subject & Body
         $mail->isHTML(true);
-        $mail->Subject = "Payment Successful - Claim Your Tax Benefit";
+        $mail->Subject = "Payment Successful";
 
         $baseUrl = rtrim($_ENV['APP_URL'], '/');
         $claimUrl = $baseUrl . "/claim-tax-benefit.php?payment_id=" . urlencode($razorpayPaymentId);

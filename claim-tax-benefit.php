@@ -54,7 +54,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Insert into donor_tax_claims table
         $stmt = $conn->prepare("INSERT INTO donor_tax_claims (payment_id, name, email, pan, address, amount, date) VALUES (?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("ssssdds", $payment_id, $name, $email, $pan, $address, $amount, $dateForDB);
+        // CORRECT
+        $stmt->bind_param("sssssss", $payment_id, $name, $email, $pan, $address, $amount, $dateForDB);
+
         $stmt->execute();
         $stmt->close();
 
@@ -73,12 +75,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
         ";
         $dompdf->loadHtml($html);
-        $dompdf->setPaper('A4','portrait');
+        $dompdf->setPaper('A4', 'portrait');
         $dompdf->render();
         $pdfOutput = $dompdf->output();
-        $certFolder = __DIR__."/certificates";
-        if(!is_dir($certFolder)) mkdir($certFolder, 0755, true);
-        $pdfFilePath = $certFolder."/{$payment_id}.pdf";
+        $certFolder = __DIR__ . "/certificates";
+        if (!is_dir($certFolder)) mkdir($certFolder, 0755, true);
+        $pdfFilePath = $certFolder . "/{$payment_id}.pdf";
         file_put_contents($pdfFilePath, $pdfOutput);
 
         // Send Email
@@ -102,9 +104,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $mail->send();
 
             $_SESSION['success'] = "Your 80G certificate has been generated and emailed successfully!";
-            header("Location: ".$_SERVER['PHP_SELF']."?payment_id=".$payment_id);
+            header("Location: " . $_SERVER['PHP_SELF'] . "?payment_id=" . $payment_id);
             exit;
-
         } catch (Exception $e) {
             $errors[] = "Email could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
@@ -114,59 +115,101 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Claim 80G Tax Benefit</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<style>
-body { background:#f4f6f8; font-family:Arial,sans-serif; }
-.container { max-width:600px; margin:50px auto; background:white; padding:30px; border-radius:12px; box-shadow:0 5px 15px rgba(0,0,0,0.1); }
-h2 { text-align:center; margin-bottom:25px; color:#2a5d84; }
-.btn-primary { background:#2a5d84; border:none; }
-.btn-primary:hover { background:#1e4764; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claim 80G Tax Benefit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #f4f6f8;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #2a5d84;
+        }
+
+        .btn-primary {
+            background: #2a5d84;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background: #1e4764;
+        }
+    </style>
 </head>
+
 <body>
-<div class="container">
-<h2>Claim Your 80G Tax Benefit</h2>
+    <div class="container">
+        <h2>Claim Your 80G Tax Benefit</h2>
 
-<?php if(!empty($errors)): ?>
-<div class="alert alert-danger">
-<ul class="mb-0"><?php foreach($errors as $err) echo "<li>{$err}</li>"; ?></ul>
-</div>
-<?php endif; ?>
+        <?php if (!empty($errors)): ?>
+            <div class="alert alert-danger">
+                <ul class="mb-0"><?php foreach ($errors as $err) echo "<li>{$err}</li>"; ?></ul>
+            </div>
+        <?php endif; ?>
 
-<?php if(!empty($_SESSION['success'])): ?>
-<div class="alert alert-success">
-<?= $_SESSION['success']; unset($_SESSION['success']); ?>
-</div>
-<?php endif; ?>
+        <?php if (!empty($_SESSION['success'])): ?>
+            <div class="alert alert-success">
+                <?= $_SESSION['success'];
+                unset($_SESSION['success']); ?>
+            </div>
+        <?php endif; ?>
 
-<form method="POST">
-<label>Full Name *</label>
-<input type="text" name="name" class="form-control" required>
+        <form method="POST">
+            <div class="mb-3">
+                <label for="name" class="form-label">Full Name *</label>
+                <input type="text" id="name" name="name" class="form-control" value="<?= htmlspecialchars($_POST['name'] ?? '') ?>" required>
+            </div>
 
-<label>Email Address *</label>
-<input type="email" name="email" class="form-control" required>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email Address *</label>
+                <input type="email" id="email" name="email" class="form-control" value="<?= htmlspecialchars($_POST['email'] ?? '') ?>" required>
+            </div>
 
-<label>PAN Number *</label>
-<input type="text" name="pan" class="form-control" maxlength="10" placeholder="ABCDE1234F" required>
+            <div class="mb-3">
+                <label for="pan" class="form-label">PAN Number *</label>
+                <input type="text" id="pan" name="pan" class="form-control" maxlength="10" placeholder="ABCDE1234F" value="<?= htmlspecialchars($_POST['pan'] ?? '') ?>" required>
+            </div>
 
-<label>Address *</label>
-<textarea name="address" class="form-control" rows="3" required></textarea>
+            <div class="mb-3">
+                <label for="address" class="form-label">Address *</label>
+                <textarea id="address" name="address" class="form-control" rows="3" required><?= htmlspecialchars($_POST['address'] ?? '') ?></textarea>
+            </div>
 
-<label>Donation Amount (INR) *</label>
-<input type="number" name="amount" class="form-control" readonly value="<?= htmlspecialchars($amount); ?>">
+            <div class="mb-3">
+                <label for="amount" class="form-label">Donation Amount (INR) *</label>
+                <input type="number" id="amount" name="amount" class="form-control" readonly value="<?= htmlspecialchars($amount); ?>">
+            </div>
 
-<label>Payment ID *</label>
-<input type="text" name="payment_id" class="form-control" readonly value="<?= htmlspecialchars($payment_id); ?>">
+            <div class="mb-3">
+                <label for="payment_id" class="form-label">Payment ID *</label>
+                <input type="text" id="payment_id" name="payment_id" class="form-control" readonly value="<?= htmlspecialchars($payment_id); ?>">
+            </div>
 
-<label>Donation Date *</label>
-<input type="text" name="date" class="form-control" readonly value="<?= htmlspecialchars($displayDate ?? date('d-m-Y')); ?>">
+            <div class="mb-3">
+                <label for="displayDate" class="form-label">Donation Date *</label>
+                <input type="text" id="displayDate" class="form-control" readonly value="<?= htmlspecialchars($displayDate ?? date('d-m-Y')); ?>">
+                <input type="hidden" name="date" value="<?= htmlspecialchars($date ?? date('Y-m-d')); ?>">
+            </div>
 
-<button type="submit" class="btn btn-primary mt-3 w-100">Submit & Get Certificate</button>
-</form>
-</div>
+            <button type="submit" class="btn btn-primary w-100">Submit & Get Certificate</button>
+        </form>
+    </div>
 </body>
+
 </html>

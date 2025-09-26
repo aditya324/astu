@@ -5,9 +5,6 @@ require 'db.php';
 $result = $conn->query("SELECT villages_served, blind_children_supported, patients_treated, women_empowered FROM stats LIMIT 1");
 $stats = $result->fetch_assoc();
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -51,6 +48,7 @@ $stats = $result->fetch_assoc();
     href="assets/css/all.min.css"
     type="text/css"
     media="all" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
 
 
@@ -157,6 +155,177 @@ $stats = $result->fetch_assoc();
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 
+
+  <style>
+    :root {
+      --muted: #6b7280;
+      --card-radius: 18px;
+      --shadow-1: 0 6px 24px rgba(17, 24, 39, 0.06);
+      --accent: #0ea5a4;
+    }
+
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: #fff;
+      color: #0f172a;
+    }
+
+    /* SECTION PADDING */
+    section.py-5 {
+      padding-top: 4.5rem;
+      padding-bottom: 4.5rem;
+    }
+
+    /* Left column */
+    .display-6 {
+      line-height: 1.02;
+      letter-spacing: -0.02em;
+    }
+
+    .quote-box {
+      background: linear-gradient(180deg, rgba(243, 251, 253, 1) 0%, rgba(249, 255, 255, 1) 100%);
+      border-left: 4px solid rgba(14, 165, 164, 0.12);
+      padding: 1.25rem 1.5rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow-1);
+    }
+
+    .quote-box p {
+      font-style: italic;
+      color: #0f172a;
+      opacity: .95;
+      margin-bottom: .8rem;
+    }
+
+    .founder-img {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #fff;
+      box-shadow: 0 6px 18px rgba(2, 6, 23, 0.08);
+    }
+
+    /* Cards grid */
+    .cause-card {
+      border-radius: var(--card-radius);
+      overflow: hidden;
+      min-height: 230px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.75rem;
+      color: #fff;
+      position: relative;
+      box-shadow: var(--shadow-1);
+      transition: transform .22s cubic-bezier(.2, .9, .3, 1), box-shadow .22s;
+      border: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .cause-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 18px 48px rgba(2, 6, 23, 0.12);
+    }
+
+    .cause-meta {
+      font-size: .92rem;
+      opacity: .95;
+      margin-bottom: .35rem;
+      font-weight: 500;
+    }
+
+    .cause-title {
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+
+    /* large, faint icon top-right */
+    .cause-card .bi {
+      font-size: 4.25rem;
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      opacity: .14;
+      transform: rotate(-6deg);
+    }
+
+    /* Colors */
+    .bg-cancer {
+      background: linear-gradient(180deg, #d95325 0%, #bf421e 100%);
+    }
+
+    .bg-blind {
+      background: linear-gradient(180deg, #f6b24a 0%, #f1a53a 100%);
+      color: #111;
+    }
+
+    .bg-elder {
+      background: linear-gradient(180deg, #0f7b78 0%, #0b6a67 100%);
+    }
+
+    .bg-rural {
+      background: linear-gradient(180deg, #6f3bd1 0%, #5a2fc0 100%);
+    }
+
+    .bg-edu {
+      background: linear-gradient(180deg, #e64a8b 0%, #d43c78 100%);
+    }
+
+    /* CTA inside each card */
+    .card-cta {
+      margin-top: .9rem;
+      display: inline-flex;
+      gap: .5rem;
+      align-items: center;
+    }
+
+    .card-cta .btn {
+      padding: .4rem .8rem;
+      font-size: .85rem;
+      border-radius: 10px;
+    }
+
+    .card-cta .btn-outline-light {
+      opacity: .95;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #fff;
+    }
+
+    /* small screens — make 5th card centered and slightly wider */
+    @media (max-width: 575.98px) {
+      .cause-card {
+        min-height: 200px;
+        padding: 1.25rem;
+      }
+    }
+
+    @media (min-width: 992px) {
+
+      /* make 5th card visually dominant on larger screens */
+      .card-5-dominant {
+        min-height: 260px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+      }
+    }
+
+    /* accessibility focus */
+    .cause-card:focus-within {
+      outline: 3px solid rgba(14, 165, 164, 0.12);
+    }
+
+    /* Tweak donate btn on left */
+    .btn-primary {
+      background: linear-gradient(180deg, #0ea5a4, #0b8f8e);
+      border: none;
+      box-shadow: 0 8px 26px rgba(14, 165, 164, 0.12);
+      padding: .7rem 1.15rem;
+      border-radius: 10px;
+    }
+  </style>
+
 </head>
 
 <body>
@@ -256,7 +425,7 @@ $stats = $result->fetch_assoc();
                   class="wow fadeInUp"
                   data-wow-delay="0.4s"
                   data-wow-duration="1s">
-                  Empowering Women, Transforming Lives
+                  Lighting the Path for Every Child
                 </h1>
               </div>
               <div class="slider-discription">
@@ -298,7 +467,7 @@ $stats = $result->fetch_assoc();
                   class="wow fadeInUp"
                   data-wow-delay="0.4s"
                   data-wow-duration="1s">
-                  Lighting the Path for Every Child
+                  Building Stronger Villages, Brick by Brick
                 </h1>
               </div>
               <div class="slider-discription">
@@ -306,7 +475,7 @@ $stats = $result->fetch_assoc();
                   class="wow fadeInUp"
                   data-wow-delay="0.6s"
                   data-wow-duration="1s">
-                  Asthu Foundation is devoted to supporting blind and visually impaired children by providing accessible education, assistive tools, and inclusive care. Our mission is to help every child thrive with dignity, confidence, and opportunity.
+                  Asthu Foundation is committed to strengthening rural infrastructure by improving access to clean water, sanitation, roads, and community spaces. Our efforts aim to create sustainable, self-reliant villages with better living conditions and brighter futures.
                 </p>
               </div>
               <div class="nontprts-btn slider1">
@@ -384,7 +553,7 @@ $stats = $result->fetch_assoc();
                   class="wow fadeInUp"
                   data-wow-delay="0.4s"
                   data-wow-duration="1s">
-                  Building Stronger Villages, Brick by Brick
+                  Empowering Women, Transforming Lives
                 </h1>
               </div>
               <div class="slider-discription">
@@ -392,7 +561,7 @@ $stats = $result->fetch_assoc();
                   class="wow fadeInUp"
                   data-wow-delay="0.6s"
                   data-wow-duration="1s">
-                  Asthu Foundation is committed to strengthening rural infrastructure by improving access to clean water, sanitation, roads, and community spaces. Our efforts aim to create sustainable, self-reliant villages with better living conditions and brighter futures.
+                  Asthu Foundation is dedicated to uplifting women through skill development, health education, and self-employment programs. Our initiatives foster confidence, independence, and equal opportunities for women to lead empowered lives.
                 </p>
               </div>
               <div class="nontprts-btn slider1">
@@ -506,7 +675,7 @@ $stats = $result->fetch_assoc();
   <!--==================================================-->
   <!-- Start About Area -->
   <!--==================================================-->
-  <section class="editorial-canvas">
+  <!-- <section class="editorial-canvas">
 
     <h1 class="hero-heading">Weaving Hope Into <span>Tomorrow.</span></h1>
 
@@ -561,11 +730,102 @@ $stats = $result->fetch_assoc();
       <a href="./donation.php" class="donate-button">Donate Now</a>
     </div>
 
+  </section> -->
+
+
+
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <!-- LEFT: heading + intro + quote -->
+        <div class="col-lg-6">
+          <p class="text-uppercase text-muted mb-2 small">Ready to help us</p>
+          <h2 class="display-6 fw-bold mb-3">We believe that we can <br class="d-none d-md-block">save more lives</h2>
+
+          <p class="text-muted mb-4">
+            Welcome to <strong>Asthu Foundation</strong>, a beacon of hope and transformation.
+            Our mission is to empower communities and create lasting impacts through dedicated healthcare, education,
+            and empowerment initiatives.
+          </p>
+
+          <div class="quote-box mb-3">
+            <p class="mb-3 mb-md-4 text-dark" style="font-style:italic">
+              “Asthu Foundation is committed to enhancing the healthcare infrastructure in rural areas.
+              Our initiatives are designed to provide comprehensive medical services and improve community health.”
+            </p>
+
+            <div class="d-flex align-items-center gap-3 ">
+              <img src="./assets/images/astu-founder.webp" alt="Dr. Chethan Raju" class="founder-img">
+              <div>
+                <div class="fw-semibold">Dr. Chethan Raju</div>
+                <div class="text-muted small">Founder and Trustee</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="donate-btn mt-5 ">
+            <a href="./donation.php">Donate Now</a>
+          </div>
+        </div>
+
+        <!-- RIGHT: cards grid (5 cards) -->
+        <div class="col-lg-6">
+          <div class="row g-3">
+
+            <div class="col-12 col-sm-6">
+              <div class="cause-card bg-cancer">
+                <i class="bi bi-activity"></i>
+                <div class="cause-title">Support For Cancer Patients</div>
+                <div class="cause-meta">Fighting Cancer, Restoring Hope</div>
+
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-12 col-sm-6">
+              <div class="cause-card bg-blind text-white">
+                <i class="bi bi-eyeglasses"></i>
+                <div class="cause-title">Support For Blind Children</div>
+                <div class="cause-meta">Empowering Vision Beyond Sight</div>
+
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-12 col-sm-6">
+              <div class="cause-card bg-elder">
+                <i class="bi bi-person-hearts"></i>
+                <div class="cause-title">Elder Care</div>
+                <div class="cause-meta">Honoring Seniors, Ensuring Dignity</div>
+
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-12 col-sm-6">
+              <div class="cause-card bg-rural">
+                <i class="bi bi-hospital"></i>
+                <div class="cause-title">Rural Healthcare Infrastructure</div>
+                <div class="cause-meta">Building Healthier Futures, One Village at a Time</div>
+
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col-12">
+              <div class="cause-card bg-edu">
+                <i class="bi bi-book-half"></i>
+                <div class="cause-title">Women Empowerment</div>
+                <div class="cause-meta">Education for Every Women</div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
-
-
-
-
 
 
 
@@ -676,7 +936,7 @@ $stats = $result->fetch_assoc();
               </p>
 
               <div class="donate-btn d-flex justify-content-center m-3">
-                <a href="./donation.php">Donate Now</a>
+                <a href="./service.php">Read more</a>
               </div>
             </div>
           </div>
@@ -802,87 +1062,7 @@ $stats = $result->fetch_assoc();
 
 
 
-  <div class="wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1s">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 mt-3">
-          <div
-            class="section-title text-center wow fadeInUp"
-            data-wow-delay="0.4s"
-            data-wow-duration="1s">
-            <div class="section-sub-thumb">
-              <img src="assets/images/slider/banner-icon.png" alt="" />
-            </div>
-            <div class="section-sub-titile">
-              <h4>Question & answers</h4>
-            </div>
-            <div class="section-sub-thumb">
-              <img src="assets/images/slider/banner-icon.png" alt="" />
-            </div>
-            <div class="section-main-title mt-3">
-              <h2>Donors frequently asked questions?</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="tab_container">
-            <div id="tab1" class="tab_content">
-              <ul class="accordion">
-                <li>
-                  <a class="active"><span>
-                      1. Is it Full Transport & Logistics Company?
-                    </span>
-                    <i class="bi bi-chevron-double-right"></i></a>
-                  <p style="display: block">
-                    The time it takes to repair a roof depends on the extent
-                    of the damage. For minor repairs, it might take an hour or
-                    two. For significant repairs, A or team might be at your
-                    home for half a day.
-                  </p>
-                </li>
-                <li>
-                  <a><span> 2. How to Create my Project in Company? </span>
-                    <i class="bi bi-chevron-double-right"></i></a>
-                  <p>
-                    The time it takes to repair a roof depends on the extent
-                    of the damage. For minor repairs, it might take an hour or
-                    two. For significant repairs, A or team might be at your
-                    home for half a day.
-                  </p>
-                </li>
-                <li>
-                  <a><span>
-                      3. How to Work in Process of Transport Company?
-                    </span>
-                    <i class="bi bi-chevron-double-right"></i></a>
-                  <p>
-                    The time it takes to repair a roof depends on the extent
-                    of the damage. For minor repairs, it might take an hour or
-                    two. For significant repairs, A or team might be at your
-                    home for half a day.
-                  </p>
-                </li>
-                <li>
-                  <a><span>
-                      4. What warranties do I have for installation?
-                    </span>
-                    <i class="bi bi-chevron-double-right"></i></a>
-                  <p>
-                    The time it takes to repair a roof depends on the extent
-                    of the damage. For minor repairs, it might take an hour or
-                    two. For significant repairs, A or team might be at your
-                    home for half a day.
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+
   <!--==================================================-->
   <!-- End Service Area -->
   <!--==================================================-->
@@ -1328,7 +1508,7 @@ $stats = $result->fetch_assoc();
               </div>
               <div class="service-items-content">
                 <h4>
-                  <a href="service-details.html">Join Us As A Volunter</a>
+                  <a href="service-details.html">Become an Volunteer</a>
                 </h4>
                 <p>
                   Make a difference with Astu Foundation — empower lives,
@@ -1875,7 +2055,95 @@ $stats = $result->fetch_assoc();
       </div>
     </div>
   </section> -->
+  <div class="wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1s">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 mt-3">
+          <div
+            class="section-title text-center wow fadeInUp"
+            data-wow-delay="0.4s"
+            data-wow-duration="1s">
+            <div class="section-sub-thumb">
+              <img src="assets/images/slider/banner-icon.png" alt="" />
+            </div>
+            <div class="section-sub-titile">
+              <h4>Question & answers</h4>
+            </div>
+            <div class="section-sub-thumb">
+              <img src="assets/images/slider/banner-icon.png" alt="" />
+            </div>
+            <div class="section-main-title mt-3">
+              <h2>Donors frequently asked questions?</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="tab_container">
+            <div id="tab1" class="tab_content">
+              <ul class="accordion">
+                <li>
+                  <a class="active"><span>1. What is Asthu Foundation’s main mission?</span>
+                    <i class="bi bi-chevron-double-right"></i></a>
+                  <p style="display: block">
+                    Asthu Foundation is dedicated to improving healthcare access, education, and empowerment in underserved communities.
+                    Our initiatives focus on creating sustainable and lasting impact.
+                  </p>
+                </li>
 
+                <li>
+                  <a><span>2. How can I volunteer with Asthu Foundation?</span>
+                    <i class="bi bi-chevron-double-right"></i></a>
+                  <p>
+                    You can join as a volunteer by filling out our volunteer form on the website.
+                    Once submitted, our team will contact you with upcoming programs and opportunities.
+                  </p>
+                </li>
+
+                <li>
+                  <a><span>3. Does Asthu Foundation provide medical assistance?</span>
+                    <i class="bi bi-chevron-double-right"></i></a>
+                  <p>
+                    Yes. We organize health camps, provide basic medical facilities, and work on strengthening rural healthcare
+                    infrastructure through awareness and direct support.
+                  </p>
+                </li>
+
+                <li>
+                  <a><span>4. How are donations used?</span>
+                    <i class="bi bi-chevron-double-right"></i></a>
+                  <p>
+                    All donations go directly into our projects—such as healthcare initiatives, education drives,
+                    women empowerment programs, and community development. Transparency is our priority.
+                  </p>
+                </li>
+
+                <li>
+                  <a><span>5. Can I sponsor a specific program or project?</span>
+                    <i class="bi bi-chevron-double-right"></i></a>
+                  <p>
+                    Yes, you can choose to sponsor specific initiatives like healthcare camps, education scholarships,
+                    or empowerment workshops. Please reach out to us for customized sponsorship options.
+                  </p>
+                </li>
+
+                <li>
+                  <a><span>6. How can I stay updated about upcoming events?</span>
+                    <i class="bi bi-chevron-double-right"></i></a>
+                  <p>
+                    You can stay updated by checking the events section on our website or following our official
+                    WhatsApp and social media community groups where we regularly share announcements.
+                  </p>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
   <section class="success-stories-section">
@@ -1890,10 +2158,10 @@ $stats = $result->fetch_assoc();
               <div class="story-text">
                 <h3><?= htmlspecialchars($row['name']) ?></h3>
                 <p><?= nl2br(htmlspecialchars($row['testimonial'])) ?></p>
-               
+
               </div>
-              <div class="story-image" 
-                   style="background-image: url('uploads/testimonials/<?= htmlspecialchars($row['image']) ?>');">
+              <div class="story-image"
+                style="background-image: url('uploads/testimonials/<?= htmlspecialchars($row['image']) ?>');">
               </div>
             </div>
           </div>
@@ -1901,7 +2169,9 @@ $stats = $result->fetch_assoc();
 
       </div>
     </div>
-</section>
+  </section>
+
+
 
   <!--==================================================-->
   <!-- End Sidebar Area -->

@@ -510,11 +510,12 @@ header.landing .sticky-nav {
 } */
 
 .slider-area.two {
-  background: url(../images/banner/women-empoerment.jpg);
+  background: url(../images/banner/blind-children-banner.jpg);
+  
   background-size: cover;
 }
 .slider-area.three {
-  background: url(../images/banner/blind-children-banner.jpg);
+  background: url(../images/banner/rural-healthcare-infrastructure.jpg);
   background-size: cover;
 }
 .slider-area.four {
@@ -522,7 +523,7 @@ header.landing .sticky-nav {
   background-size: cover;
 }
 .slider-area.five {
-  background: url(../images/banner/rural-healthcare-infrastructure.jpg);
+  background: url(../images/banner/women-empoerment.jpg);
   background-size: cover;
 }
 
