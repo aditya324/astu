@@ -100,8 +100,10 @@
                         <li><i class="bi bi-check-circle-fill text-success me-2"></i>Organizing awareness and early detection camps.</li>
                         <li><i class="bi bi-check-circle-fill text-success me-2"></i>Providing counseling and emotional support.</li>
                     </ul>
-                    <div class="about-info mt-10">
+                    <div class="about-info mt-10 gap-4">
                         <div class="nontprts-btn about"> <a href="./donation.php">Support This Cause</i></a> </div>
+                        <div class="nontprts-btn about"> <a href="./donation.php">Read More</i></a> </div>
+
                     </div>
                 </div>
             </div>

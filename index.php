@@ -1725,7 +1725,7 @@ $stats = $result->fetch_assoc();
   <!--==================================================-->
   <!-- Start Testimonial Area -->
   <!--==================================================-->
-  <div
+  <!-- <div
     class="testimonial-area wow fadeInUp"
     data-wow-delay="0.3s"
     data-wow-duration="1s">
@@ -1804,7 +1804,7 @@ $stats = $result->fetch_assoc();
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <!--==================================================-->
   <!-- End Testimonial Area -->
   <!--==================================================-->
