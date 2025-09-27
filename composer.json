@@ -3,6 +3,8 @@
         "vlucas/phpdotenv": "^5.6",
         "phpmailer/phpmailer": "^6.10",
         "razorpay/razorpay": "^2.9",
-        "dompdf/dompdf": "^3.1"
+        "dompdf/dompdf": "^3.1",
+        "setasign/fpdi": "^2.6",
+        "setasign/fpdf": "^1.8"
     }
 }

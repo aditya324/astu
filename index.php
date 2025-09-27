@@ -324,6 +324,97 @@ $stats = $result->fetch_assoc();
       padding: .7rem 1.15rem;
       border-radius: 10px;
     }
+
+
+
+
+     :root{
+      --brand: #DF5311;
+      --ink: #111827;
+      --muted: #6B7280;
+      --line: #E5E7EB;
+      --tile: #FFFFFF;
+      --tile-ghost: #FAFAFA;
+    }
+    body{
+      background:#F6F7F9;
+      color:#1F2937;
+    }
+    .wrap{ max-width: 1200px; }
+
+    /* Header */
+    .masthead{
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 18px 20px;
+    }
+    .brand-dot{
+      width: 10px; height: 10px; border-radius: 50%;
+      background: var(--brand);
+      display:inline-block; margin-right:8px;
+    }
+    .subtitle{ color:var(--muted); }
+
+    /* Vertical tabs (nav-pills) */
+    .nav-panel{
+      background:#fff; border:1px solid var(--line); border-radius:12px; padding:10px;
+    }
+    .nav-pills .nav-link{
+      color:#374151; border:1px solid transparent; border-radius:8px;
+      padding:.6rem .75rem; font-weight:500;
+    }
+    .nav-pills .nav-link:hover{ background:#FDF3ED; border-color:#F8E1D6; color:var(--brand); }
+    .nav-pills .nav-link.active{
+      background:#fff; color:var(--brand);
+      border-color:#F5C8B0; box-shadow:0 0 0 3px rgba(223,83,17,.08) inset;
+    }
+
+    /* Section surface */
+    .surface{
+      background:#fff; border:1px solid var(--line); border-radius:12px; padding:22px;
+    }
+    .surface + .surface{ margin-top:16px; }
+
+    /* KPI */
+    .kpi{
+      background: var(--tile);
+      border:1px solid var(--line);
+      border-radius:12px; padding:16px;
+      transition: box-shadow .15s ease, transform .15s ease;
+    }
+    .kpi:hover{ transform: translateY(-2px); box-shadow:0 10px 18px rgba(0,0,0,.06); }
+    .kpi .icon{
+      width:36px; height:36px; border-radius:10px;
+      background: #FFE8DE; display:flex; align-items:center; justify-content:center;
+      color: var(--brand);
+    }
+    .kpi .label{ color:var(--muted); font-size:.85rem; }
+    .kpi .value{ font-weight:700; font-size:1.25rem; color:var(--ink); }
+
+    /* Lists */
+    .pro-list{ margin:0; padding-left:1.25rem; }
+    .pro-list li{ margin-bottom:.35rem; }
+
+    /* Section headings */
+    .section-title{ font-size:1.05rem; font-weight:700; color:var(--ink); }
+
+    /* Small utilities */
+    .soft-sep{ border-top:1px dashed var(--line); }
+    .btn-brand{ background:var(--brand); border-color:var(--brand); }
+    .btn-brand:hover{ filter:brightness(.95); }
+    .badge-soft{
+      background:#FFE8DE; color:var(--brand);
+      border:1px solid #F7C9B3;
+    }
+
+    /* Print tweaks */
+    @media print{
+      .nav-panel{ display:none; }
+      .masthead, .surface{ box-shadow:none !important; border-color:#ddd; }
+      .btn, .badge{ display:none; }
+      body{ background:#fff; }
+    }
   </style>
 
 </head>
@@ -936,8 +1027,18 @@ $stats = $result->fetch_assoc();
               </p>
 
               <div class="donate-btn d-flex justify-content-center m-3">
-                <a href="./service.php">Read more</a>
+                <a href="./Cancer-care.php">Read More</a>
               </div>
+              <!-- <div class="d-flex justify-content-center gap-3 my-3">
+  <a href="./service.php" class="btn btn-primary px-4 py-2"
+     style="background-color:#DF5311; border:none; border-radius:30px;">
+    Read More
+  </a>
+  <a href="./service.php" class="btn btn-outline-dark px-4 py-2"
+     style="border-radius:30px;">
+    Read More
+  </a>
+</div> -->
             </div>
           </div>
         </div>
@@ -964,7 +1065,7 @@ $stats = $result->fetch_assoc();
               </p>
 
               <div class="donate-btn d-flex justify-content-center m-3">
-                <a href="./donation.php">Donate Now</a>
+                <a href="./Blind-Care.php">Read More</a>
               </div>
             </div>
           </div>
@@ -1888,6 +1989,240 @@ $stats = $result->fetch_assoc();
       </div>
     </div>
   </section>
+
+
+
+  <div class="container wrap my-4 my-lg-5">
+
+    <!-- Header -->
+    <div class="masthead mb-4">
+      <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+        <div>
+          <div class="d-flex align-items-center">
+            <span class="brand-dot"></span>
+            <h1 class="h5 mb-0">Impact, Partnerships & Financial Excellence</h1>
+          </div>
+          <div class="subtitle mt-1">Executive snapshot for stakeholders — outcomes, alliances, and transparency.</div>
+        </div>
+        <div class="d-flex gap-2">
+          <a class="btn btn-outline-dark btn-sm" href="#finance"><i class="bi bi-receipt-cutoff me-1"></i> Financials</a>
+          <a class="btn btn-brand btn-sm text-white" href="#impact"><i class="bi bi-speedometer2 me-1"></i> Impact</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-3 g-lg-4">
+      <!-- Left: Tabs -->
+      <div class="col-12 col-lg-3">
+        <div class="nav-panel">
+          <div class="nav flex-lg-column nav-pills" id="proTabs" role="tablist" aria-orientation="vertical">
+            <button class="nav-link active mb-1" id="impact-tab" data-bs-toggle="pill" data-bs-target="#impact" type="button" role="tab" aria-controls="impact" aria-selected="true">
+              <i class="bi bi-speedometer2 me-2"></i> Impact Framework
+            </button>
+            <button class="nav-link mb-1" id="partners-tab" data-bs-toggle="pill" data-bs-target="#partners" type="button" role="tab" aria-controls="partners" aria-selected="false">
+              <i class="bi bi-people me-2"></i> Partnership Ecosystem
+            </button>
+            <button class="nav-link" id="finance-tab" data-bs-toggle="pill" data-bs-target="#finance" type="button" role="tab" aria-controls="finance" aria-selected="false">
+              <i class="bi bi-cash-coin me-2"></i> Financial Excellence
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Content -->
+      <div class="col-12 col-lg-9">
+        <div class="tab-content" id="proTabsContent">
+
+          <!-- Impact -->
+          <div class="tab-pane fade show active" id="impact" role="tabpanel" aria-labelledby="impact-tab" tabindex="0">
+            <div class="surface">
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="section-title">Impact Measurement & Accountability Framework</div>
+                <span class="badge badge-soft rounded-pill"><i class="bi bi-shield-check me-1"></i> Audited</span>
+              </div>
+
+              <!-- KPIs -->
+              <div class="row g-3 g-md-4 mt-1">
+                <div class="col-6 col-md-3">
+                  <div class="kpi h-100">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                      <div class="icon"><i class="bi bi-heart-pulse-fill"></i></div>
+                      <div class="label">Lives Saved</div>
+                    </div>
+                    <div class="value">15,000+</div>
+                    <div class="small text-muted">annually</div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="kpi h-100">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                      <div class="icon"><i class="bi bi-activity"></i></div>
+                      <div class="label">Health Outcomes</div>
+                    </div>
+                    <div class="value">+70%</div>
+                    <div class="small text-muted">key indicators</div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="kpi h-100">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                      <div class="icon"><i class="bi bi-graph-up"></i></div>
+                      <div class="label">Economic Impact</div>
+                    </div>
+                    <div class="value">₹500+ Cr</div>
+                    <div class="small text-muted">savings & gains</div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="kpi h-100">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                      <div class="icon"><i class="bi bi-currency-rupee"></i></div>
+                      <div class="label">Social ROI</div>
+                    </div>
+                    <div class="value">₹12 : ₹1</div>
+                    <div class="small text-muted">per rupee invested</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row g-3 g-md-4 mt-1">
+                <div class="col-12 col-lg-6">
+                  <div class="p-3 rounded-3 border" style="border-color:var(--line);">
+                    <div class="fw-semibold mb-2"><i class="bi bi-shield-lock me-1 text-danger"></i> Third-Party Validation</div>
+                    <ul class="pro-list">
+                      <li><strong>Independent Impact Assessments:</strong> annual evaluations by global development organizations</li>
+                      <li><strong>Beneficiary Feedback Systems:</strong> real-time satisfaction & outcomes</li>
+                      <li><strong>Academic Partnerships:</strong> research with premier medical institutions</li>
+                      <li><strong>Government Recognition:</strong> awards & certifications from health ministries</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                  <div class="p-3 rounded-3 border" style="border-color:var(--line);">
+                    <div class="fw-semibold mb-2"><i class="bi bi-speedometer2 me-1" style="color:var(--brand)"></i> Real-Time Dashboard Snapshot</div>
+                    <div class="small text-muted mb-1">Program Efficiency</div>
+                    <div class="progress mb-3" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress-bar" style="width:92%; background:var(--brand)">92%</div>
+                    </div>
+                    <div class="d-flex gap-2 flex-wrap">
+                      <span class="badge bg-light text-secondary border"><i class="bi bi-cloud-check me-1"></i> Uptime 99.9%</span>
+                      <span class="badge bg-light text-secondary border"><i class="bi bi-person-lock me-1"></i> RBAC enabled</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- /surface -->
+          </div>
+
+          <!-- Partnerships -->
+          <div class="tab-pane fade" id="partners" role="tabpanel" aria-labelledby="partners-tab" tabindex="0">
+            <div class="surface">
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="section-title">Partnership Ecosystem & Scaling Strategy</div>
+                <span class="badge badge-soft rounded-pill"><i class="bi bi-diagram-3 me-1"></i> Scaling</span>
+              </div>
+
+              <div class="row g-3 g-md-4 mt-1">
+                <div class="col-md-4">
+                  <div class="p-3 rounded-3 border h-100" style="border-color:var(--line);">
+                    <div class="fw-semibold mb-2"><i class="bi bi-hospital me-1 text-danger"></i> Healthcare Partners</div>
+                    <ul class="pro-list">
+                      <li>50+ hospitals & medical colleges</li>
+                      <li>International orgs (WHO, Gates Foundation)</li>
+                      <li>Medical equipment & pharmaceutical companies</li>
+                      <li>Government health departments & policy makers</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="p-3 rounded-3 border h-100" style="border-color:var(--line);">
+                    <div class="fw-semibold mb-2"><i class="bi bi-cpu-fill me-1" style="color:var(--brand)"></i> Technology Partners</div>
+                    <ul class="pro-list">
+                      <li>Global AI & health-tech companies</li>
+                      <li>Digital health platform providers</li>
+                      <li>Medical device innovators & research institutions</li>
+                      <li>Telecommunications & connectivity providers</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="p-3 rounded-3 border h-100" style="border-color:var(--line);">
+                    <div class="fw-semibold mb-2"><i class="bi bi-building-check me-1 text-success"></i> Corporate Partnerships</div>
+                    <ul class="pro-list">
+                      <li>Fortune 500 CSR collaboration</li>
+                      <li>Employee engagement & skill-based volunteering</li>
+                      <li>Supply chain & procurement optimization</li>
+                      <li>Board advisory & governance support</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <hr class="soft-sep my-3 my-md-4"/>
+
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge bg-light text-secondary border"><i class="bi bi-briefcase me-1"></i> Strategic MOUs</span>
+                <span class="badge bg-light text-secondary border"><i class="bi bi-rocket-takeoff me-1"></i> Rapid deployment kits</span>
+                <span class="badge bg-light text-secondary border"><i class="bi bi-globe2 me-1"></i> Multi-region rollout</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Financials -->
+          <div class="tab-pane fade" id="finance" role="tabpanel" aria-labelledby="finance-tab" tabindex="0">
+            <div class="surface">
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="section-title">Financial Excellence & Transparency</div>
+                <span class="badge badge-soft rounded-pill"><i class="bi bi-shield-lock me-1"></i> Compliance</span>
+              </div>
+
+              <div class="row g-3 g-md-4 mt-1">
+                <div class="col-lg-6">
+                  <div class="p-3 rounded-3 border h-100" style="border-color:var(--line);">
+                    <div class="fw-semibold mb-2"><i class="bi bi-clipboard-data me-1" style="color:var(--brand)"></i> Performance Metrics</div>
+                    <ul class="pro-list">
+                      <li><strong>Program Efficiency Ratio:</strong> 92% to beneficiaries</li>
+                      <li><strong>Administrative Costs:</strong> &lt;8% (best practice &lt;15%)</li>
+                      <li><strong>Fundraising Efficiency:</strong> ₹15 raised per ₹1 spent</li>
+                      <li><strong>Audit Excellence:</strong> 10+ years unqualified opinions</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="p-3 rounded-3 border h-100" style="border-color:var(--line);">
+                    <div class="fw-semibold mb-2"><i class="bi bi-eye me-1" style="color:var(--brand)"></i> Transparency Commitments</div>
+                    <ul class="pro-list">
+                      <li>Real-Time Fund Tracking (live utilization dashboard)</li>
+                      <li>Quarterly Impact Reports with beneficiary stories</li>
+                      <li>Annual audited financials & impact assessments</li>
+                      <li>Donor communication & facility visit opportunities</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row g-3 mt-1">
+                <div class="col-md-6">
+                  <div class="small text-muted mb-1">YTD Disbursement</div>
+                  <div class="progress" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" style="width:78%; background:var(--brand)">78%</div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="small text-muted mb-1">Reporting Timeliness</div>
+                  <div class="progress" role="progressbar" aria-valuenow="96" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" style="width:96%; background:var(--brand)">96%</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div><!-- /tab-content -->
+      </div>
+    </div>
+  </div>
 
   <!--==================================================-->
   <!-- Start Blog Area -->

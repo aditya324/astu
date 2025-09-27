@@ -4,16 +4,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <title>Rural Healthcare Infrastructure | Asthu Foundation</title>
+  <title>Precision Cancer Care Ecosystem | Asthu Foundation</title>
 
   <!-- SEO -->
-  <meta name="description" content="Asthu Foundation’s PHC Transformation Model: a standards-aligned, tiered upgrade path from basic health posts to CHCs to reduce preventable deaths and travel burden in rural India." />
+  <meta name="description" content="Asthu Foundation’s Pillar 2: a precision cancer care ecosystem spanning prevention, AI screening, treatment access, rehabilitation, and innovation." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="canonical" href="https://example.com/rural-health-infra.php" />
+  <link rel="canonical" href="https://example.com/precision-cancer-care.php" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Rural Healthcare Infrastructure | Asthu Foundation" />
-  <meta property="og:description" content="Tiered PHC Transformation Model aligned to IPHS/NQAS/NABL/AERB/BIS standards." />
+  <meta property="og:title" content="Precision Cancer Care Ecosystem | Asthu Foundation" />
+  <meta property="og:description" content="Redefining cancer care through technology and compassion — AI-powered screening, treatment access, survivorship care, and innovation." />
   <meta property="og:type" content="website" />
 
   <!-- Favicon -->
@@ -63,9 +63,7 @@
       background: #fff;
       padding: 12px;
     }
-    .toc a {
-      display: block; padding: 10px 12px; border-radius: 8px; color: var(--ink-2); text-decoration: none;
-    }
+    .toc a { display: block; padding: 10px 12px; border-radius: 8px; color: var(--ink-2); text-decoration: none; }
     .toc a:hover, .toc a.active { background: #eef2ff; color: #27318b; }
 
     /* CARDS */
@@ -77,12 +75,10 @@
       padding: 20px;
       height: 100%;
     }
-    .metric {
-      display: flex; gap: 12px; align-items: start;
-    }
+    .metric { display: flex; gap: 12px; align-items: start; }
     .metric i { font-size: 1.25rem; color: var(--brand); }
 
-    /* TIERS */
+    /* BANNERS / STRIPS */
     .tier {
       border-left: 5px solid var(--brand);
       border-radius: 12px;
@@ -97,6 +93,14 @@
       border: 1px dashed var(--line);
       border-radius: 10px;
       padding: 12px 14px;
+    }
+    .badge-soft {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: .25rem .6rem;
+      font-size: .8rem;
+      color: var(--ink-2);
     }
 
     /* BUTTONS */
@@ -121,8 +125,8 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Rural Healthcare Infrastructure",
-    "description": "Asthu Foundation’s tiered PHC Transformation Model.",
+    "name": "Precision Cancer Care Ecosystem",
+    "description": "Asthu Foundation’s Pillar 2: Prevention, AI screening, treatment access, rehabilitation, and innovation in oncology.",
     "isPartOf": { "@type": "WebSite", "name": "Asthu Foundation" }
   }
   </script>
@@ -132,220 +136,324 @@
   <?php require "header.php"; ?>
 
   <!-- Breadcrumb -->
-  <section id="precision-cancer" tabindex="-1" aria-labelledby="precision-h" class="mt-4">
-  <h2 id="precision-h" class="h4 fw-bold mb-3">Pillar 2: Precision Cancer Care Ecosystem</h2>
-  <p class="muted mb-3">
-    Redefining cancer care through technology and compassion — prevention & early detection, treatment excellence,
-    recovery & rehabilitation, and research-driven innovation.
-  </p>
-
-  <!-- Crisis metrics -->
-  <div class="row g-3 mb-3">
-    <div class="col-md-6 col-xl-3">
-      <div class="cardx h-100">
-        <div class="metric">
-          <i class="bi bi-bar-chart-line"></i>
-          <div>
-            <div class="fw-semibold">1.4 million</div>
-            <div class="small muted">New cases annually in India</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6 col-xl-3">
-      <div class="cardx h-100">
-        <div class="metric">
-          <i class="bi bi-activity"></i>
-          <div>
-            <div class="fw-semibold">70%</div>
-            <div class="small muted">Diagnosed at advanced stages</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6 col-xl-3">
-      <div class="cardx h-100">
-        <div class="metric">
-          <i class="bi bi-hourglass-split"></i>
-          <div>
-            <div class="fw-semibold">~6 months</div>
-            <div class="small muted">Rural diagnostic delay</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6 col-xl-3">
-      <div class="cardx h-100">
-        <div class="metric">
-          <i class="bi bi-currency-rupee"></i>
-          <div>
-            <div class="fw-semibold">₹5–20 lakhs</div>
-            <div class="small muted">Avg. treatment cost / patient</div>
-          </div>
-        </div>
-      </div>
+  <div class="breadcrumb-wrap">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb small">
+          <li class="breadcrumb-item"><a href="/" class="text-decoration-none">Home</a></li>
+          <li class="breadcrumb-item"><a href="/initiatives.php" class="text-decoration-none">Initiatives</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Precision Cancer Care Ecosystem</li>
+        </ol>
+      </nav>
     </div>
   </div>
 
-  <!-- Prevention & Early Detection -->
-  <article class="tier mb-3" aria-labelledby="p2-prevent-h">
-    <h3 id="p2-prevent-h" class="h5 fw-semibold mb-1">Prevention & Early Detection Matrix</h3>
-    <div class="muted mb-2">AI-Powered Screening Network</div>
-    <div class="row g-3">
-      <div class="col-md-7">
-        <ul class="small mb-3">
-          <li><strong>Mobile Diagnostic Labs:</strong> 50+ vehicles with mammography, cervical screening, biomarker testing</li>
-          <li><strong>Machine Learning Diagnostics:</strong> ~95% accuracy in early-stage detection via image analysis</li>
-          <li><strong>Genetic Risk Assessment:</strong> BRCA testing & hereditary counseling</li>
-          <li><strong>Community Health Workforce:</strong> 2,000+ trained screeners using smartphone-based tools</li>
-        </ul>
-        <div class="callout small">Outcome focus: earlier detection, faster referral, lower stage at diagnosis.</div>
-      </div>
-      <div class="col-md-5">
-        <table class="table table-sm align-middle mb-2">
-          <tbody>
-            <tr><th scope="row" class="fw-normal">Coverage</th><td>Urban & rural clusters; high-risk cohorts</td></tr>
-            <tr><th scope="row" class="fw-normal">Quality</th><td>Standardized protocols, QC audits, data privacy</td></tr>
-            <tr><th scope="row" class="fw-normal">Throughput</th><td>Target 5,00,000+ screenings / year</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </article>
-
-  <!-- Treatment Excellence -->
-  <article class="tier mb-3" aria-labelledby="p2-treat-h">
-    <h3 id="p2-treat-h" class="h5 fw-semibold mb-1">Treatment Excellence Program</h3>
-    <div class="muted mb-2">Financial Shield Initiative</div>
-    <div class="row g-3">
-      <div class="col-md-7">
-        <ul class="small mb-3">
-          <li><strong>Direct Hospital Partnerships:</strong> Access via 200+ oncology centers</li>
-          <li><strong>Medicine Access Program:</strong> Free targeted therapies worth ₹50+ crores annually</li>
-          <li><strong>Surgery Support:</strong> Full funding for complex oncological procedures</li>
-          <li><strong>Radiation Therapy Access:</strong> Treatment within 48 hours of prescription (SLA)</li>
-        </ul>
-        <div class="callout small">Outcome focus: reduced abandonment, faster time-to-therapy, improved survival.</div>
-      </div>
-      <div class="col-md-5">
-        <table class="table table-sm align-middle mb-2">
-          <tbody>
-            <tr><th scope="row" class="fw-normal">Network</th><td>Tier-1/2 cities + regional hubs</td></tr>
-            <tr><th scope="row" class="fw-normal">Eligibility</th><td>Socio-economic triage + clinical priority</td></tr>
-            <tr><th scope="row" class="fw-normal">SLAs</th><td>48h radiation; 72h drug approval; 7d surgery scheduling</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </article>
-
-  <!-- Recovery & Rehabilitation -->
-  <article class="tier mb-3" aria-labelledby="p2-rehab-h">
-    <h3 id="p2-rehab-h" class="h5 fw-semibold mb-1">Recovery & Rehabilitation Ecosystem</h3>
-    <div class="muted mb-2">Holistic Healing Approach</div>
-    <div class="row g-3">
-      <div class="col-md-7">
-        <ul class="small mb-3">
-          <li><strong>Survivorship Clinics:</strong> Long-term follow-up & late-effects management</li>
-          <li><strong>Psychological Oncology:</strong> Trauma-informed therapy for patients & families</li>
-          <li><strong>Nutritional Rehabilitation:</strong> Specialized diet during & post-treatment</li>
-          <li><strong>Vocational Reintegration:</strong> Skills training & employment support</li>
-        </ul>
-        <div class="callout small">Outcome focus: adherence, functional recovery, return to livelihood.</div>
-      </div>
-      <div class="col-md-5">
-        <table class="table table-sm align-middle mb-2">
-          <tbody>
-            <tr><th scope="row" class="fw-normal">Follow-up</th><td>Structured schedules with digital reminders</td></tr>
-            <tr><th scope="row" class="fw-normal">Psycho-oncology</th><td>CBT, family therapy, support groups</td></tr>
-            <tr><th scope="row" class="fw-normal">Reintegration</th><td>Placement partners; micro-entrepreneurship</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </article>
-
-  <!-- Innovation Lab -->
-  <article class="tier mb-3" aria-labelledby="p2-innov-h">
-    <h3 id="p2-innov-h" class="h5 fw-semibold mb-1">Innovation Laboratory</h3>
-    <div class="muted mb-2">Translational & Precision Medicine</div>
-    <div class="row g-3">
-      <div class="col-md-7">
-        <ul class="small mb-3">
-          <li><strong>Liquid Biopsy Programs:</strong> Non-invasive monitoring via blood tests</li>
-          <li><strong>Precision Medicine:</strong> Genomic profiling for personalized treatment</li>
-          <li><strong>Immunotherapy Access:</strong> Clinical trials & advanced therapies</li>
-        </ul>
-        <div class="callout small">Outcome focus: earlier relapse detection, therapy optimization, access to innovation.</div>
-      </div>
-      <div class="col-md-5">
-        <table class="table table-sm align-middle mb-2">
-          <tbody>
-            <tr><th scope="row" class="fw-normal">Data</th><td>Consent-driven, anonymized registries</td></tr>
-            <tr><th scope="row" class="fw-normal">Compliance</th><td>Ethics review, trial governance, safety boards</td></tr>
-            <tr><th scope="row" class="fw-normal">Partners</th><td>Academic labs, CROs, device & pharma</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </article>
-
-  <!-- Outcomes -->
-  <div class="cardx mb-3">
-    <h3 class="h6 fw-semibold mb-2">Transformative Outcomes (5-Year Plan)</h3>
-    <div class="row g-3">
-      <div class="col-6 col-md-3">
-        <div class="metric">
-          <i class="bi bi-people"></i>
-          <div>
-            <div class="fw-semibold">25,000+</div>
-            <div class="small muted">Patients supported</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="metric">
-          <i class="bi bi-hospital"></i>
-          <div>
-            <div class="fw-semibold">18,000+</div>
-            <div class="small muted">Treatments completed</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="metric">
-          <i class="bi bi-heart-pulse"></i>
-          <div>
-            <div class="fw-semibold">85%</div>
-            <div class="small muted">Five-year survival (target)</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="metric">
-          <i class="bi bi-currency-rupee"></i>
-          <div>
-            <div class="fw-semibold">₹200 crores</div>
-            <div class="small muted">Treatment costs covered</div>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-9">
+          <div class="kicker mb-2">Pillar 2 • Asthu Foundation</div>
+          <h1 class="display-6 fw-semibold mb-2">Precision Cancer Care Ecosystem</h1>
+          <p class="lead mb-3">Redefining cancer care through technology and compassion — from prevention and AI-led screening to equitable treatment access, survivorship, and innovation.</p>
+          <div class="d-flex gap-2 flex-wrap">
+            <span class="badge-soft">AI Screening</span>
+            <span class="badge-soft">Treatment Access</span>
+            <span class="badge-soft">Rehabilitation</span>
+            <span class="badge-soft">Innovation Lab</span>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </header>
 
-  <!-- CTA -->
-  <div class="cardx">
-    <div class="row g-3 align-items-center">
-      <div class="col-lg-8">
-        <h3 class="h6 fw-bold mb-1">Partner with Asthu Foundation</h3>
-        <p class="small muted mb-0">Help expand screening fleets, fund therapies, and open survivorship clinics across India.</p>
-      </div>
-      <div class="col-lg-4 text-lg-end">
-        <a href="/contact.php" class="btn btn-primary">Start a Conversation</a>
+  <!-- BODY -->
+  <main class="section">
+    <div class="container">
+      <div class="row g-5">
+        <!-- TOC -->
+        <aside id="tocCol" class="col-lg-3 d-none d-lg-block">
+          <div class="toc-sticky">
+            <nav class="toc" aria-label="On this page">
+              <div class="fw-semibold small px-1 pb-1">On this page</div>
+              <a href="#crisis">The Cancer Crisis in Numbers</a>
+              <a href="#prevention">Prevention & Early Detection</a>
+              <a href="#treatment">Treatment Excellence & Financial Shield</a>
+              <a href="#recovery">Recovery & Rehabilitation</a>
+              <a href="#innovation">Innovation Laboratory</a>
+              <a href="#impact">Transformative Outcomes</a>
+              <a href="#engage">Partner With Asthu</a>
+            </nav>
+          </div>
+        </aside>
+
+        <!-- CONTENT -->
+        <div class="col-lg-9">
+
+          <!-- CRISIS -->
+          <section id="crisis" tabindex="-1" aria-labelledby="crisis-h">
+            <h2 id="crisis-h" class="h4 fw-bold mb-3">The Cancer Crisis in Numbers</h2>
+            <div class="row g-3">
+              <div class="col-md-3">
+                <div class="cardx h-100">
+                  <div class="metric">
+                    <i class="bi bi-bar-chart-line-fill"></i>
+                    <div>
+                      <div class="fw-semibold">1.4 million</div>
+                      <div class="small muted">New cases annually in India</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="cardx h-100">
+                  <div class="metric">
+                    <i class="bi bi-search-heart-fill"></i>
+                    <div>
+                      <div class="fw-semibold">70%</div>
+                      <div class="small muted">Diagnosed at advanced stages</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="cardx h-100">
+                  <div class="metric">
+                    <i class="bi bi-clock-history"></i>
+                    <div>
+                      <div class="fw-semibold">~6 months</div>
+                      <div class="small muted">Rural diagnostic delays</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="cardx h-100">
+                  <div class="metric">
+                    <i class="bi bi-currency-rupee"></i>
+                    <div>
+                      <div class="fw-semibold">₹5–20 lakhs</div>
+                      <div class="small muted">Average treatment cost / patient</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="small muted mt-3 mb-0">We close gaps in detection, affordability, and continuity of care across the oncology journey.</p>
+            <div class="divider"></div>
+          </section>
+
+          <!-- PREVENTION & EARLY DETECTION -->
+          <section id="prevention" tabindex="-1" aria-labelledby="prevention-h">
+            <h2 id="prevention-h" class="h4 fw-bold mb-3">Prevention &amp; Early Detection Matrix</h2>
+
+            <article class="tier mb-3">
+              <h3 class="h6 fw-semibold mb-2">AI-Powered Screening Network</h3>
+              <div class="row g-3">
+                <div class="col-md-7">
+                  <ul class="small mb-3">
+                    <li><strong>Mobile Diagnostic Labs:</strong> 50+ vehicles with mammography, cervical screening, and biomarker testing.</li>
+                    <li><strong>Machine Learning Diagnostics:</strong> ~95% early-stage accuracy via image analysis pipelines.</li>
+                    <li><strong>Genetic Risk Assessment:</strong> BRCA testing & hereditary counseling.</li>
+                    <li><strong>Community Health Workers:</strong> 2,000+ trained screeners using smartphone diagnostic tools.</li>
+                  </ul>
+                  <div class="callout small">Goal: Downstage detection by shifting from late to early presentation, especially in rural belts.</div>
+                </div>
+                <div class="col-md-5">
+                  <table class="table table-sm align-middle mb-2">
+                    <tbody>
+                      <tr><th scope="row" class="fw-normal">Coverage</th><td>10M+ screening opportunities / 5 yrs</td></tr>
+                      <tr><th scope="row" class="fw-normal">Turnaround</th><td>&lt;48 hrs triage, e-referrals</td></tr>
+                    </tbody>
+                  </table>
+                  <a href="#engage" class="btn btn-primary btn-sm w-100">Deploy a Mobile Lab</a>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <!-- TREATMENT & FINANCIAL SHIELD -->
+          <section id="treatment" tabindex="-1" aria-labelledby="treatment-h">
+            <h2 id="treatment-h" class="h4 fw-bold mb-3">Treatment Excellence Program &amp; Financial Shield</h2>
+
+            <article class="tier mb-3">
+              <div class="row g-3">
+                <div class="col-md-7">
+                  <ul class="small mb-3">
+                    <li><strong>Direct Hospital Partnerships:</strong> Access at 200+ oncology centers via Asthu coordination.</li>
+                    <li><strong>Medicine Access Program:</strong> Free targeted therapy drugs worth ₹50+ crores annually.</li>
+                    <li><strong>Surgery Support:</strong> Complete funding for complex oncological procedures.</li>
+                    <li><strong>Radiation Therapy Access:</strong> Slot assurance within 48 hours of prescription.</li>
+                  </ul>
+                  <div class="callout small">Aim: No eligible patient is denied optimal therapy due to cost or logistics.</div>
+                </div>
+                <div class="col-md-5">
+                  <table class="table table-sm align-middle mb-2">
+                    <tbody>
+                      <tr><th scope="row" class="fw-normal">Financial Shield</th><td>Catastrophic expense mitigation</td></tr>
+                      <tr><th scope="row" class="fw-normal">Utilization</th><td>25,000+ patients in 5 yrs</td></tr>
+                    </tbody>
+                  </table>
+                  <a href="#engage" class="btn btn-primary btn-sm w-100">Activate Patient Support</a>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <!-- RECOVERY & REHAB -->
+          <section id="recovery" tabindex="-1" aria-labelledby="recovery-h">
+            <h2 id="recovery-h" class="h4 fw-bold mb-3">Recovery &amp; Rehabilitation Ecosystem</h2>
+
+            <div class="row g-3">
+              <div class="col-lg-6">
+                <div class="cardx h-100">
+                  <div class="fw-semibold mb-2">Holistic Healing Approach</div>
+                  <ul class="small mb-0">
+                    <li><strong>Survivorship Clinics:</strong> Long-term follow-up & late-effects management.</li>
+                    <li><strong>Psychological Oncology:</strong> Trauma-informed therapy for patients & families.</li>
+                    <li><strong>Nutritional Rehabilitation:</strong> Specialized programs during & post-treatment.</li>
+                    <li><strong>Vocational Reintegration:</strong> Skills training and employment support.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="cardx h-100">
+                  <div class="fw-semibold mb-2">Continuity & Navigation</div>
+                  <ul class="small mb-0">
+                    <li>Care navigators for appointments, transport, housing.</li>
+                    <li>Tele-oncology follow-ups and adverse-event triage.</li>
+                    <li>Rehab partnerships (lymphedema, physio, speech/OT).</li>
+                    <li>Peer support & caregiver education circles.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="divider"></div>
+          </section>
+
+          <!-- INNOVATION LAB -->
+          <section id="innovation" tabindex="-1" aria-labelledby="innovation-h">
+            <h2 id="innovation-h" class="h4 fw-bold mb-3">Innovation Laboratory</h2>
+
+            <article class="tier mb-3">
+              <div class="row g-3">
+                <div class="col-md-7">
+                  <ul class="small mb-3">
+                    <li><strong>Liquid Biopsy Programs:</strong> Non-invasive monitoring via blood tests.</li>
+                    <li><strong>Precision Medicine:</strong> Genomic profiling for personalized regimens.</li>
+                    <li><strong>Immunotherapy Access:</strong> Clinical trial participation & advanced options.</li>
+                  </ul>
+                  <div class="callout small">Pipeline: Translate cutting-edge science into equitable access for Indian contexts.</div>
+                </div>
+                <div class="col-md-5">
+                  <table class="table table-sm align-middle mb-2">
+                    <tbody>
+                      <tr><th scope="row" class="fw-normal">Trials Network</th><td>National partners + IRB oversight</td></tr>
+                      <tr><th scope="row" class="fw-normal">Data Stack</th><td>Federated registries & outcomes dashboards</td></tr>
+                    </tbody>
+                  </table>
+                  <a href="#engage" class="btn btn-primary btn-sm w-100">Collaborate on Research</a>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <!-- IMPACT -->
+          <section id="impact" class="mt-4" tabindex="-1" aria-labelledby="impact-h">
+            <h2 id="impact-h" class="h4 fw-bold mb-3">Transformative Outcomes (5-Year Horizon)</h2>
+            <div class="row g-3">
+              <div class="col-md-3">
+                <div class="cardx h-100">
+                  <div class="metric">
+                    <i class="bi bi-people-fill"></i>
+                    <div>
+                      <div class="fw-semibold">25,000+</div>
+                      <div class="small muted">Patients supported</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="cardx h-100">
+                  <div class="metric">
+                    <i class="bi bi-clipboard2-check-fill"></i>
+                    <div>
+                      <div class="fw-semibold">18,000+</div>
+                      <div class="small muted">Treatments completed</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="cardx h-100">
+                  <div class="metric">
+                    <i class="bi bi-heart-pulse-fill"></i>
+                    <div>
+                      <div class="fw-semibold">85%</div>
+                      <div class="small muted">Five-year survival (target)</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="cardx h-100">
+                  <div class="metric">
+                    <i class="bi bi-cash-coin"></i>
+                    <div>
+                      <div class="fw-semibold">₹200 crores</div>
+                      <div class="small muted">Treatment costs covered</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-2">
+              <div class="col-lg-6">
+                <div class="cardx">
+                  <div class="fw-semibold mb-2">Why this ecosystem works</div>
+                  <ul class="small mb-0">
+                    <li>Early detection shifts outcomes dramatically.</li>
+                    <li>Financial Shield eliminates catastrophic spend.</li>
+                    <li>Integrated rehab sustains quality of life.</li>
+                    <li>Innovation translates into accessible care.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="cardx">
+                  <div class="fw-semibold mb-2">Governance & Transparency</div>
+                  <ul class="small mb-0">
+                    <li>Clinical pathways and commissioning checklists.</li>
+                    <li>Drug provenance, warranties, and audit trails.</li>
+                    <li>Outcome dashboards, data privacy, and consent.</li>
+                    <li>Preventive maintenance & AMC for equipment uptime.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="divider"></div>
+          </section>
+
+          <!-- CTA -->
+          <section id="engage" tabindex="-1" aria-labelledby="engage-h">
+            <div class="cardx">
+              <div class="row g-3 align-items-center">
+                <div class="col-lg-8">
+                  <h2 id="engage-h" class="h5 fw-bold mb-1">Partner with Asthu Foundation</h2>
+                  <p class="small muted mb-0">Co-create screening networks, therapy access, rehab hubs, and research pilots with us.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                  <a href="/contact.php" class="btn btn-primary">Start a Conversation</a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </main>
 
   <?php require "footer.php"; ?>
 
@@ -382,4 +490,3 @@
   </script>
 </body>
 </html>
-a
