@@ -1171,7 +1171,7 @@ $stats = $result->fetch_assoc();
             data-wow-delay="0.2s"
             data-wow-duration="1s">
             <div class="service-thumb">
-              <img src="assets/images/2151064696.webp" alt="" />
+              <img src="assets/images/cancer-care.jpg" alt="" />
             </div>
             <div class="service-content">
 
@@ -1236,7 +1236,7 @@ $stats = $result->fetch_assoc();
             data-wow-delay="0.6s"
             data-wow-duration="1s">
             <div class="service-thumb">
-              <img src="assets/images/elder-care-at-astu.jpg" alt="" />
+              <img src="assets/images/elder-care.jpg" alt="" />
             </div>
             <div class="service-content">
 
@@ -1291,7 +1291,7 @@ $stats = $result->fetch_assoc();
             data-wow-delay="1s"
             data-wow-duration="1s">
             <div class="service-thumb">
-              <img src="assets/images/wmen-empoerment.jpg" alt="" />
+              <img src="assets/images/women-empowerment.jpg" alt="" />
             </div>
             <div class="service-content">
 
@@ -2640,9 +2640,20 @@ $stats = $result->fetch_assoc();
 
 
   <section class="success-stories-section">
-    <h2 class="section-title">Success Stories</h2>
+
+
 
     <div class="swiper">
+      <div class="nontprts-btn safe d-flex justify-content-center align-content-center   gap-5 m-4 ">
+        <div class="stories-header d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+          <h2 class="section-title mb-0">Success Stories</h2>
+
+          <a class="btn btn-brand d-inline-flex align-items-center gap-2"
+            href="./testimonial_Form.php" aria-label="Add success story">
+            <i class="bi bi-plus-lg"></i> Add
+          </a>
+        </div>
+      </div>
       <div class="swiper-wrapper">
 
         <?php while ($row = $stories->fetch_assoc()) { ?>
