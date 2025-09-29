@@ -143,8 +143,8 @@
                             <div class="sidebar-widget-menu">
                                 <ul>
                                     <li class="dropdown"><a href="/" data-toggle="dropdown">Home</a></li>
-                                    <li class="dropdown"><a href="about.html" data-toggle="dropdown">About</a></li>
-                                    <li class="dropdown"><a href="donation.html" data-toggle="dropdown">Donation</a></li>
+                                    <li class="dropdown"><a href="about.php" data-toggle="dropdown">About</a></li>
+                                    <li class="dropdown"><a href="donation.php" data-toggle="dropdown">Donation</a></li>
                                     <li class="dropdown"><a href="./events.php" data-toggle="dropdown">Events</a></li>
 
                                     <!-- <li class="dropdown"><a href="#project" data-toggle="dropdown">Pages <i class="icon-arrow"></i></a>

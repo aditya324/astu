@@ -328,7 +328,7 @@ $stats = $result->fetch_assoc();
 
 
 
-     :root{
+    :root {
       --brand: #DF5311;
       --ink: #111827;
       --muted: #6B7280;
@@ -336,84 +336,240 @@ $stats = $result->fetch_assoc();
       --tile: #FFFFFF;
       --tile-ghost: #FAFAFA;
     }
-    body{
-      background:#F6F7F9;
-      color:#1F2937;
+
+    body {
+      background: #F6F7F9;
+      color: #1F2937;
     }
-    .wrap{ max-width: 1200px; }
+
+    .wrap {
+      max-width: 1200px;
+    }
 
     /* Header */
-    .masthead{
+    .masthead {
       background: #fff;
       border: 1px solid var(--line);
       border-radius: 14px;
       padding: 18px 20px;
     }
-    .brand-dot{
-      width: 10px; height: 10px; border-radius: 50%;
+
+    .brand-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
       background: var(--brand);
-      display:inline-block; margin-right:8px;
+      display: inline-block;
+      margin-right: 8px;
     }
-    .subtitle{ color:var(--muted); }
+
+    .subtitle {
+      color: var(--muted);
+    }
 
     /* Vertical tabs (nav-pills) */
-    .nav-panel{
-      background:#fff; border:1px solid var(--line); border-radius:12px; padding:10px;
+    .nav-panel {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px;
     }
-    .nav-pills .nav-link{
-      color:#374151; border:1px solid transparent; border-radius:8px;
-      padding:.6rem .75rem; font-weight:500;
+
+    .nav-pills .nav-link {
+      color: #374151;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      padding: .6rem .75rem;
+      font-weight: 500;
     }
-    .nav-pills .nav-link:hover{ background:#FDF3ED; border-color:#F8E1D6; color:var(--brand); }
-    .nav-pills .nav-link.active{
-      background:#fff; color:var(--brand);
-      border-color:#F5C8B0; box-shadow:0 0 0 3px rgba(223,83,17,.08) inset;
+
+    .nav-pills .nav-link:hover {
+      background: #FDF3ED;
+      border-color: #F8E1D6;
+      color: var(--brand);
+    }
+
+    .nav-pills .nav-link.active {
+      background: #fff;
+      color: var(--brand);
+      border-color: #F5C8B0;
+      box-shadow: 0 0 0 3px rgba(223, 83, 17, .08) inset;
     }
 
     /* Section surface */
-    .surface{
-      background:#fff; border:1px solid var(--line); border-radius:12px; padding:22px;
+    .surface {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 22px;
     }
-    .surface + .surface{ margin-top:16px; }
+
+    .surface+.surface {
+      margin-top: 16px;
+    }
 
     /* KPI */
-    .kpi{
+    .kpi {
       background: var(--tile);
-      border:1px solid var(--line);
-      border-radius:12px; padding:16px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 16px;
       transition: box-shadow .15s ease, transform .15s ease;
     }
-    .kpi:hover{ transform: translateY(-2px); box-shadow:0 10px 18px rgba(0,0,0,.06); }
-    .kpi .icon{
-      width:36px; height:36px; border-radius:10px;
-      background: #FFE8DE; display:flex; align-items:center; justify-content:center;
+
+    .kpi:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 18px rgba(0, 0, 0, .06);
+    }
+
+    .kpi .icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: #FFE8DE;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: var(--brand);
     }
-    .kpi .label{ color:var(--muted); font-size:.85rem; }
-    .kpi .value{ font-weight:700; font-size:1.25rem; color:var(--ink); }
+
+    .kpi .label {
+      color: var(--muted);
+      font-size: .85rem;
+    }
+
+    .kpi .value {
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--ink);
+    }
 
     /* Lists */
-    .pro-list{ margin:0; padding-left:1.25rem; }
-    .pro-list li{ margin-bottom:.35rem; }
+    .pro-list {
+      margin: 0;
+      padding-left: 1.25rem;
+    }
+
+    .pro-list li {
+      margin-bottom: .35rem;
+    }
 
     /* Section headings */
-    .section-title{ font-size:1.05rem; font-weight:700; color:var(--ink); }
+    .section-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
 
     /* Small utilities */
-    .soft-sep{ border-top:1px dashed var(--line); }
-    .btn-brand{ background:var(--brand); border-color:var(--brand); }
-    .btn-brand:hover{ filter:brightness(.95); }
-    .badge-soft{
-      background:#FFE8DE; color:var(--brand);
-      border:1px solid #F7C9B3;
+    .soft-sep {
+      border-top: 1px dashed var(--line);
+    }
+
+    .btn-brand {
+      background: var(--brand);
+      border-color: var(--brand);
+    }
+
+    .btn-brand:hover {
+      filter: brightness(.95);
+    }
+
+    .badge-soft {
+      background: #FFE8DE;
+      color: var(--brand);
+      border: 1px solid #F7C9B3;
     }
 
     /* Print tweaks */
-    @media print{
-      .nav-panel{ display:none; }
-      .masthead, .surface{ box-shadow:none !important; border-color:#ddd; }
-      .btn, .badge{ display:none; }
-      body{ background:#fff; }
+    @media print {
+      .nav-panel {
+        display: none;
+      }
+
+      .masthead,
+      .surface {
+        box-shadow: none !important;
+        border-color: #ddd;
+      }
+
+      .btn,
+      .badge {
+        display: none;
+      }
+
+      body {
+        background: #fff;
+      }
+    }
+
+
+
+    .feature-card {
+      position: relative;
+      padding: 28px 22px;
+      border-radius: 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      min-height: 190px;
+      color: #fff;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, .06);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, .12);
+    }
+
+    .feature-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      margin-bottom: 14px;
+      background: rgba(255, 255, 255, .18);
+      backdrop-filter: blur(2px);
+    }
+
+    .feature-icon i {
+      font-size: 30px;
+      line-height: 1;
+    }
+
+    .feature-title {
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 4px;
+    }
+
+    .feature-meta {
+      font-size: .92rem;
+      opacity: .95;
+    }
+
+    /* Gradient themes */
+    .theme-cancer {
+      background: linear-gradient(135deg, #DF5311 0%, #f97316 100%);
+    }
+
+    .theme-blind {
+      background: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%);
+    }
+
+    .theme-elder {
+      background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
+    }
+
+    .theme-rural {
+      background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+    }
+
+    .theme-edu {
+      background: linear-gradient(135deg, #ef4444 0%, #fb7185 100%);
     }
   </style>
 
@@ -864,56 +1020,58 @@ $stats = $result->fetch_assoc();
           <div class="row g-3">
 
             <div class="col-12 col-sm-6">
-              <div class="cause-card bg-cancer">
-                <i class="bi bi-activity"></i>
-                <div class="cause-title">Support For Cancer Patients</div>
-                <div class="cause-meta">Fighting Cancer, Restoring Hope</div>
-
+              <div class="feature-card theme-cancer">
+                <div class="feature-icon">
+                  <i class="fa-solid fa-ribbon"></i>
+                </div>
+                <div class="feature-title">Support For Cancer Patients</div>
+                <div class="feature-meta">Fighting Cancer, Restoring Hope</div>
               </div>
             </div>
 
-            <!-- Card 2 -->
             <div class="col-12 col-sm-6">
-              <div class="cause-card bg-blind text-white">
-                <i class="bi bi-eyeglasses"></i>
-                <div class="cause-title">Support For Blind Children</div>
-                <div class="cause-meta">Empowering Vision Beyond Sight</div>
-
+              <div class="feature-card theme-blind">
+                <div class="feature-icon">
+                  <i class="fa-solid fa-eye-low-vision"></i>
+                </div>
+                <div class="feature-title">Support For Blind Children</div>
+                <div class="feature-meta">Empowering Vision Beyond Sight</div>
               </div>
             </div>
 
-            <!-- Card 3 -->
             <div class="col-12 col-sm-6">
-              <div class="cause-card bg-elder">
-                <i class="bi bi-person-hearts"></i>
-                <div class="cause-title">Elder Care</div>
-                <div class="cause-meta">Honoring Seniors, Ensuring Dignity</div>
-
+              <div class="feature-card theme-elder">
+                <div class="feature-icon">
+                  <i class="fa-solid fa-hand-holding-heart"></i>
+                </div>
+                <div class="feature-title">Elder Care</div>
+                <div class="feature-meta">Honoring Seniors, Ensuring Dignity</div>
               </div>
             </div>
 
-            <!-- Card 4 -->
             <div class="col-12 col-sm-6">
-              <div class="cause-card bg-rural">
-                <i class="bi bi-hospital"></i>
-                <div class="cause-title">Rural Healthcare Infrastructure</div>
-                <div class="cause-meta">Building Healthier Futures, One Village at a Time</div>
-
+              <div class="feature-card theme-rural">
+                <div class="feature-icon">
+                  <i class="fa-solid fa-stethoscope"></i>
+                </div>
+                <div class="feature-title">Rural Healthcare Infrastructure</div>
+                <div class="feature-meta">Building Healthier Futures, One Village at a Time</div>
               </div>
             </div>
 
-            <!-- Card 5 -->
             <div class="col-12">
-              <div class="cause-card bg-edu">
-                <i class="bi bi-book-half"></i>
-                <div class="cause-title">Women Empowerment</div>
-                <div class="cause-meta">Education for Every Women</div>
-
+              <div class="feature-card theme-edu">
+                <div class="feature-icon">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="feature-title">Women Empowerment</div>
+                <div class="feature-meta">Education for Every Women</div>
               </div>
             </div>
 
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -2158,7 +2316,7 @@ $stats = $result->fetch_assoc();
                 </div>
               </div>
 
-              <hr class="soft-sep my-3 my-md-4"/>
+              <hr class="soft-sep my-3 my-md-4" />
 
               <div class="d-flex flex-wrap gap-2">
                 <span class="badge bg-light text-secondary border"><i class="bi bi-briefcase me-1"></i> Strategic MOUs</span>
