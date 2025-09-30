@@ -472,6 +472,62 @@
 
   <?php require "footer.php" ?>
 </body>
+  <script src="assets/js/vendor/jquery-3.6.2.min.js"></script>
 
+  <script src="assets/js/popper.min.js"></script>
+
+  <!-- bootstrap js -->
+  <script src="assets/js/bootstrap.min.js"></script>
+
+  <!-- carousel js -->
+  <script src="assets/js/owl.carousel.min.js"></script>
+
+  <!-- counterup js -->
+  <script src="assets/js/jquery.counterup.min.js"></script>
+
+  <!-- waypoints js -->
+  <script src="assets/js/waypoints.min.js"></script>
+
+  <!-- wow js -->
+  <script src="assets/js/wow.min.js"></script>
+
+  <!-- imagesloaded js -->
+  <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+
+  <!-- venobox js -->
+  <script src="venobox/venobox.js"></script>
+
+  <!--  animated-text js -->
+  <script src="assets/js/animated-text.js"></script>
+
+  <!-- venobox min js -->
+  <script src="venobox/venobox.min.js"></script>
+
+  <!-- isotope js -->
+  <script src="assets/js/isotope.pkgd.min.js"></script>
+
+  <!-- jquery meanmenu js -->
+  <script src="assets/js/jquery.meanmenu.js"></script>
+
+  <!-- jquery scrollup js -->
+  <script src="assets/js/jquery.scrollUp.js"></script>
+
+  <!-- Slick Slider -->
+  <script src="assets/slick/slick.min.js"></script>
+
+  <script src="assets/js/jquery.barfiller.js"></script>
+  <!-- jquery js -->
+
+  <!-- ragrslider js -->
+  <script src="assets/js/rangeslider.js"></script>
+
+  <!-- ragrslider js -->
+  <script src="assets/js/mixitup.min.js"></script>
+
+  <!-- theme js -->
+  <script src="assets/js/theme.js"></script>
+
+  <!-- scroll js -->
+  <script src="assets/js/script.js"></script>
 
 </html>

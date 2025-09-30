@@ -141,8 +141,8 @@ $dotenv->load();
                                     <input type="radio" class="btn-check" name="donation_type" id="one-time" value="one-time" autocomplete="off" checked>
                                     <label class="btn btn-outline-primary" for="one-time">One-Time</label>
 
-                                    <input type="radio" class="btn-check" name="donation_type" id="monthly" value="monthly" autocomplete="off">
-                                    <label class="btn btn-outline-primary" for="monthly">Monthly</label>
+                                    <!-- <input type="radio" class="btn-check" name="donation_type" id="monthly" value="monthly" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="monthly">Monthly</label> -->
                                 </div>
                             </div>
                             <div id="payment-status" class="mb-3"></div>

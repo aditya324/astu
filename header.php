@@ -8,6 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
 </head>
 <style>
     .header-menu-items {
@@ -54,7 +55,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-3">
-                    <div class="logo">
+                    <div class="">
                         <a href="index.php">
                             <img src="assets/images/astu-logo (2).jpg" alt="Logo" />
                         </a>
@@ -82,7 +83,7 @@
                                         </ul>
                                     </div>
                                 </li> -->
-                                <li><a href="service.php">Service</li>
+                                <li><a href="service.php">Services</li>
                                 <li><a href="events.php">Events</li>
                                  <li><a href="blog.html">Blogs</li>
                                 <!-- <li>
@@ -111,7 +112,7 @@
     <!-- Nonprts Mobile Menu Area -->
     <div class="mobile-menu-area sticky-menu" id="navbar">
         <div class="mobile-menu">
-            <div class="mobile-logo">
+            <div class="mobile-logo"> 
                 <a href="index.html"><img src="assets/images/astu-logo (2).jpg" alt=""></a>
             </div>
             <div class="side-menu-info">

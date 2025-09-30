@@ -200,7 +200,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && empty($errors)) {
       {$logoTag}
       <div class="brand">
         <h1>{$ORG_NAME}</h1>
-        <div class="reg">Reg No : {$ORG_REG_NO}</div>
+        <!-- <div class="reg">Reg No : {$ORG_REG_NO}</div> -->
       </div>
     </div>
 

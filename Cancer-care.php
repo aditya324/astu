@@ -35,7 +35,13 @@
       --soft: #f8fafc;
     }
 
-    body { color: var(--ink); }
+    .btn-primary{
+      background-color: #df5311;
+    }
+
+    body {
+      color: var(--ink);
+    }
 
     /* HERO */
     .hero {
@@ -45,26 +51,55 @@
       color: #fff;
       padding: 72px 0 56px;
     }
-    .hero .kicker { letter-spacing: .08em; text-transform: uppercase; font-size: .9rem; opacity: .85; }
+
+    .hero .kicker {
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-size: .9rem;
+      opacity: .85;
+    }
 
     /* BREADCRUMB */
     .breadcrumb-wrap {
       background: #fff;
       border-bottom: 1px solid var(--line);
     }
-    .breadcrumb { margin: 0; padding: .75rem 0; }
+
+    .breadcrumb {
+      margin: 0;
+      padding: .75rem 0;
+    }
 
     /* LAYOUT */
-    .section { padding: 56px 0; }
-    .toc-sticky { position: sticky; top: 96px; }
+    .section {
+      padding: 56px 0;
+    }
+
+    .toc-sticky {
+      position: sticky;
+      top: 96px;
+    }
+
     .toc {
       border: 1px solid var(--line);
       border-radius: 12px;
       background: #fff;
       padding: 12px;
     }
-    .toc a { display: block; padding: 10px 12px; border-radius: 8px; color: var(--ink-2); text-decoration: none; }
-    .toc a:hover, .toc a.active { background: #eef2ff; color: #27318b; }
+
+    .toc a {
+      display: block;
+      padding: 10px 12px;
+      border-radius: 8px;
+      color: var(--ink-2);
+      text-decoration: none;
+    }
+
+    .toc a:hover,
+    .toc a.active {
+      background: #eef2ff;
+      color: #27318b;
+    }
 
     /* CARDS */
     .cardx {
@@ -75,8 +110,17 @@
       padding: 20px;
       height: 100%;
     }
-    .metric { display: flex; gap: 12px; align-items: start; }
-    .metric i { font-size: 1.25rem; color: var(--brand); }
+
+    .metric {
+      display: flex;
+      gap: 12px;
+      align-items: start;
+    }
+
+    .metric i {
+      font-size: 1.25rem;
+      color: var(--brand);
+    }
 
     /* BANNERS / STRIPS */
     .tier {
@@ -86,14 +130,23 @@
       border: 1px solid var(--line);
       background: #fff;
     }
-    .muted { color: var(--muted); }
-    .table-sm td, .table-sm th { padding: .5rem .6rem; }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .table-sm td,
+    .table-sm th {
+      padding: .5rem .6rem;
+    }
+
     .callout {
       background: var(--soft);
       border: 1px dashed var(--line);
       border-radius: 10px;
       padding: 12px 14px;
     }
+
     .badge-soft {
       background: #fff;
       border: 1px solid var(--line);
@@ -104,31 +157,111 @@
     }
 
     /* BUTTONS */
-    .btn-primary { background: var(--brand); border-color: var(--brand); }
-    .btn-primary:hover { background: #c24a10; border-color: #c24a10; }
-    .btn-quiet { background: #fff; border: 1px solid var(--line); }
+    .btn-primary {
+      background: var(--brand);
+      border-color: var(--brand);
+    }
+
+    .btn-primary:hover {
+      background: #c24a10;
+      border-color: #c24a10;
+    }
+
+    .btn-quiet {
+      background: #fff;
+      border: 1px solid var(--line);
+    }
 
     /* UTIL */
-    .divider { height: 1px; background: var(--line); margin: 28px 0; }
+    .divider {
+      height: 1px;
+      background: var(--line);
+      margin: 28px 0;
+    }
 
     /* PRINT */
     @media print {
-      .hero, .breadcrumb-wrap, #tocCol, #backToTop { display: none !important; }
-      .section { padding: 0; }
-      a[href]:after { content: ""; }
-      .btn { display: none; }
+
+      .hero,
+      .breadcrumb-wrap,
+      #tocCol,
+      #backToTop {
+        display: none !important;
+      }
+
+      .section {
+        padding: 0;
+      }
+
+      a[href]:after {
+        content: "";
+      }
+
+      .btn {
+        display: none;
+      }
     }
   </style>
 
+
+  <link rel="icon" type="image/png" sizes="56x56" href="assets/images/fav-icon/icon.png" />
+
+  <!-- Your stack CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+  <link rel="icon" type="image/png" sizes="56x56" href="assets/images/fav-icon/icon.png">
+	<!-- bootstrap CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" media="all">
+	<!-- carousel CSS -->
+	<link rel="stylesheet" href="assets/css/owl.carousel.min.css" type="text/css" media="all">
+	<!-- animate CSS -->
+	<link rel="stylesheet" href="assets/css/animate.css" type="text/css" media="all">
+	<!-- font-awesome CSS -->
+	<link rel="stylesheet" href="assets/css/all.min.css" type="text/css" media="all">
+	<!-- font-flaticon CSS -->
+	<link rel="stylesheet" href="assets/css/flaticon.css" type="text/css" media="all">
+	<!-- theme-default CSS -->
+	<link rel="stylesheet" href="assets/css/theme-default.css" type="text/css" media="all">
+	<!-- meanmenu CSS -->
+	<link rel="stylesheet" href="assets/css/meanmenu.min.css" type="text/css" media="all">
+	<!-- transitions CSS -->
+	<link rel="stylesheet" href="assets/css/owl.transitions.css" type="text/css" media="all">
+	<!-- venobox CSS -->
+	<link rel="stylesheet" href="venobox/venobox.css" type="text/css" media="all">
+	<!-- bootstrap icons -->
+	<link rel="stylesheet" href="assets/css/bootstrap-icons.css" type="text/css" media="all">
+	<!-- Slick Slider -->
+	<link rel="stylesheet" type="text/css" href="assets/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css">
+	<!-- Main Style CSS -->
+	<link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all">
+	<!-- Dropdown CSS -->
+	<link rel="stylesheet" href="assets/css/dropdown.css" type="text/css" media="all">
+	<!-- responsive CSS -->
+	<link rel="stylesheet" href="assets/css/responsive.css" type="text/css" media="all">
+	<!-- rangeslider CSS -->
+	<link rel="stylesheet" href="assets/css/rangeslider.css" type="text/css" media="all">
+	<!-- modernizr js -->
+	<script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+
+
   <!-- Schema (minimal) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Precision Cancer Care Ecosystem",
-    "description": "Asthu Foundation’s Pillar 2: Prevention, AI screening, treatment access, rehabilitation, and innovation in oncology.",
-    "isPartOf": { "@type": "WebSite", "name": "Asthu Foundation" }
-  }
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Precision Cancer Care Ecosystem",
+      "description": "Asthu Foundation’s Pillar 2: Prevention, AI screening, treatment access, rehabilitation, and innovation in oncology.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Asthu Foundation"
+      }
+    }
   </script>
 </head>
 
@@ -141,7 +274,7 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb small">
           <li class="breadcrumb-item"><a href="/" class="text-decoration-none">Home</a></li>
-          <li class="breadcrumb-item"><a href="/initiatives.php" class="text-decoration-none">Initiatives</a></li>
+          <li class="breadcrumb-item"><a href="./service.php" class="text-decoration-none">Services</a></li>
           <li class="breadcrumb-item active" aria-current="page">Precision Cancer Care Ecosystem</li>
         </ol>
       </nav>
@@ -262,11 +395,17 @@
                 <div class="col-md-5">
                   <table class="table table-sm align-middle mb-2">
                     <tbody>
-                      <tr><th scope="row" class="fw-normal">Coverage</th><td>10M+ screening opportunities / 5 yrs</td></tr>
-                      <tr><th scope="row" class="fw-normal">Turnaround</th><td>&lt;48 hrs triage, e-referrals</td></tr>
+                      <tr>
+                        <th scope="row" class="fw-normal">Coverage</th>
+                        <td>10M+ screening opportunities / 5 yrs</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="fw-normal">Turnaround</th>
+                        <td>&lt;48 hrs triage, e-referrals</td>
+                      </tr>
                     </tbody>
                   </table>
-                  <a href="#engage" class="btn btn-primary btn-sm w-100">Deploy a Mobile Lab</a>
+                  <a href="./donation.php" class="btn btn-primary btn-sm w-100" style="background-color: #df5311;">Donate Now</a>
                 </div>
               </div>
             </article>
@@ -290,11 +429,17 @@
                 <div class="col-md-5">
                   <table class="table table-sm align-middle mb-2">
                     <tbody>
-                      <tr><th scope="row" class="fw-normal">Financial Shield</th><td>Catastrophic expense mitigation</td></tr>
-                      <tr><th scope="row" class="fw-normal">Utilization</th><td>25,000+ patients in 5 yrs</td></tr>
+                      <tr>
+                        <th scope="row" class="fw-normal">Financial Shield</th>
+                        <td>Catastrophic expense mitigation</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="fw-normal">Utilization</th>
+                        <td>25,000+ patients in 5 yrs</td>
+                      </tr>
                     </tbody>
                   </table>
-                  <a href="#engage" class="btn btn-primary btn-sm w-100">Activate Patient Support</a>
+                  <a href="./donation.php" class="btn btn-primary btn-sm w-100" style="background-color: #df5311;">Donate Now</a>
                 </div>
               </div>
             </article>
@@ -348,11 +493,17 @@
                 <div class="col-md-5">
                   <table class="table table-sm align-middle mb-2">
                     <tbody>
-                      <tr><th scope="row" class="fw-normal">Trials Network</th><td>National partners + IRB oversight</td></tr>
-                      <tr><th scope="row" class="fw-normal">Data Stack</th><td>Federated registries & outcomes dashboards</td></tr>
+                      <tr>
+                        <th scope="row" class="fw-normal">Trials Network</th>
+                        <td>National partners + IRB oversight</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="fw-normal">Data Stack</th>
+                        <td>Federated registries & outcomes dashboards</td>
+                      </tr>
                     </tbody>
                   </table>
-                  <a href="#engage" class="btn btn-primary btn-sm w-100">Collaborate on Research</a>
+                  <a href="./donation.php" class="btn btn-primary btn-sm w-100" style="background-color: #df5311;">Donate Now</a>
                 </div>
               </div>
             </article>
@@ -444,7 +595,7 @@
                   <p class="small muted mb-0">Co-create screening networks, therapy access, rehab hubs, and research pilots with us.</p>
                 </div>
                 <div class="col-lg-4 text-lg-end">
-                  <a href="/contact.php" class="btn btn-primary">Start a Conversation</a>
+                  <a href="./contact.php" class="btn btn-primary btn-sm w-100" style="background-color: #df5311;">Contact us</a>
                 </div>
               </div>
             </div>
@@ -466,7 +617,10 @@
         const el = document.getElementById(id);
         if (!el) return;
         e.preventDefault();
-        window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' });
+        window.scrollTo({
+          top: el.offsetTop - 80,
+          behavior: 'smooth'
+        });
       });
     });
 
@@ -484,9 +638,74 @@
           }
         }
       });
-    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0.01 });
+    }, {
+      rootMargin: '-40% 0px -55% 0px',
+      threshold: 0.01
+    });
 
     sections.forEach(s => s && obs.observe(s));
   </script>
 </body>
+
 </html>
+
+
+
+
+  <script src="assets/js/vendor/jquery-3.6.2.min.js"></script>
+
+  <script src="assets/js/popper.min.js"></script>
+
+  <!-- bootstrap js -->
+  <script src="assets/js/bootstrap.min.js"></script>
+
+  <!-- carousel js -->
+  <script src="assets/js/owl.carousel.min.js"></script>
+
+  <!-- counterup js -->
+  <script src="assets/js/jquery.counterup.min.js"></script>
+
+  <!-- waypoints js -->
+  <script src="assets/js/waypoints.min.js"></script>
+
+  <!-- wow js -->
+  <script src="assets/js/wow.min.js"></script>
+
+  <!-- imagesloaded js -->
+  <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+
+  <!-- venobox js -->
+  <script src="venobox/venobox.js"></script>
+
+  <!--  animated-text js -->
+  <script src="assets/js/animated-text.js"></script>
+
+  <!-- venobox min js -->
+  <script src="venobox/venobox.min.js"></script>
+
+  <!-- isotope js -->
+  <script src="assets/js/isotope.pkgd.min.js"></script>
+
+  <!-- jquery meanmenu js -->
+  <script src="assets/js/jquery.meanmenu.js"></script>
+
+  <!-- jquery scrollup js -->
+  <script src="assets/js/jquery.scrollUp.js"></script>
+
+  <!-- Slick Slider -->
+  <script src="assets/slick/slick.min.js"></script>
+
+  <script src="assets/js/jquery.barfiller.js"></script>
+  <!-- jquery js -->
+
+  <!-- ragrslider js -->
+  <script src="assets/js/rangeslider.js"></script>
+
+  <!-- ragrslider js -->
+  <script src="assets/js/mixitup.min.js"></script>
+
+  <!-- theme js -->
+  <script src="assets/js/theme.js"></script>
+
+  <!-- scroll js -->
+  <script src="assets/js/script.js"></script>

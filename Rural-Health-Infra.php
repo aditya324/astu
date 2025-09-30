@@ -24,6 +24,42 @@
   <link rel="stylesheet" href="assets/css/bootstrap-icons.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/responsive.css" />
+  <link rel="icon" type="image/png" sizes="56x56" href="assets/images/fav-icon/icon.png">
+	<!-- bootstrap CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" media="all">
+	<!-- carousel CSS -->
+	<link rel="stylesheet" href="assets/css/owl.carousel.min.css" type="text/css" media="all">
+	<!-- animate CSS -->
+	<link rel="stylesheet" href="assets/css/animate.css" type="text/css" media="all">
+	<!-- font-awesome CSS -->
+	<link rel="stylesheet" href="assets/css/all.min.css" type="text/css" media="all">
+	<!-- font-flaticon CSS -->
+	<link rel="stylesheet" href="assets/css/flaticon.css" type="text/css" media="all">
+	<!-- theme-default CSS -->
+	<link rel="stylesheet" href="assets/css/theme-default.css" type="text/css" media="all">
+	<!-- meanmenu CSS -->
+	<link rel="stylesheet" href="assets/css/meanmenu.min.css" type="text/css" media="all">
+	<!-- transitions CSS -->
+	<link rel="stylesheet" href="assets/css/owl.transitions.css" type="text/css" media="all">
+	<!-- venobox CSS -->
+	<link rel="stylesheet" href="venobox/venobox.css" type="text/css" media="all">
+	<!-- bootstrap icons -->
+	<link rel="stylesheet" href="assets/css/bootstrap-icons.css" type="text/css" media="all">
+	<!-- Slick Slider -->
+	<link rel="stylesheet" type="text/css" href="assets/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css">
+	<!-- Main Style CSS -->
+	<link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all">
+	<!-- Dropdown CSS -->
+	<link rel="stylesheet" href="assets/css/dropdown.css" type="text/css" media="all">
+	<!-- responsive CSS -->
+	<link rel="stylesheet" href="assets/css/responsive.css" type="text/css" media="all">
+	<!-- rangeslider CSS -->
+	<link rel="stylesheet" href="assets/css/rangeslider.css" type="text/css" media="all">
+	<!-- modernizr js -->
+	<script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
   <style>
     :root {
@@ -137,7 +173,7 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb small">
           <li class="breadcrumb-item"><a href="/" class="text-decoration-none">Home</a></li>
-          <li class="breadcrumb-item"><a href="/initiatives.php" class="text-decoration-none">Initiatives</a></li>
+          <li class="breadcrumb-item"><a href="./service.php" class="text-decoration-none">Services</a></li>
           <li class="breadcrumb-item active" aria-current="page">Rural Healthcare Infrastructure</li>
         </ol>
       </nav>
@@ -248,7 +284,7 @@
                         <tr><th scope="row" class="fw-normal">ROI (Impact)</th><td>Up to 300% reduction in maternal mortality</td></tr>
                       </tbody>
                     </table>
-                    <a href="#engage" class="btn btn-primary btn-sm w-100">Start a Tier 1 Center</a>
+                    <a href="./donation.php" class="btn btn-primary btn-sm w-100">Donate Now</a>
                   </div>
                 </div>
               </div>
@@ -279,7 +315,7 @@
                         <tr><th scope="row" class="fw-normal">Compliance</th><td>IPHS & NQAS</td></tr>
                       </tbody>
                     </table>
-                    <a href="#engage" class="btn btn-primary btn-sm w-100">Upgrade to Tier 2</a>
+                    <a href="./donation.php" class="btn btn-primary btn-sm w-100">Donate Now</a>
                   </div>
                 </div>
               </div>
@@ -310,7 +346,7 @@
                         <tr><th scope="row" class="fw-normal">Performance Targets</th><td>150–200 OPD/day; 60–80 deliveries/month; 100–150 tests/day</td></tr>
                       </tbody>
                     </table>
-                    <a href="#engage" class="btn btn-primary btn-sm w-100">Build a Tier 3 CHC</a>
+                    <a href="./donation.php" class="btn btn-primary btn-sm w-100">Donate Now</a>
                   </div>
                 </div>
               </div>
@@ -437,4 +473,61 @@
     sections.forEach(s => s && obs.observe(s));
   </script>
 </body>
+  <script src="assets/js/vendor/jquery-3.6.2.min.js"></script>
+
+  <script src="assets/js/popper.min.js"></script>
+
+  <!-- bootstrap js -->
+  <script src="assets/js/bootstrap.min.js"></script>
+
+  <!-- carousel js -->
+  <script src="assets/js/owl.carousel.min.js"></script>
+
+  <!-- counterup js -->
+  <script src="assets/js/jquery.counterup.min.js"></script>
+
+  <!-- waypoints js -->
+  <script src="assets/js/waypoints.min.js"></script>
+
+  <!-- wow js -->
+  <script src="assets/js/wow.min.js"></script>
+
+  <!-- imagesloaded js -->
+  <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+
+  <!-- venobox js -->
+  <script src="venobox/venobox.js"></script>
+
+  <!--  animated-text js -->
+  <script src="assets/js/animated-text.js"></script>
+
+  <!-- venobox min js -->
+  <script src="venobox/venobox.min.js"></script>
+
+  <!-- isotope js -->
+  <script src="assets/js/isotope.pkgd.min.js"></script>
+
+  <!-- jquery meanmenu js -->
+  <script src="assets/js/jquery.meanmenu.js"></script>
+
+  <!-- jquery scrollup js -->
+  <script src="assets/js/jquery.scrollUp.js"></script>
+
+  <!-- Slick Slider -->
+  <script src="assets/slick/slick.min.js"></script>
+
+  <script src="assets/js/jquery.barfiller.js"></script>
+  <!-- jquery js -->
+
+  <!-- ragrslider js -->
+  <script src="assets/js/rangeslider.js"></script>
+
+  <!-- ragrslider js -->
+  <script src="assets/js/mixitup.min.js"></script>
+
+  <!-- theme js -->
+  <script src="assets/js/theme.js"></script>
+
+  <!-- scroll js -->
+  <script src="assets/js/script.js"></script>
 </html>

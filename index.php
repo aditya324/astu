@@ -1251,7 +1251,7 @@ $stats = $result->fetch_assoc();
               </p>
 
               <div class="donate-btn d-flex justify-content-center m-3">
-                <a href="./donation.php">Donate Now</a>
+                <a href="./Elder-care.php">Read More</a>
               </div>
             </div>
           </div>
@@ -1278,7 +1278,7 @@ $stats = $result->fetch_assoc();
               </p>
 
               <div class="donate-btn d-flex justify-content-center m-3">
-                <a href="./donation.php">Donate Now</a>
+                   <a href="./Rural-Health-Infra.php">Read More</a>
               </div>
             </div>
           </div>
@@ -1304,7 +1304,7 @@ $stats = $result->fetch_assoc();
               </p>
 
               <div class="donate-btn d-flex justify-content-center m-3">
-                <a href="./donation.php">Donate Now</a>
+                   <a href="./Women-empowerment.php">Read More</a>
               </div>
             </div>
           </div>
@@ -2644,7 +2644,7 @@ $stats = $result->fetch_assoc();
 
 
     <div class="swiper">
-      <div class="nontprts-btn safe d-flex justify-content-center align-content-center   gap-5 m-4 ">
+      <!-- <div class="nontprts-btn safe d-flex justify-content-center align-content-center   gap-5 m-4 ">
         <div class="stories-header d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
           <h2 class="section-title mb-0">Success Stories</h2>
 
@@ -2653,7 +2653,7 @@ $stats = $result->fetch_assoc();
             <i class="bi bi-plus-lg"></i> Add
           </a>
         </div>
-      </div>
+      </div> -->
       <div class="swiper-wrapper">
 
         <?php while ($row = $stories->fetch_assoc()) { ?>

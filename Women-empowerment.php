@@ -35,7 +35,9 @@
       --soft: #f8fafc;
     }
 
-    body { color: var(--ink); }
+    body {
+      color: var(--ink);
+    }
 
     /* HERO */
     .hero {
@@ -45,23 +47,55 @@
       color: #fff;
       padding: 72px 0 56px;
     }
-    .hero .kicker { letter-spacing: .08em; text-transform: uppercase; font-size: .9rem; opacity: .85; }
+
+    .hero .kicker {
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-size: .9rem;
+      opacity: .85;
+    }
 
     /* BREADCRUMB */
-    .breadcrumb-wrap { background: #fff; border-bottom: 1px solid var(--line); }
-    .breadcrumb { margin: 0; padding: .75rem 0; }
+    .breadcrumb-wrap {
+      background: #fff;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .breadcrumb {
+      margin: 0;
+      padding: .75rem 0;
+    }
 
     /* LAYOUT */
-    .section { padding: 56px 0; }
-    .toc-sticky { position: sticky; top: 96px; }
+    .section {
+      padding: 56px 0;
+    }
+
+    .toc-sticky {
+      position: sticky;
+      top: 96px;
+    }
+
     .toc {
       border: 1px solid var(--line);
       border-radius: 12px;
       background: #fff;
       padding: 12px;
     }
-    .toc a { display: block; padding: 10px 12px; border-radius: 8px; color: var(--ink-2); text-decoration: none; }
-    .toc a:hover, .toc a.active { background: #eef2ff; color: #27318b; }
+
+    .toc a {
+      display: block;
+      padding: 10px 12px;
+      border-radius: 8px;
+      color: var(--ink-2);
+      text-decoration: none;
+    }
+
+    .toc a:hover,
+    .toc a.active {
+      background: #eef2ff;
+      color: #27318b;
+    }
 
     /* CARDS */
     .cardx {
@@ -72,8 +106,17 @@
       padding: 20px;
       height: 100%;
     }
-    .metric { display: flex; gap: 12px; align-items: start; }
-    .metric i { font-size: 1.25rem; color: var(--brand); }
+
+    .metric {
+      display: flex;
+      gap: 12px;
+      align-items: start;
+    }
+
+    .metric i {
+      font-size: 1.25rem;
+      color: var(--brand);
+    }
 
     /* HIGHLIGHTED SECTIONS */
     .tier {
@@ -83,14 +126,23 @@
       border: 1px solid var(--line);
       background: #fff;
     }
-    .muted { color: var(--muted); }
-    .table-sm td, .table-sm th { padding: .5rem .6rem; }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .table-sm td,
+    .table-sm th {
+      padding: .5rem .6rem;
+    }
+
     .callout {
       background: var(--soft);
       border: 1px dashed var(--line);
       border-radius: 10px;
       padding: 12px 14px;
     }
+
     .badge-soft {
       background: #fff;
       border: 1px solid var(--line);
@@ -101,31 +153,103 @@
     }
 
     /* BUTTONS */
-    .btn-primary { background: var(--brand); border-color: var(--brand); }
-    .btn-primary:hover { background: #c24a10; border-color: #c24a10; }
+    .btn-primary {
+      background: var(--brand);
+      border-color: var(--brand);
+    }
+
+    .btn-primary:hover {
+      background: #c24a10;
+      border-color: #c24a10;
+    }
 
     /* UTIL */
-    .divider { height: 1px; background: var(--line); margin: 28px 0; }
+    .divider {
+      height: 1px;
+      background: var(--line);
+      margin: 28px 0;
+    }
 
     /* PRINT */
     @media print {
-      .hero, .breadcrumb-wrap, #tocCol, #backToTop { display: none !important; }
-      .section { padding: 0; }
-      a[href]:after { content: ""; }
-      .btn { display: none; }
+
+      .hero,
+      .breadcrumb-wrap,
+      #tocCol,
+      #backToTop {
+        display: none !important;
+      }
+
+      .section {
+        padding: 0;
+      }
+
+      a[href]:after {
+        content: "";
+      }
+
+      .btn {
+        display: none;
+      }
     }
   </style>
 
   <!-- Schema (minimal) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Women's Health & Economic Empowerment",
-    "description": "Asthu Foundation’s Pillar 5: Lifecycle health, livelihood creation, leadership & rights, and innovation for women.",
-    "isPartOf": { "@type": "WebSite", "name": "Asthu Foundation" }
-  }
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Women's Health & Economic Empowerment",
+      "description": "Asthu Foundation’s Pillar 5: Lifecycle health, livelihood creation, leadership & rights, and innovation for women.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Asthu Foundation"
+      }
+    }
   </script>
+  <link rel="icon" type="image/png" sizes="56x56" href="assets/images/fav-icon/icon.png" />
+
+  <!-- Your stack CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+  <link rel="icon" type="image/png" sizes="56x56" href="assets/images/fav-icon/icon.png">
+  <!-- bootstrap CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" media="all">
+  <!-- carousel CSS -->
+  <link rel="stylesheet" href="assets/css/owl.carousel.min.css" type="text/css" media="all">
+  <!-- animate CSS -->
+  <link rel="stylesheet" href="assets/css/animate.css" type="text/css" media="all">
+  <!-- font-awesome CSS -->
+  <link rel="stylesheet" href="assets/css/all.min.css" type="text/css" media="all">
+  <!-- font-flaticon CSS -->
+  <link rel="stylesheet" href="assets/css/flaticon.css" type="text/css" media="all">
+  <!-- theme-default CSS -->
+  <link rel="stylesheet" href="assets/css/theme-default.css" type="text/css" media="all">
+  <!-- meanmenu CSS -->
+  <link rel="stylesheet" href="assets/css/meanmenu.min.css" type="text/css" media="all">
+  <!-- transitions CSS -->
+  <link rel="stylesheet" href="assets/css/owl.transitions.css" type="text/css" media="all">
+  <!-- venobox CSS -->
+  <link rel="stylesheet" href="venobox/venobox.css" type="text/css" media="all">
+  <!-- bootstrap icons -->
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.css" type="text/css" media="all">
+  <!-- Slick Slider -->
+  <link rel="stylesheet" type="text/css" href="assets/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css">
+  <!-- Main Style CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all">
+  <!-- Dropdown CSS -->
+  <link rel="stylesheet" href="assets/css/dropdown.css" type="text/css" media="all">
+  <!-- responsive CSS -->
+  <link rel="stylesheet" href="assets/css/responsive.css" type="text/css" media="all">
+  <!-- rangeslider CSS -->
+  <link rel="stylesheet" href="assets/css/rangeslider.css" type="text/css" media="all">
+  <!-- modernizr js -->
+  <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 </head>
 
 <body>
@@ -137,7 +261,7 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb small">
           <li class="breadcrumb-item"><a href="/" class="text-decoration-none">Home</a></li>
-          <li class="breadcrumb-item"><a href="/initiatives.php" class="text-decoration-none">Initiatives</a></li>
+          <li class="breadcrumb-item"><a href="./service.php" class="text-decoration-none">Services</a></li>
           <li class="breadcrumb-item active" aria-current="page">Women's Health &amp; Economic Empowerment</li>
         </ol>
       </nav>
@@ -260,11 +384,18 @@
                 <div class="col-md-5">
                   <table class="table table-sm align-middle mb-2">
                     <tbody>
-                      <tr><th scope="row" class="fw-normal">Coverage</th><td>PHC + mobile clinics + workplace camps</td></tr>
-                      <tr><th scope="row" class="fw-normal">Safeguards</th><td>Informed consent, privacy, referral pathways</td></tr>
+                      <tr>
+                        <th scope="row" class="fw-normal">Coverage</th>
+                        <td>PHC + mobile clinics + workplace camps</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="fw-normal">Safeguards</th>
+                        <td>Informed consent, privacy, referral pathways</td>
+                      </tr>
                     </tbody>
                   </table>
-                  <a href="#engage" class="btn btn-primary btn-sm w-100">Start a Women’s Health Camp</a>
+                  <a href="./donation.php" class="btn btn-primary btn-sm w-100"
+                    style="background-color: #df5311;">Donate Now</a>
                 </div>
               </div>
             </article>
@@ -290,11 +421,18 @@
                 <div class="col-md-5">
                   <table class="table table-sm align-middle mb-2">
                     <tbody>
-                      <tr><th scope="row" class="fw-normal">Enterprise Target</th><td>65,000+ ventures launched</td></tr>
-                      <tr><th scope="row" class="fw-normal">Support Stack</th><td>Toolkits, logistics, GST & compliance help</td></tr>
+                      <tr>
+                        <th scope="row" class="fw-normal">Enterprise Target</th>
+                        <td>65,000+ ventures launched</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="fw-normal">Support Stack</th>
+                        <td>Toolkits, logistics, GST & compliance help</td>
+                      </tr>
                     </tbody>
                   </table>
-                  <a href="#engage" class="btn btn-primary btn-sm w-100">Launch a Skill Hub</a>
+                  <a href="./donation.php" class="btn btn-primary btn-sm w-100"
+                    style="background-color: #df5311;">Donate Now</a>
                 </div>
               </div>
             </article>
@@ -349,11 +487,18 @@
                 <div class="col-md-5">
                   <table class="table table-sm align-middle mb-2">
                     <tbody>
-                      <tr><th scope="row" class="fw-normal">Data Ethics</th><td>Consent, privacy, benefit sharing</td></tr>
-                      <tr><th scope="row" class="fw-normal">Interoperability</th><td>UPI, ONDC, Aadhaar eKYC (where applicable)</td></tr>
+                      <tr>
+                        <th scope="row" class="fw-normal">Data Ethics</th>
+                        <td>Consent, privacy, benefit sharing</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="fw-normal">Interoperability</th>
+                        <td>UPI, ONDC, Aadhaar eKYC (where applicable)</td>
+                      </tr>
                     </tbody>
                   </table>
-                  <a href="#engage" class="btn btn-primary btn-sm w-100">Co-build the Innovation Stack</a>
+                  <a href="./donation.php" class="btn btn-primary btn-sm w-100"
+                    style="background-color: #df5311;">Donate Now</a>
                 </div>
               </div>
             </article>
@@ -445,7 +590,8 @@
                   <p class="small muted mb-0">Co-create health camps, skill hubs, women-led enterprises, and civic leadership cohorts with us.</p>
                 </div>
                 <div class="col-lg-4 text-lg-end">
-                  <a href="/contact.php" class="btn btn-primary">Start a Conversation</a>
+                  <a href="/contact.php" class="btn btn-primary"
+                    style="background-color: #df5311;">Start a Conversation</a>
                 </div>
               </div>
             </div>
@@ -467,7 +613,10 @@
         const el = document.getElementById(id);
         if (!el) return;
         e.preventDefault();
-        window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' });
+        window.scrollTo({
+          top: el.offsetTop - 80,
+          behavior: 'smooth'
+        });
       });
     });
 
@@ -485,9 +634,75 @@
           }
         }
       });
-    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0.01 });
+    }, {
+      rootMargin: '-40% 0px -55% 0px',
+      threshold: 0.01
+    });
 
     sections.forEach(s => s && obs.observe(s));
   </script>
+
+
+
+
+  <script src="assets/js/vendor/jquery-3.6.2.min.js"></script>
+
+  <script src="assets/js/popper.min.js"></script>
+
+  <!-- bootstrap js -->
+  <script src="assets/js/bootstrap.min.js"></script>
+
+  <!-- carousel js -->
+  <script src="assets/js/owl.carousel.min.js"></script>
+
+  <!-- counterup js -->
+  <script src="assets/js/jquery.counterup.min.js"></script>
+
+  <!-- waypoints js -->
+  <script src="assets/js/waypoints.min.js"></script>
+
+  <!-- wow js -->
+  <script src="assets/js/wow.min.js"></script>
+
+  <!-- imagesloaded js -->
+  <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+
+  <!-- venobox js -->
+  <script src="venobox/venobox.js"></script>
+
+  <!--  animated-text js -->
+  <script src="assets/js/animated-text.js"></script>
+
+  <!-- venobox min js -->
+  <script src="venobox/venobox.min.js"></script>
+
+  <!-- isotope js -->
+  <script src="assets/js/isotope.pkgd.min.js"></script>
+
+  <!-- jquery meanmenu js -->
+  <script src="assets/js/jquery.meanmenu.js"></script>
+
+  <!-- jquery scrollup js -->
+  <script src="assets/js/jquery.scrollUp.js"></script>
+
+  <!-- Slick Slider -->
+  <script src="assets/slick/slick.min.js"></script>
+
+  <script src="assets/js/jquery.barfiller.js"></script>
+  <!-- jquery js -->
+
+  <!-- ragrslider js -->
+  <script src="assets/js/rangeslider.js"></script>
+
+  <!-- ragrslider js -->
+  <script src="assets/js/mixitup.min.js"></script>
+
+  <!-- theme js -->
+  <script src="assets/js/theme.js"></script>
+
+  <!-- scroll js -->
+  <script src="assets/js/script.js"></script>
+
 </body>
+
 </html>
