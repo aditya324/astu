@@ -395,13 +395,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 </div>
               </div>
               <div class="mt-4 d-flex flex-wrap gap-2">
-                <a href="#volunteer-form" class="btn btn-accent">Volunteer Now</a>
+                <a href="./donation.php" class="btn btn-accent">Donate Now</a>
                 <a href="#contact" class="btn btn-outline-dark">Discuss Partnerships</a>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </div>x`
 
     </div>
   </section>

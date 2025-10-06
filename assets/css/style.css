@@ -515,11 +515,12 @@ header.landing .sticky-nav {
   background-size: cover;
 }
 .slider-area.three {
-  background: url(../images/banner/rural-healthcare-infrastructure.jpg);
+  background: url(../images/banner/elder-care-banner.jpg);
   background-size: cover;
 }
 .slider-area.four {
-  background: url(../images/banner/elder-care-banner.jpg);
+  background: url(../images/banner/rural-health-infra.png);
+  
   background-size: cover;
 }
 .slider-area.five {

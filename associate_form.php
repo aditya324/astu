@@ -224,31 +224,48 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <title>Associate with Astu Foundation</title>
-  <meta name="description" content="" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" type="image/png" sizes="56x56" href="assets/images/fav-icon/icon.png" />
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" media="all" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-  <link rel="stylesheet" href="assets/css/owl.carousel.min.css" type="text/css" media="all" />
-  <link rel="stylesheet" href="assets/css/animate.css" type="text/css" media="all" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/all.min.css" type="text/css" media="all" />
-  <link rel="stylesheet" href="assets/css/flaticon.css" type="text/css" media="all" />
-  <link rel="stylesheet" href="assets/css/theme-default.css" type="text/css" media="all" />
-  <link rel="stylesheet" href="assets/css/meanmenu.min.css" type="text/css" media="all" />
-  <link rel="stylesheet" href="assets/css/owl.transitions.css" type="text/css" media="all" />
-  <link rel="stylesheet" href="venobox/venobox.css" type="text/css" media="all" />
-  <link rel="stylesheet" href="assets/css/bootstrap-icons.css" type="text/css" media="all" />
-  <link rel="stylesheet" type="text/css" href="assets/slick/slick.css" />
-  <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css" />
-  <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all" />
-  <link rel="stylesheet" href="assets/css/dropdown.css" type="text/css" media="all" />
-  <link rel="stylesheet" href="assets/css/responsive.css" type="text/css" media="all" />
-  <link rel="stylesheet" href="assets/css/rangeslider.css" type="text/css" media="all" />
-  <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Nonprts-Nonprofit Charity HTML5 Template </title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" sizes="56x56" href="assets/images/fav-icon/icon.png">
+	<!-- bootstrap CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" media="all">
+	<!-- carousel CSS -->
+	<link rel="stylesheet" href="assets/css/owl.carousel.min.css" type="text/css" media="all">
+	<!-- animate CSS -->
+	<link rel="stylesheet" href="assets/css/animate.css" type="text/css" media="all">
+	<!-- font-awesome CSS -->
+	<link rel="stylesheet" href="assets/css/all.min.css" type="text/css" media="all">
+	<!-- font-flaticon CSS -->
+	<link rel="stylesheet" href="assets/css/flaticon.css" type="text/css" media="all">
+	<!-- theme-default CSS -->
+	<link rel="stylesheet" href="assets/css/theme-default.css" type="text/css" media="all">
+	<!-- meanmenu CSS -->
+	<link rel="stylesheet" href="assets/css/meanmenu.min.css" type="text/css" media="all">
+	<!-- transitions CSS -->
+	<link rel="stylesheet" href="assets/css/owl.transitions.css" type="text/css" media="all">
+	<!-- venobox CSS -->
+	<link rel="stylesheet" href="venobox/venobox.css" type="text/css" media="all">
+	<!-- bootstrap icons -->
+	<link rel="stylesheet" href="assets/css/bootstrap-icons.css" type="text/css" media="all">
+	<!-- Slick Slider -->
+	<link rel="stylesheet" type="text/css" href="assets/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css">
+	<!-- Main Style CSS -->
+	<link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all">
+	<!-- Dropdown CSS -->
+	<link rel="stylesheet" href="assets/css/dropdown.css" type="text/css" media="all">
+	<!-- responsive CSS -->
+	<link rel="stylesheet" href="assets/css/responsive.css" type="text/css" media="all">
+	<!-- rangeslider CSS -->
+	<link rel="stylesheet" href="assets/css/rangeslider.css" type="text/css" media="all">
+	<!-- modernizr js -->
+	<script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 </head>
 
 <body class="bg-light">
@@ -305,5 +322,62 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
   <?php require "footer.php" ?>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/vendor/jquery-3.6.2.min.js"></script>
+
+	<script src="assets/js/popper.min.js"></script>
+
+	<!-- bootstrap js -->
+	<script src="assets/js/bootstrap.min.js"></script>
+
+	<!-- carousel js -->
+	<script src="assets/js/owl.carousel.min.js"></script>
+
+	<!-- counterup js -->
+	<script src="assets/js/jquery.counterup.min.js"></script>
+
+	<!-- waypoints js -->
+	<script src="assets/js/waypoints.min.js"></script>
+
+	<!-- wow js -->
+	<script src="assets/js/wow.min.js"></script>
+
+	<!-- imagesloaded js -->
+	<script src="assets/js/imagesloaded.pkgd.min.js"></script>
+
+	<!-- venobox js -->
+	<script src="venobox/venobox.js"></script>
+
+	<!--  animated-text js -->
+	<script src="assets/js/animated-text.js"></script>
+
+	<!-- venobox min js -->
+	<script src="venobox/venobox.min.js"></script>
+
+	<!-- isotope js -->
+	<script src="assets/js/isotope.pkgd.min.js"></script>
+
+	<!-- jquery meanmenu js -->
+	<script src="assets/js/jquery.meanmenu.js"></script>
+
+	<!-- jquery scrollup js -->
+	<script src="assets/js/jquery.scrollUp.js"></script>
+
+	<!-- Slick Slider -->
+	<script src="assets/slick/slick.min.js"></script>
+
+	<script src="assets/js/jquery.barfiller.js"></script>
+	<!-- jquery js -->
+
+	<!-- ragrslider js -->
+	<script src="assets/js/rangeslider.js"></script>
+
+	<!-- ragrslider js -->
+	<script src="assets/js/mixitup.min.js"></script>
+
+	<!-- theme js -->
+	<script src="assets/js/theme.js"></script>
+
+	<!-- scroll js -->
+	<script src="assets/js/script.js"></script>
 </body>
 </html>

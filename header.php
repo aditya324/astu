@@ -95,7 +95,7 @@
                   </ul>
                                     </div>
                                 </li> -->
-                                <li><a href="contact.php">Contacts</a></li>
+                                <li><a href="contact.php">Contact us</a></li>
                             </ul>
                         </div>
 
@@ -109,7 +109,7 @@
         </div>
     </header>
 
-    <!-- Nonprts Mobile Menu Area -->
+  
     <div class="mobile-menu-area sticky-menu" id="navbar">
         <div class="mobile-menu">
             <div class="mobile-logo"> 

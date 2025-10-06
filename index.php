@@ -714,7 +714,7 @@ $stats = $result->fetch_assoc();
                   class="wow fadeInUp"
                   data-wow-delay="0.4s"
                   data-wow-duration="1s">
-                  Building Stronger Villages, Brick by Brick
+                  Caring for Elders, Honoring Their Journey
                 </h1>
               </div>
               <div class="slider-discription">
@@ -722,7 +722,8 @@ $stats = $result->fetch_assoc();
                   class="wow fadeInUp"
                   data-wow-delay="0.6s"
                   data-wow-duration="1s">
-                  Asthu Foundation is committed to strengthening rural infrastructure by improving access to clean water, sanitation, roads, and community spaces. Our efforts aim to create sustainable, self-reliant villages with better living conditions and brighter futures.
+                  Asthu Foundation is dedicated to providing compassionate elder care through health checkups, emotional support, and community engagement. We strive to ensure our seniors live with dignity, respect, and a sense of belonging.
+
                 </p>
               </div>
               <div class="nontprts-btn slider1">
@@ -756,7 +757,7 @@ $stats = $result->fetch_assoc();
                   class="wow fadeInUp"
                   data-wow-delay="0.4s"
                   data-wow-duration="1s">
-                  Caring for Elders, Honoring Their Journey
+                  Building Stronger Villages, Brick by Brick
                 </h1>
               </div>
               <div class="slider-discription">
@@ -764,7 +765,7 @@ $stats = $result->fetch_assoc();
                   class="wow fadeInUp"
                   data-wow-delay="0.6s"
                   data-wow-duration="1s">
-                  Asthu Foundation is dedicated to providing compassionate elder care through health checkups, emotional support, and community engagement. We strive to ensure our seniors live with dignity, respect, and a sense of belonging.
+                  Asthu Foundation is committed to strengthening rural infrastructure by improving access to clean water, sanitation, roads, and community spaces. Our efforts aim to create sustainable, self-reliant villages with better living conditions and brighter futures.
 
 
                 </p>
@@ -1278,7 +1279,7 @@ $stats = $result->fetch_assoc();
               </p>
 
               <div class="donate-btn d-flex justify-content-center m-3">
-                   <a href="./Rural-Health-Infra.php">Read More</a>
+                <a href="./Rural-Health-Infra.php">Read More</a>
               </div>
             </div>
           </div>
@@ -1304,7 +1305,7 @@ $stats = $result->fetch_assoc();
               </p>
 
               <div class="donate-btn d-flex justify-content-center m-3">
-                   <a href="./Women-empowerment.php">Read More</a>
+                <a href="./Women-empowerment.php">Read More</a>
               </div>
             </div>
           </div>
@@ -2629,6 +2630,96 @@ $stats = $result->fetch_assoc();
                     WhatsApp and social media community groups where we regularly share announcements.
                   </p>
                 </li>
+                <li>
+                  <a><span>7. Is Asthu Foundation a registered non-profit organization?</span>
+                    <i class="bi bi-chevron-double-right"></i></a>
+                  <p>
+                    Yes, Asthu Foundation is a legally registered non-profit organization working in accordance with
+                    government norms to ensure transparency and accountability in all its operations.
+                  </p>
+                </li>
+
+                <li>
+                  <a><span>8. Do I get a tax benefit when I donate?</span>
+                    <i class="bi bi-chevron-double-right"></i></a>
+                  <p>
+                    Absolutely. All eligible donations to Asthu Foundation qualify for tax exemption under Section 80G
+                    of the Income Tax Act. Donors receive a digital 80G certificate via email after successful donation.
+                  </p>
+                </li>
+
+                <li>
+                  <a><span>9. Can companies or institutions collaborate with Asthu Foundation?</span>
+                    <i class="bi bi-chevron-double-right"></i></a>
+                  <p>
+                    Yes, we actively welcome CSR partnerships and institutional collaborations to co-create impactful programs.
+                    Organizations can contribute through funding, volunteering, or skill-based initiatives.
+                  </p>
+                </li>
+
+                <li>
+                  <a><span>10. What are the key focus areas of Asthu Foundation?</span>
+                    <i class="bi bi-chevron-double-right"></i></a>
+                  <p>
+                    Our major focus areas include Rural Healthcare, Women Empowerment, Education for All,
+                    Skill Development, and Environmental Sustainability.
+                  </p>
+                </li>
+
+                <li>
+                  <a><span>11. How does Asthu Foundation ensure transparency in fund usage?</span>
+                    <i class="bi bi-chevron-double-right"></i></a>
+                  <p>
+                    We maintain clear financial records, periodic audits, and publish project impact reports.
+                    Every rupee is tracked and used solely for approved community initiatives.
+                  </p>
+                </li>
+
+                <li>
+                  <a><span>12. Can I volunteer remotely?</span>
+                    <i class="bi bi-chevron-double-right"></i></a>
+                  <p>
+                    Yes, many of our awareness, content creation, digital outreach, and research programs
+                    can be done remotely. Virtual volunteers play a key role in expanding our impact.
+                  </p>
+                </li>
+
+                <li>
+                  <a><span>13. Does Asthu Foundation conduct awareness programs?</span>
+                    <i class="bi bi-chevron-double-right"></i></a>
+                  <p>
+                    Yes, we regularly organize health awareness campaigns, educational sessions, and
+                    workshops in schools, rural communities, and public institutions.
+                  </p>
+                </li>
+
+                <li>
+                  <a><span>14. How can I track the progress of a program I supported?</span>
+                    <i class="bi bi-chevron-double-right"></i></a>
+                  <p>
+                    Supporters receive regular email updates, event photos, and detailed impact reports
+                    on the projects they have contributed to or sponsored.
+                  </p>
+                </li>
+                <li>
+                  <a><span>15. Are there internship opportunities at Asthu Foundation?</span>
+                    <i class="bi bi-chevron-double-right"></i></a>
+                  <p>
+                    Yes, we offer short-term and long-term internships for students and professionals
+                    passionate about social impact, community health, and sustainable development.
+                  </p>
+                </li>
+
+                <li>
+                  <a><span>16. How can I contact Asthu Foundation for queries?</span>
+                    <i class="bi bi-chevron-double-right"></i></a>
+                  <p>
+                    You can reach us via the contact form on our website or email us directly at
+                    <a href="mailto:info@asthufoundation.org">info@asthufoundation.org</a>.
+                    Our team responds within 24–48 hours on working days.
+                  </p>
+                </li>
+
               </ul>
             </div>
 
