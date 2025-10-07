@@ -4,6 +4,23 @@ require 'db.php';
 
 $result = $conn->query("SELECT villages_served, blind_children_supported, patients_treated, women_empowered FROM stats LIMIT 1");
 $stats = $result->fetch_assoc();
+
+// Helpers
+
+
+// Fetch sponsors (latest first). Change LIMIT if you want more.
+function e($v){ return htmlspecialchars((string)$v, ENT_QUOTES, 'UTF-8'); }
+function inr($n){ $s = number_format((float)$n, 2); return preg_replace('/\.00$/','', $s); }
+
+// Get latest sponsors
+$limit = 18;
+$stmt = $conn->prepare("SELECT id, name, amount, image FROM sponsors ORDER BY created_at DESC, id DESC LIMIT ?");
+$stmt->bind_param("i", $limit);
+$stmt->execute();
+$sponsors = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+
+// count to decide button visibility
+$hasMore = count($sponsors) > 6;
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
@@ -232,7 +249,7 @@ $stats = $result->fetch_assoc();
       opacity: .95;
       margin-bottom: .35rem;
       font-weight: 500;
-    }
+    } 
 
     .cause-title {
       font-weight: 700;
@@ -248,6 +265,24 @@ $stats = $result->fetch_assoc();
       opacity: .14;
       transform: rotate(-6deg);
     }
+
+
+      .sponsor-amount{
+    font-weight:700;
+    background:#f3f4f6;
+    border:1px solid #e5e7eb;
+    padding:6px 10px;
+    border-radius:999px;
+    font-size:14px;
+  }
+  .btn-read-more{
+    display:inline-block;
+    padding:8px 14px;
+    border-radius:8px;
+    border:1px solid #e5e7eb;
+    text-decoration:none;
+    font-weight:600;
+  }
 
     /* Colors */
     .bg-cancer {
@@ -504,73 +539,125 @@ $stats = $result->fetch_assoc();
     }
 
 
-
+    /* Card shell */
     .feature-card {
       position: relative;
-      padding: 28px 22px;
       border-radius: 14px;
+      min-height: 400px;
+      padding: 26px;
+      overflow: hidden;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      min-height: 190px;
+      justify-content: flex-end;
+        align-items: center; 
+      /* text to bottom-left */
       color: #fff;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, .06);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, .08);
       transition: transform .25s ease, box-shadow .25s ease;
     }
 
     .feature-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 10px 22px rgba(0, 0, 0, .12);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, .12);
     }
 
-    .feature-icon {
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      margin-bottom: 14px;
-      background: rgba(255, 255, 255, .18);
-      backdrop-filter: blur(2px);
+    /* Big image “icon” */
+    .feature-illustration {
+      position: absolute;
+      top: 26px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(200px, 70%);
+      /* big like the reference */
+      height: auto;
+      display: block;
+      pointer-events: none;
     }
 
-    .feature-icon i {
-      font-size: 30px;
-      line-height: 1;
+    /* Bottom-left text */
+    .feature-text {
+      position: relative;
+      z-index: 1;
+      max-width: 22ch;
+    }
+
+   .feature-title {
+  font-size: clamp(1.3rem, 1.2vw + 1rem, 1.6rem) !important;
+  font-weight: 700 !important;
+  margin-bottom: 8px;
+  line-height: 1.3;
+  letter-spacing: 0.3px;
+  text-transform: capitalize;
+}
+
+    .feature-meta {
+        font-size: 1.05rem;   
+      color: #e9eef4;
+    }
+
+    /* Theme colors (solid backgrounds, keep your original palette) */
+    .theme-cancer {
+      background: #cf4b1e;
+    }
+
+    /* rust orange */
+    .theme-blind {
+      background: #f5b53a;
+    }
+
+    /* warm yellow */
+    .theme-elder {
+      background: #1f8a8a;
+    }
+
+    /* teal */
+    .theme-rural {
+      background: #7b42f5;
+    }
+
+    /* purple */
+    .theme-edu {
+      background: #e68a00;
+    }
+
+    /* orange */
+
+    /* Text inside card */
+    .feature-content {
+      position: relative;
+      z-index: 1;
     }
 
     .feature-title {
+      font-size: 1.15rem !important;
       font-weight: 700;
-      font-size: 1.05rem;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
 
     .feature-meta {
-      font-size: .92rem;
-      opacity: .95;
+      font-size: 0.95rem;
+      opacity: 0.95;
     }
 
-    /* Gradient themes */
-    .theme-cancer {
-      background: linear-gradient(135deg, #DF5311 0%, #f97316 100%);
+    /* Founder image */
+    .founder-img {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      object-fit: cover;
     }
 
-    .theme-blind {
-      background: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%);
-    }
 
-    .theme-elder {
-      background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
-    }
+  /* Make hiding work even without Bootstrap */
+  .hidden-card { display: none !important; }
 
-    .theme-rural {
-      background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
-    }
-
-    .theme-edu {
-      background: linear-gradient(135deg, #ef4444 0%, #fb7185 100%);
-    }
+  .sponsor-amount{
+    font-weight:700; background:#f3f4f6; border:1px solid #e5e7eb;
+    padding:6px 10px; border-radius:999px; font-size:14px;
+  }
+  .btn-read-more{
+    display:inline-block; padding:8px 14px; border-radius:8px;
+    border:1px solid #e5e7eb; text-decoration:none; font-weight:600;
+  }
   </style>
 
 </head>
@@ -630,7 +717,8 @@ $stats = $result->fetch_assoc();
                   class="wow fadeInUp"
                   data-wow-delay="0.4s"
                   data-wow-duration="1s">
-                  Fighting Cancer, Restoring Hope
+
+                  Touching Lives... Saving Souls!!
                 </h1>
               </div>
               <div class="slider-discription">
@@ -638,9 +726,10 @@ $stats = $result->fetch_assoc();
                   class="wow fadeInUp"
                   data-wow-delay="0.6s"
                   data-wow-duration="1s">
-                  Asthu Foundation is dedicated to empowering women through
-                  health and skill development programs, fostering
-                  self-reliance and confidence.
+
+
+
+                  Welcome to Asthu Foundation, a beacon of hope and transformation. Our mission is to empower communities and create lasting impacts through dedicated healthcare, education, and empowerment initiatives.
                 </p>
               </div>
               <div class="nontprts-btn slider1">
@@ -672,7 +761,9 @@ $stats = $result->fetch_assoc();
                   class="wow fadeInUp"
                   data-wow-delay="0.4s"
                   data-wow-duration="1s">
-                  Lighting the Path for Every Child
+
+
+                  Fighting Cancer, Restoring Hope
                 </h1>
               </div>
               <div class="slider-discription">
@@ -680,8 +771,7 @@ $stats = $result->fetch_assoc();
                   class="wow fadeInUp"
                   data-wow-delay="0.6s"
                   data-wow-duration="1s">
-                  Asthu Foundation is dedicated to uplifting women through skill development, health education, and self-employment programs. Our initiatives foster confidence, independence, and equal opportunities for women to lead empowered lives.
-                </p>
+                  Asthu Foundation is dedicated to supporting cancer patients through awareness, early detection, and holistic care programs, fostering hope, resilience, and a better quality of life. </p>
               </div>
               <div class="nontprts-btn slider1">
                 <a
@@ -714,7 +804,8 @@ $stats = $result->fetch_assoc();
                   class="wow fadeInUp"
                   data-wow-delay="0.4s"
                   data-wow-duration="1s">
-                  Caring for Elders, Honoring Their Journey
+
+                  Empowering Vision Beyond Sight
                 </h1>
               </div>
               <div class="slider-discription">
@@ -722,8 +813,7 @@ $stats = $result->fetch_assoc();
                   class="wow fadeInUp"
                   data-wow-delay="0.6s"
                   data-wow-duration="1s">
-                  Asthu Foundation is dedicated to providing compassionate elder care through health checkups, emotional support, and community engagement. We strive to ensure our seniors live with dignity, respect, and a sense of belonging.
-
+                  Asthu Foundation is committed to empowering blind children through education, rehabilitation, and skill development programs, nurturing independence, confidence, and inclusion in society
                 </p>
               </div>
               <div class="nontprts-btn slider1">
@@ -758,6 +848,7 @@ $stats = $result->fetch_assoc();
                   data-wow-delay="0.4s"
                   data-wow-duration="1s">
                   Building Stronger Villages, Brick by Brick
+
                 </h1>
               </div>
               <div class="slider-discription">
@@ -801,7 +892,50 @@ $stats = $result->fetch_assoc();
                   class="wow fadeInUp"
                   data-wow-delay="0.4s"
                   data-wow-duration="1s">
+                  Caring for Elders, Honoring Their Journey
+                </h1>
+              </div>
+              <div class="slider-discription">
+                <p
+                  class="wow fadeInUp"
+                  data-wow-delay="0.6s"
+                  data-wow-duration="1s">
+                  Asthu Foundation is dedicated to providing compassionate elder care through health checkups, emotional support, and community engagement. We strive to ensure our seniors live with dignity, respect, and a sense of belonging.
+
+                </p>
+              </div>
+              <div class="nontprts-btn slider1">
+                <a
+                  class="wow fadeInUp"
+                  data-wow-delay="0.8s"
+                  data-wow-duration="1s"
+                  href="./donation.php">Donate Now<i class="bi bi-arrow-right"></i></a>
+              </div>
+              <div class="nontprts-btn slider2">
+                <a
+                  class="wow fadeInUp"
+                  data-wow-delay="0.8s"
+                  data-wow-duration="1s"
+                  href="contact.html">Contact Now <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slider-area six d-flex align-items-center">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-12">
+            <div class="slider-content">
+              <div class="slider-sub-title"></div>
+              <div class="slider-main-title">
+                <h1
+                  class="wow fadeInUp"
+                  data-wow-delay="0.4s"
+                  data-wow-duration="1s">
                   Empowering Women, Transforming Lives
+
                 </h1>
               </div>
               <div class="slider-discription">
@@ -984,11 +1118,13 @@ $stats = $result->fetch_assoc();
 
   <section class="py-5">
     <div class="container">
-      <div class="row g-5 align-items-center">
-        <!-- LEFT: heading + intro + quote -->
+      <div class="row g-5">
+        <!-- LEFT SIDE -->
         <div class="col-lg-6">
           <p class="text-uppercase text-muted mb-2 small">Ready to help us</p>
-          <h2 class="display-6 fw-bold mb-3">We believe that we can <br class="d-none d-md-block">save more lives</h2>
+          <h2 class="display-6 fw-bold mb-3">
+            We believe that we can <br class="d-none d-md-block">save more lives
+          </h2>
 
           <p class="text-muted mb-4">
             Welcome to <strong>Asthu Foundation</strong>, a beacon of hope and transformation.
@@ -997,12 +1133,12 @@ $stats = $result->fetch_assoc();
           </p>
 
           <div class="quote-box mb-3">
-            <p class="mb-3 mb-md-4 text-dark" style="font-style:italic">
+            <p class="mb-3 mb-md-4 text-dark" style="font-style: italic">
               “Asthu Foundation is committed to enhancing the healthcare infrastructure in rural areas.
               Our initiatives are designed to provide comprehensive medical services and improve community health.”
             </p>
 
-            <div class="d-flex align-items-center gap-3 ">
+            <div class="d-flex align-items-center gap-3">
               <img src="./assets/images/astu-founder.webp" alt="Dr. Chethan Raju" class="founder-img">
               <div>
                 <div class="fw-semibold">Dr. Chethan Raju</div>
@@ -1011,62 +1147,68 @@ $stats = $result->fetch_assoc();
             </div>
           </div>
 
-          <div class="donate-btn mt-5 ">
+          <div class="donate-btn mt-5">
             <a href="./donation.php">Donate Now</a>
           </div>
         </div>
 
-        <!-- RIGHT: cards grid (5 cards) -->
+        <!-- RIGHT SIDE (image cards) -->
+        <!-- RIGHT: cards grid (5 image-icon cards) -->
         <div class="col-lg-6">
-          <div class="row g-3">
+          <div class="row g-4">
 
+            <!-- Cancer -->
             <div class="col-12 col-sm-6">
               <div class="feature-card theme-cancer">
-                <div class="feature-icon">
-                  <i class="fa-solid fa-ribbon"></i>
+                <img src="./assets/icons/cancer_3367329 (1).svg" alt="Cancer icon" class="feature-illustration" />
+                <div class="feature-text">
+                  <div class="feature-title">Support For Cancer Patients</div>
+                  <div class="feature-meta">Fighting Cancer, Restoring Hope</div>
                 </div>
-                <div class="feature-title">Support For Cancer Patients</div>
-                <div class="feature-meta">Fighting Cancer, Restoring Hope</div>
               </div>
             </div>
 
+            <!-- Blind Children -->
             <div class="col-12 col-sm-6">
               <div class="feature-card theme-blind">
-                <div class="feature-icon">
-                  <i class="fa-solid fa-eye-low-vision"></i>
+                <img src="./assets/icons/cinema_9304213.webp" alt="Blind children icon" class="feature-illustration" />
+                <div class="feature-text">
+                  <div class="feature-title">Support For Blind Children</div>
+                  <div class="feature-meta">Empowering Vision Beyond Sight</div>
                 </div>
-                <div class="feature-title">Support For Blind Children</div>
-                <div class="feature-meta">Empowering Vision Beyond Sight</div>
               </div>
             </div>
 
+            <!-- Elder Care -->
             <div class="col-12 col-sm-6">
               <div class="feature-card theme-elder">
-                <div class="feature-icon">
-                  <i class="fa-solid fa-hand-holding-heart"></i>
+                <img src="./assets/icons/disabilities_10767069.png" alt="Elder care icon" class="feature-illustration" />
+                <div class="feature-text">
+                  <div class="feature-title">Elder Care</div>
+                  <div class="feature-meta">Honoring Seniors, Ensuring Dignity</div>
                 </div>
-                <div class="feature-title">Elder Care</div>
-                <div class="feature-meta">Honoring Seniors, Ensuring Dignity</div>
               </div>
             </div>
 
+            <!-- Rural Healthcare -->
             <div class="col-12 col-sm-6">
               <div class="feature-card theme-rural">
-                <div class="feature-icon">
-                  <i class="fa-solid fa-stethoscope"></i>
+                <img src="./assets/icons/rural-health-icon.webp" alt="Rural health icon" class="feature-illustration" />
+                <div class="feature-text">
+                  <div class="feature-title">Rural Healthcare Infrastructure</div>
+                  <div class="feature-meta">Building Healthier Futures, One Village at a Time</div>
                 </div>
-                <div class="feature-title">Rural Healthcare Infrastructure</div>
-                <div class="feature-meta">Building Healthier Futures, One Village at a Time</div>
               </div>
             </div>
 
+            <!-- Women Empowerment -->
             <div class="col-12">
               <div class="feature-card theme-edu">
-                <div class="feature-icon">
-                  <i class="fa-solid fa-graduation-cap"></i>
+                <img src="./assets/icons/pride_18163187.svg" alt="Women empowerment icon" class="feature-illustration" />
+                <div class="feature-text text-center">
+                  <div class="feature-title ">Women Empowerment</div>
+                  <div class="feature-meta">Education for Every Woman</div>
                 </div>
-                <div class="feature-title">Women Empowerment</div>
-                <div class="feature-meta">Education for Every Women</div>
               </div>
             </div>
 
@@ -1076,6 +1218,9 @@ $stats = $result->fetch_assoc();
       </div>
     </div>
   </section>
+
+
+
 
 
 
@@ -1138,187 +1283,57 @@ $stats = $result->fetch_assoc();
   <!--==================================================-->
   <!-- Start Service Area -->
   <!--==================================================-->
-  <div
-    class="service-area wow fadeInUp"
-    data-wow-delay="0.3s"
-    data-wow-duration="1s">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div
-            class="section-title text-center wow fadeInUp"
-            data-wow-delay="0.4s"
-            data-wow-duration="1s">
-            <div class="section-sub-thumb">
-              <img src="assets/images/slider/banner-icon.png" alt="" />
-            </div>
-            <div class="section-sub-titile">
-              <h4>Start donating them</h4>
-            </div>
-            <div class="section-sub-thumb">
-              <img src="assets/images/slider/banner-icon.png" alt="" />
-            </div>
-            <div class="section-main-title">
-              <h2>Find popular causes</h2>
+<div class="service-area wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1s">
+  <div class="container">
+    <!-- Head -->
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title text-center wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
+          <div class="section-sub-thumb"><img src="assets/images/slider/banner-icon.png" alt=""></div>
+          <div class="section-sub-titile"><h4>people who made it possible</h4></div>
+          <div class="section-sub-thumb"><img src="assets/images/slider/banner-icon.png" alt=""></div>
+          <div class="section-main-title"><h2>Our Sponsors</h2></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="row" id="sponsorsRow">
+      <?php if (!$sponsors): ?>
+        <div class="col-12"><p class="text-center">No sponsors yet.</p></div>
+      <?php else:
+        $i = 0;
+        foreach ($sponsors as $sp):
+          $i++;
+          $hiddenClass = $i > 6 ? ' hidden-card' : ''; // use our own class
+          $img = !empty($sp['image']) ? 'admin/'.ltrim($sp['image'], '/\\') : 'assets/images/placeholder-4x3.jpg';
+      ?>
+      <div class="col-lg-4 col-md-6<?= $hiddenClass ?>">
+        <div class="service-single-box wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+          <div class="service-thumb">
+            <img src="<?= e($img) ?>" alt="<?= e($sp['name']) ?>">
+          </div>
+          <div class="service-content">
+            <h4 class="service-title"><a href="#"><?= e($sp['name']) ?></a></h4>
+    
+            <div class="donate-btn d-flex flex-column align-items-center gap-2 m-3">
+              <div class="sponsor-amount">Donated: ₹ <?= inr($sp['amount']) ?></div>
+             
             </div>
           </div>
         </div>
       </div>
-      <div class="row" id="servicesRow">
+      <?php endforeach; endif; ?>
+    </div>
 
-        <div class="col-lg-4 col-md-6">
-          <div
-            class="service-single-box wow fadeInUp"
-            data-wow-delay="0.2s"
-            data-wow-duration="1s">
-            <div class="service-thumb">
-              <img src="assets/images/cancer-care.jpg" alt="" />
-            </div>
-            <div class="service-content">
-
-              <h4 class="service-title">
-                <a href="#">Cancer Patient Support</a>
-              </h4>
-              <p class="service-discription">
-                Our Cancer Patient Support program is dedicated to offering
-                comprehensive assistance to those battling cancer. We aim to
-                alleviate the challenges faced by patients and their families.
-              </p>
-
-              <div class="donate-btn d-flex justify-content-center m-3">
-                <a href="./Cancer-care.php">Read More</a>
-              </div>
-              <!-- <div class="d-flex justify-content-center gap-3 my-3">
-  <a href="./service.php" class="btn btn-primary px-4 py-2"
-     style="background-color:#DF5311; border:none; border-radius:30px;">
-    Read More
-  </a>
-  <a href="./service.php" class="btn btn-outline-dark px-4 py-2"
-     style="border-radius:30px;">
-    Read More
-  </a>
-</div> -->
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-lg-4 col-md-6">
-          <div
-            class="service-single-box wow fadeInUp"
-            data-wow-delay="0.4s"
-            data-wow-duration="1s">
-            <div class="service-thumb">
-              <img src="assets/images/child-reading-in-braile.jpg" alt="" />
-            </div>
-            <div class="service-content">
-
-              <h4 class="service-title">
-                <a href="#">Support For Blind Children</a>
-              </h4>
-              <p class="service-discription">
-                Empowering blind children with dedicated support,
-                Fostering their unique journey to independence.
-                Building skills for confident integration,
-                Creating a future where every child can thrive.
-              </p>
-
-              <div class="donate-btn d-flex justify-content-center m-3">
-                <a href="./Blind-Care.php">Read More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-lg-4 col-md-6">
-          <div
-            class="service-single-box wow fadeInUp"
-            data-wow-delay="0.6s"
-            data-wow-duration="1s">
-            <div class="service-thumb">
-              <img src="assets/images/elder-care.jpg" alt="" />
-            </div>
-            <div class="service-content">
-
-              <h4 class="service-title">
-                <a href="#">Elder Care</a>
-              </h4>
-              <p class="service-discription">
-                Our mission is to provide comprehensive support,
-                To champion the dignity of every senior.
-                Fostering a life of fulfillment and purpose,
-                And honoring them with unwavering respect.
-              </p>
-
-              <div class="donate-btn d-flex justify-content-center m-3">
-                <a href="./Elder-care.php">Read More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-lg-4 col-md-6 extra-card mt-3">
-          <div
-            class="service-single-box wow fadeInUp"
-            data-wow-delay="0.8s"
-            data-wow-duration="1s">
-            <div class="service-thumb">
-              <img src="assets/images/rural-infra.jpg" alt="" />
-            </div>
-            <div class="service-content">
-
-              <h4 class="service-title">
-                <a href="#">Rural Healthcare Infrastructure</a>
-              </h4>
-              <p class="service-discription">
-                Strengthening village healthcare systems through better access
-                and facilities. Empowering rural communities with quality
-                medical infrastructure
-              </p>
-
-              <div class="donate-btn d-flex justify-content-center m-3">
-                <a href="./Rural-Health-Infra.php">Read More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-lg-4 col-md-6 extra-card mt-3">
-          <div
-            class="service-single-box wow fadeInUp"
-            data-wow-delay="1s"
-            data-wow-duration="1s">
-            <div class="service-thumb">
-              <img src="assets/images/women-empowerment.jpg" alt="" />
-            </div>
-            <div class="service-content">
-
-              <h4 class="service-title">
-                <a href="#">Women Empowerment</a>
-              </h4>
-              <p class="service-discription">
-                Empowering women through education, opportunity, and equality.
-                Building a future where every woman can lead and thrive.
-              </p>
-
-              <div class="donate-btn d-flex justify-content-center m-3">
-                <a href="./Women-empowerment.php">Read More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="text-center mt-4">
-        <button id="viewMoreBtn" class="view-morebtn">View More</button>
-      </div>
-
+    <!-- View More -->
+    <div class="text-center mt-4">
+      <button id="viewMoreBtn" class="view-morebtn" type="button" style="display: <?= $hasMore ? 'inline-block' : 'none' ?>;">
+        View More
+      </button>
     </div>
   </div>
+</div>
 
 
 
@@ -2497,6 +2512,65 @@ $stats = $result->fetch_assoc();
       </div>
     </div>
   </div>
+
+ <div class="service-area wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1s">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title text-center wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
+          <div class="section-sub-thumb">
+            <img src="assets/images/slider/banner-icon.png" alt="" />
+          </div>
+          <div class="section-sub-titile">
+            <h4>people who made it possible</h4>
+          </div>
+          <div class="section-sub-thumb">
+            <img src="assets/images/slider/banner-icon.png" alt="" />
+          </div>
+          <div class="section-main-title">
+            <h2>Our Sponsors</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" id="sponsorsRow">
+      <?php if (!$sponsors): ?>
+        <div class="col-12"><p class="text-center">No sponsors yet.</p></div>
+      <?php else:
+        $i = 0;
+        foreach ($sponsors as $sp):
+          $i++;
+          $extra = $i > 6 ? ' extra-card d-none' : '';
+          // images are saved under admin/uploads/sponsers/
+          $img = !empty($sp['image']) ? 'admin/'.ltrim($sp['image'], '/\\') : 'assets/images/placeholder-4x3.jpg';
+      ?>
+      <div class="col-lg-4 col-md-6<?= $extra ?>">
+        <div class="service-single-box wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+          <div class="service-thumb">
+            <img src="<?= e($img) ?>" alt="<?= e($sp['name']) ?>" />
+          </div>
+          <div class="service-content">
+            <h4 class="service-title"><a href="#"><?= e($sp['name']) ?></a></h4>
+            <p class="service-discription">Grateful for the generosity of our sponsor.</p>
+            <div class="donate-btn d-flex flex-column align-items-center gap-2 m-3">
+              <div class="sponsor-amount">Donated: ₹ <?= inr($sp['amount']) ?></div>
+          
+            </div>
+          </div>
+        </div>
+      </div>
+      <?php endforeach; endif; ?>
+    </div>
+
+    <div class="text-center mt-4">
+      <button id="viewMoreBtn" class="view-morebtn" style="display: <?= $hasMore ? 'inline-block' : 'none' ?>;">
+        View More
+      </button>
+    </div>
+  </div>
+</div>
+
   <!--==================================================-->
   <!-- End Blog Area -->
   <!--==================================================-->
@@ -2692,7 +2766,6 @@ $stats = $result->fetch_assoc();
                     workshops in schools, rural communities, and public institutions.
                   </p>
                 </li>
-
                 <li>
                   <a><span>14. How can I track the progress of a program I supported?</span>
                     <i class="bi bi-chevron-double-right"></i></a>
@@ -2964,6 +3037,26 @@ $stats = $result->fetch_assoc();
       });
     });
   </script>
+<script>
+  (function(){
+    var btn = document.getElementById('viewMoreBtn');
+    if(!btn) return;
+
+    btn.addEventListener('click', function(ev){
+      ev.preventDefault(); // just in case
+      var hidden = document.querySelectorAll('#sponsorsRow .hidden-card');
+      hidden.forEach(function(el){
+        el.classList.remove('hidden-card'); // remove our class
+        el.style.display = "";              // force re-show (fallback)
+      });
+      // If using WOW.js, re-init animations for newly shown cards
+      if (typeof WOW !== 'undefined') {
+        try { new WOW().init(); } catch(e){}
+      }
+      btn.style.display = 'none';
+    });
+  })();
+</script>
 </body>
 
 </html>

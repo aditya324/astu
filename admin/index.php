@@ -137,6 +137,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <a href="?page=certificateDownloads" class="<?= (($_GET['page'] ?? '') === 'certificateDownloads') ? 'active' : '' ?>">
                 <i class="bi bi-cash me-2"></i>certificateDownloads
             </a>
+             <a href="?page=admin_sponsors" class="<?= (($_GET['page'] ?? '') === 'add_sponsor') ? 'active' : '' ?>">
+                <i class="bi bi-cash me-2"></i>sponsers
+            </a>
 
 
             <div class="mt-3 text-uppercase small opacity-75">Account</div>
@@ -158,7 +161,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <main class="page">
                 <?php
                 $page = $_GET['page'] ?? 'events_add';
-                $allowed = ['events_add', 'events_manage', 'event_edit', 'volunteer_pending', 'associate_pending', 'edit_stats', 'testimonials', 'donations', 'certificateDownloads'];
+                $allowed = ['events_add', 'events_manage', 'event_edit', 'volunteer_pending', 'associate_pending', 'edit_stats', 'testimonials', 'donations', 'certificateDownloads', 'admin_sponsors'];
                 if (!in_array($page, $allowed)) $page = 'events_add';
                 require __DIR__ . "/{$page}.php";
                 ?>

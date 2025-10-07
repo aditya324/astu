@@ -491,7 +491,7 @@ header.landing .sticky-nav {
 ===================================================*/
 
 .slider-area {
-  background: url(../images/banner/caner-patient-holding-hands.jpg);
+  background: url(../images/banner/Touching-Lives-Saving-Souls2.webp);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -510,23 +510,34 @@ header.landing .sticky-nav {
 } */
 
 .slider-area.two {
-  background: url(../images/banner/blind-children-banner.jpg);
+ 
+   background: url(../images/banner/caner-patient-holding-hands.jpg);
   
   background-size: cover;
 }
 .slider-area.three {
-  background: url(../images/banner/elder-care-banner.jpg);
+ 
+   background: url(../images/banner/blind-children-banner.jpg);
   background-size: cover;
 }
 .slider-area.four {
-  background: url(../images/banner/rural-health-infra.png);
+  
+   background: url(../images/banner/rural-health-infra.png);
   
   background-size: cover;
 }
 .slider-area.five {
+
+  
+  background: url(../images/banner/elder-care-banner.jpg);
+  background-size: cover;
+}
+.slider-area.six {
+
   background: url(../images/banner/women-empoerment.jpg);
   background-size: cover;
 }
+
 
 .slider-content {
   width: 55%;
@@ -557,7 +568,7 @@ header.landing .sticky-nav {
 }
 
 .slider-discription p {
-  font-size: 18px;
+  font-size: 21px;
   line-height: 26px;
   color: #ffffff;
   margin: 16px 0 53px;

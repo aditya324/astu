@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         $_SESSION["username"] = $username;                            
                         
                 
-                        header("location: AddEvents.php");
+                        header("location: /admin/index.php");
                     } else {
                         // Password is not valid
                         header("location: login.php?error=invalid");

@@ -196,8 +196,8 @@
             data-wow-delay="0.10s"
             data-wow-duration="1s">
             <p>
-              Copyright © <a href="#">Website_Stock</a> All Rights Reserved.
-            </p>
+  Copyright © <a href="https://sunrisedigital.co.in/" target="_blank">Sunrise Digital</a> All Rights Reserved.
+</p>
           </div>
         </div>
       </div>
